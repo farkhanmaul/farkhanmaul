@@ -1,5 +1,4 @@
 <h1 align="left" id="macropower-title">:wave: Hello there! I'm Farkhan Maulana</h1>
-<h3 align="left">I am a Learner, doing some Engineering things</h3>
 
 <p align="left">
   <a href="https://github.com/vrxnm/vrxnm">
@@ -20,14 +19,6 @@
 - :mailbox: &nbsp;Ask me anything on my **[Instagram]**
 - :computer: &nbsp;Connect with me on **[LinkedIn]**
 
-<br>
-
-
-
-<br>
-
-
-
 <table>
   <tr>
     <td align="left">
@@ -44,7 +35,7 @@
 </table>
 
 <h2 id="vrxnm">Currently Learning</h2>
-> Tools, languages, and other things that I like to work with.
+> Tools, languages, and other things that I Currently Learning.
 <table>
   <tr>
     <td align="center" width="96">
@@ -78,7 +69,6 @@
       </a>
       <br>TypeScript
     </td>
-
     <td align="center" width="96">
       <a href="#macropower-tech">
         <img src="./img/javascript-original.svg" width="48" height="48" alt="JavaScript" />
