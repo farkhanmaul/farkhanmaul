@@ -1,9 +1,3 @@
-- 👋 Hi, I’m Farkhan Maulana
-- 👀 I’m interested in Programming 
-- 🌱 I’m currently learning SQL
-- 💞️ I’m looking to collaborate on-line
-- 📫 How to reach me @vrxnm
-- 🐱‍👤 "Your mind is a weapon. Keep it loaded"
 
 <h1 align="left" id="macropower-title">:wave: Hello there! I'm Farkhan Maulana</h1>
 <h3 align="left">I am a Learner, doing some Engineering things</h3>
@@ -18,18 +12,15 @@
   <a href="https://github.com/vrxnm?tab=followers">
     <img alt="GitHub followers" src="https://img.shields.io/github/followers/vrxnm?color=green&logo=github">
   </a>
-  <a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme">
-    <img alt="Awesome" src="https://awesome.re/mentioned-badge.svg">
-  </a>
 </p>
 
 <a href="#macropower-title">
   <img src="https://github-readme-stats.vercel.app/api?username=vrxnm&show_icons=true&count_private=true&include_all_commits=true" alt="macropower" align="right" />
 </a>
 
-- :office: &nbsp;I'm currently working at **[84.51°]**
-- :seedling: &nbsp;I’m currently learning **Go**
-- :speech_balloon: &nbsp;I like to talk about **Homelabbing** and **OSS**
+- :office: &nbsp;I'm currently learning at **Ahmad Dahlan University**
+- :seedling: &nbsp;I’m currently learning **SQL**
+- :speech_balloon: &nbsp;I like to talk about **Code** and **Algorithm**
 - :mailbox: &nbsp;Ask me anything on my **[issues page]**
 - :computer: &nbsp;Connect with me on **[LinkedIn]**
 
@@ -155,9 +146,8 @@
 </table>
 
 
-[84.51°]: https://github.com/8451 "84.51° Github Home"
 [issues page]: https://github.com/MacroPower/MacroPower/issues "MacroPower/issues"
-[linkedin]: https://www.linkedin.com/in/colvinjm "Jacob Colvin LinkedIn"
+[linkedin]: https://www.linkedin.com/in/farkhanmaul "Farkhan Maulana LinkedIn"
 
 
 <!---
