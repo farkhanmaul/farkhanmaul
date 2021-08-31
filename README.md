@@ -6,10 +6,10 @@
 - 🐱‍👤 "Your mind is a weapon. Keep it loaded"
 
 <h1 align="left" id="macropower-title">:wave: Hello there! I'm Farkhan Maulana</h1>
-<h3 align="left">I am a Versatilist, doing SW/SR/DevOps Engineering things</h3>
+<h3 align="left">I am a Learner, doing some Engineering things</h3>
 
 <p align="left">
-  <a href="https://github.com/MacroPower/MacroPower">
+  <a href="https://github.com/vrxnm/vrxnm">
     <img src="https://komarev.com/ghpvc/?username=macropower" alt="page views" />
   </a>
   <a href="https://macropower.readthedocs.io/en/latest">
@@ -21,7 +21,7 @@
   <a href="https://reddit.com/u/macropower">
     <img alt="Reddit User Karma" src="https://img.shields.io/reddit/user-karma/combined/macropower?label=karma&logo=reddit">
   </a>
-  <a href="https://github.com/MacroPower?tab=followers">
+  <a href="https://github.com/vrxnm?tab=followers">
     <img alt="GitHub followers" src="https://img.shields.io/github/followers/MacroPower?color=green&logo=github">
   </a>
   <a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme">
@@ -159,8 +159,6 @@
     </td>
   </tr>
 </table>
-
-<h2 align="left">Coding Activity</h2>
 
 
 [84.51°]: https://github.com/8451 "84.51° Github Home"
