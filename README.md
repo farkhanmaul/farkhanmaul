@@ -41,7 +41,7 @@
       </a>
       <br>Python
     </td>
-    <td align="center" width="96">
+<!---   <td align="center" width="96">
       <a href="#macropower-tech">
         <img src="./img/go-flat.svg" width="48" height="48" alt="Golang" />
       </a>
@@ -59,6 +59,7 @@
       </a>
       <br>TypeScript
     </td>
+--->
     <td align="center" width="96">
       <a href="#macropower-tech">
         <img src="./img/javascript-original.svg" width="48" height="48" alt="JavaScript" />
@@ -77,6 +78,7 @@
       </a>
       <br>Bootstrap
     </td>
+    <!---
     <td align="center" width="96">
       <a href="#macropower-tech">
         <img src="./img/sass-original.svg" width="48" height="48" alt="Sass" />
@@ -115,6 +117,7 @@
       </a>
       <br>Powershell
     </td>
+--->
     <td align="center"  width="96">
       <a href="#macropower-tech">
         <img src="./img/mysql-original.svg" width="48" height="48" alt="MySQL" />
@@ -125,6 +128,7 @@
       <a href="#macropower-tech" >
         <img src="https://raw.githubusercontent.com/grafana/grafana/master/public/img/grafana_icon.svg" width="48" height="48" alt="Grafana" />
       </a>
+       <!---
       <br>Grafana
     </td>
     <td align="center" width="96">
@@ -139,6 +143,7 @@
       </a>
       <br>Thanos
     </td>
+--->
   </tr>
 </table>
 
