@@ -11,8 +11,8 @@
   </a>
 </p>
 
-<a href="#macropower-title">
-  <img src="https://github-readme-stats.vercel.app/api?username=vrxnm&show_icons=true&count_private=true&include_all_commits=true" alt="macropower" align="right" />
+<a href="#vrxnm-title">
+  <img src="https://github-readme-stats.vercel.app/api?username=vrxnm&show_icons=true&count_private=true&include_all_commits=true" alt="vrxnm" align="right" />
 </a>
 
 - :office: &nbsp;I'm currently learning at **Ahmad Dahlan University**
