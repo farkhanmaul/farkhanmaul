@@ -6,9 +6,6 @@
   <a href="https://github.com/vrxnm/vrxnm">
     <img src="https://komarev.com/ghpvc/?username=vrxnm" alt="page views" />
   </a>
-  <a href="https://macropower.readthedocs.io/en/latest">
-    <img alt="Read the Docs" src="https://img.shields.io/readthedocs/macropower?logo=read-the-docs">
-  </a>
   <a href="https://github.com/vrxnm?tab=followers">
     <img alt="GitHub followers" src="https://img.shields.io/github/followers/vrxnm?color=green&logo=github">
   </a>
@@ -21,7 +18,7 @@
 - :office: &nbsp;I'm currently learning at **Ahmad Dahlan University**
 - :seedling: &nbsp;I’m currently learning **SQL**
 - :speech_balloon: &nbsp;I like to talk about **Code** and **Algorithm**
-- :mailbox: &nbsp;Ask me anything on my **[issues page]**
+- :mailbox: &nbsp;Ask me anything on my **[Instagram]**
 - :computer: &nbsp;Connect with me on **[LinkedIn]**
 
 <br>
@@ -146,7 +143,7 @@
 </table>
 
 
-[issues page]: https://github.com/MacroPower/MacroPower/issues "MacroPower/issues"
+[Instagram]: https://instagram.com/vrxnm "VRXNM Instagram"
 [linkedin]: https://www.linkedin.com/in/farkhanmaul "Farkhan Maulana LinkedIn"
 
 
