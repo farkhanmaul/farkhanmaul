@@ -5,7 +5,7 @@
 - 📫 How to reach me @vrxnm
 - 🐱‍👤 "Your mind is a weapon. Keep it loaded"
 
-<h1 align="left" id="macropower-title">:wave: Hello there! I'm Jacob Colvin</h1>
+<h1 align="left" id="macropower-title">:wave: Hello there! I'm Farkhan Maulana</h1>
 <h3 align="left">I am a Versatilist, doing SW/SR/DevOps Engineering things</h3>
 
 <p align="left">
@@ -162,38 +162,10 @@
 
 <h2 align="left">Coding Activity</h2>
 
-> Total logged time since 2020-07-19. Updated every 1 hour. [(Learn how this works)](https://macropower.readthedocs.io/en/latest/#dynamic-ascii-graph)
-
-<!-- prettier-ignore-start -->
-<!-- START_SECTION:ascii_graph -->
-
-```
-   736.3 hr  ┤                                                                                            ╭────── 
-   734.9 hr  ┤                                                                                            │       
-   733.5 hr  ┤                                                                                           ╭╯       
-   732.0 hr  ┤                                                                                           │        
-   730.6 hr  ┤                                                                                 ╭─────────╯        
-   729.1 hr  ┤                                                                                ╭╯                  
-   727.7 hr  ┤                                              ╭─────────────────────────────────╯                   
-   726.3 hr  ┤                                 ╭────────────╯                                                     
-   724.8 hr  ┤                   ╭─────────────╯                                                                  
-   723.4 hr  ┤                  ╭╯                                                                                
-   722.0 hr  ┤        ╭─────────╯                                                                                 
-   720.5 hr  ┤       ╭╯                                                                                           
-   719.1 hr  ┼───────╯                                                                                            
-             ┼─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤ 
-            -7d           -6d           -5d           -4d           -3d           -2d           -1d           now
-```
-
-<!-- END_SECTION:ascii_graph -->
-<!-- prettier-ignore-end -->
-
-<!-- links -->
 
 [84.51°]: https://github.com/8451 "84.51° Github Home"
 [issues page]: https://github.com/MacroPower/MacroPower/issues "MacroPower/issues"
 [linkedin]: https://www.linkedin.com/in/colvinjm "Jacob Colvin LinkedIn"
-
 
 
 <!---
