@@ -1,4 +1,3 @@
-
 <h1 align="left" id="macropower-title">:wave: Hello there! I'm Farkhan Maulana</h1>
 <h3 align="left">I am a Learner, doing some Engineering things</h3>
 
@@ -10,7 +9,6 @@
     <img alt="GitHub followers" src="https://img.shields.io/github/followers/vrxnm?color=green&logo=github">
   </a>
 </p>
-
 <a href="#vrxnm-title">
   <img src="https://github-readme-stats.vercel.app/api?username=vrxnm&show_icons=true&theme=react&border_color=61dafb&hide_border=true" alt="vrxnm" align="right"/>
 </a>
@@ -18,24 +16,34 @@
 - :office: &nbsp;I'm currently learning at **Ahmad Dahlan University**
 - :seedling: &nbsp;I’m currently learning **SQL**
 - :speech_balloon: &nbsp;I like to talk about **Code** and **Algorithm**
+- :speech_balloon: &nbsp;I like to talk about **Design** and **Editing** too
 - :mailbox: &nbsp;Ask me anything on my **[Instagram]**
 - :computer: &nbsp;Connect with me on **[LinkedIn]**
 
 <br>
 
 
-<a href="#vrxnm-title">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vrxnm&hide=c%23,powershell,Mathematica,Ruby,Objective-C,Objective-C%2b%2b,Cuda&title_color=61dafb&text_color=ffffff&icon_color=61dafb&bg_color=20232a&langs_count=8&layout=compact&border_color=61dafb&hide_border=true" alt="vrxnmm" align="left"/>
-</a>
+
 <br>
-<a href="#vrxnm-title">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vrxnm&theme=react&border=61dafb&hide_border=true" alt="vrxnmm" align="right"/>
-</a>
 
 
-<div width="100%" align="center">
-<h2 align="left" id="vrxnm">Favorite Tech</h2>
-</div>
+
+<table>
+  <tr>
+    <td align="left">
+   <a href="#vrxnm-title">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vrxnm&hide=c%23,powershell,Mathematica,Ruby,Objective-C,Objective-C%2b%2b,Cuda&title_color=61dafb&text_color=ffffff&icon_color=61dafb&bg_color=20232a&langs_count=8&layout=compact&border_color=61dafb&hide_border=true" alt="vrxnmm" align="left"/>
+    </a>
+    </td>
+    <td align="right">
+    <a href="#vrxnm-title">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=vrxnm&theme=react&border=61dafb&hide_border=true" alt="vrxnmm" align="right"/>
+    </a>
+    </td>
+  </tr>
+</table>
+
+<h2 id="vrxnm">Favorite Tech</h2>
 > Tools, languages, and other things that I like to work with.
 <table>
   <tr>
