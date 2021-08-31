@@ -43,7 +43,7 @@
   </tr>
 </table>
 
-<h2 id="vrxnm">Favorite Tech</h2>
+<h2 id="vrxnm">Currently Learning</h2>
 > Tools, languages, and other things that I like to work with.
 <table>
   <tr>
@@ -71,13 +71,14 @@
       </a>
       <br>Jsonnet
     </td>
+--->
     <td align="center" width="96">
       <a href="#macropower-tech">
         <img src="./img/typescript-original.svg" width="48" height="48" alt="TypeScript" />
       </a>
       <br>TypeScript
     </td>
---->
+
     <td align="center" width="96">
       <a href="#macropower-tech">
         <img src="./img/javascript-original.svg" width="48" height="48" alt="JavaScript" />
