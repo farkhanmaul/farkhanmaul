@@ -24,11 +24,12 @@
 <br>
 
 <a href="#vrxnm-title">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vrxnm&theme=react&border=61dafb&hide_border=true" alt="vrxnm" align="right" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vrxnm&hide=c%23,powershell,Mathematica,Ruby,Objective-C,Objective-C%2b%2b,Cuda&title_color=61dafb&text_color=ffffff&icon_color=61dafb&bg_color=20232a&langs_count=8&layout=compact&border_color=61dafb&hide_border=true" alt="vrxnm" align="left"/>
 </a>
 <a href="#vrxnm-title">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vrxnm&hide=c%23,powershell,Mathematica,Ruby,Objective-C,Objective-C%2b%2b,Cuda&title_color=61dafb&text_color=ffffff&icon_color=61dafb&bg_color=20232a&langs_count=8&layout=compact&border_color=61dafb&hide_border=true" alt="vrxnm" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vrxnm&theme=react&border=61dafb&hide_border=true" alt="vrxnm" align="right" />
 </a>
+
 <h2 align="left" id="macropower-tech">Favorite Tech</h2>
 
 > Tools, languages, and other things that I like to work with.
