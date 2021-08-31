@@ -29,11 +29,13 @@
 </a>
 <br>
 <a href="#vrxnm-title">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vrxnm&theme=react&border=61dafb&hide_border=true" alt="vrxnmm"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vrxnm&theme=react&border=61dafb&hide_border=true" alt="vrxnmm" align="right"/>
 </a>
 
 
+<div width="100%" align="center">
 <h2 align="left" id="vrxnm">Favorite Tech</h2>
+</div>
 > Tools, languages, and other things that I like to work with.
 <table>
   <tr>
