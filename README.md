@@ -13,7 +13,7 @@
 </a>
 
 - :office: &nbsp;I'm currently learning at **Ahmad Dahlan University**
-- :seedling: &nbsp;I’m currently learning **SQL**
+- :seedling: &nbsp;I’m currently learning **Javascript**
 - :speech_balloon: &nbsp;I like to talk about **Code** and **Algorithm**
 - :speech_balloon: &nbsp;I like to talk about **Design** and **Editing** too
 - :mailbox: &nbsp;Ask me anything on my **[Instagram]**
