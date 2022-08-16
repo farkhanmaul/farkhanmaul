@@ -8,16 +8,25 @@
     <img alt="GitHub followers" src="https://img.shields.io/github/followers/vrxnm?color=green&logo=github">
   </a>
 </p>
+
+
+<table>
+<tr>
+<td align="left">
+- :office: &nbsp;I'm currently learning at **Ahmad Dahlan University**
+<br>- :seedling: &nbsp;I’m currently learning **Javascript**
+<br>- :speech_balloon: &nbsp;I like to talk about **Code** and **Algorithm**
+<br>- :speech_balloon: &nbsp;I like to talk about **Design** and **Editing** too
+<br>- :mailbox: &nbsp;Ask me anything on my **[Instagram]**
+<br>- :computer: &nbsp;Connect with me on **[LinkedIn]**
+</td>
+<td align="right">
 <a href="#vrxnm-title">
   <img src="https://github-readme-stats.vercel.app/api?username=vrxnm&show_icons=true&theme=react&border_color=61dafb&hide_border=true" alt="vrxnm" align="right"/>
 </a>
-
-- :office: &nbsp;I'm currently learning at **Ahmad Dahlan University**
-- :seedling: &nbsp;I’m currently learning **Javascript**
-- :speech_balloon: &nbsp;I like to talk about **Code** and **Algorithm**
-- :speech_balloon: &nbsp;I like to talk about **Design** and **Editing** too
-- :mailbox: &nbsp;Ask me anything on my **[Instagram]**
-- :computer: &nbsp;Connect with me on **[LinkedIn]**
+</td>
+</tr>
+</table>
 
 <table>
   <tr>
