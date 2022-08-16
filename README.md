@@ -13,12 +13,12 @@
 <table>
 <tr>
 <td align="left">
-- :office: &nbsp;I'm currently learning at **Ahmad Dahlan University**
-<br>- :seedling: &nbsp;I’m currently learning **Javascript**
-<br>- :speech_balloon: &nbsp;I like to talk about **Code** and **Algorithm**
-<br>- :speech_balloon: &nbsp;I like to talk about **Design** and **Editing** too
-<br>- :mailbox: &nbsp;Ask me anything on my **[Instagram]**
-<br>- :computer: &nbsp;Connect with me on **[LinkedIn]**
+- :office: &nbsp;I'm currently learning at <b>Ahmad Dahlan University<b>
+<br>- :seedling: &nbsp;I’m currently learning <b>Javascript<b>
+<br>- :speech_balloon: &nbsp;I like to talk about <b>Code<b> and <b>Algorithm<b>
+<br>- :speech_balloon: &nbsp;I like to talk about <b>Design<b> and <b>Editing<b> too
+<br>- :mailbox: &nbsp;Ask me anything on my <b>[Instagram]<b>
+<br>- :computer: &nbsp;Connect with me on <b>[LinkedIn]<b>
 </td>
 <td align="right">
 <a href="#vrxnm-title">
