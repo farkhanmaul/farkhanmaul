@@ -43,7 +43,7 @@
 </table>
 
 
-[linkedin]: https://www.linkedin.com/in/farkhanmaul "Farkhan Maulana LinkedIn"
+[Linkedin]: https://www.linkedin.com/in/farkhanmaul "Farkhan Maulana LinkedIn"
 
 
 
