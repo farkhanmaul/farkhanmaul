@@ -51,5 +51,3 @@ You can click the Preview link to take a look at your changes.
 [![Twitter: Follow @farkhanmaul](https://img.shields.io/twitter/follow/farkhanmaul?style=social)](https://twitter.com/farkhanmaul)
 ---
 
-
-<img align="center" src="https://github.com/farkhanmaul/farkhanmaul/blob/output/github-contribution-grid-snake.svg" alt="Snake">
