@@ -1,13 +1,8 @@
-<h1 align="left" id="macropower-title">:wave: Hello there! I'm Farkhan Maulana</h1>
+<h1 align="left" id="macropower-title">:wave: Hello there!</h1>
 
-<p align="left">
-  <a href="https://github.com/farkhanmaul/farkhanmaul">
-    <img src="https://komarev.com/ghpvc/?username=farkhanmaul" alt="page views" />
-  </a>
-  <a href="https://github.com/farkhanmaul?tab=followers">
-    <img alt="GitHub followers" src="https://img.shields.io/github/followers/farkhanmaul?color=green&logo=github">
-  </a>
-</p>
+![Version: 17.07.2022](https://img.shields.io/badge/version-25.12.2022-informational)&nbsp;
+![Visitors](https://visitor-badge.glitch.me/badge?page_id=farkhanmaul)&nbsp;
+[![GitHub: farkhanmaul](https://img.shields.io/github/followers/farkhanmaul?label=follow&style=social)](https://github.com/farkhanmaul)&nbsp;
 
 
 <table>
@@ -42,12 +37,16 @@
   </tr>
 </table>
 
-
-[Linkedin]: https://www.linkedin.com/in/farkhanmaul "Farkhan Maulana LinkedIn"
-
-
-
 <!---
 farkhanmaul/farkhanmaul is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
+
+## 🤝🏻 Connect with Me!
+[![Email: farkhanmaul25@gmail.com](https://img.shields.io/badge/-farkhanmaul25@gmail.com-D14836?style=flat&logo=Gmail&logoColor=white)](mailto:farkhanmaul25@gmail.com)
+[![LinkedIn: Muhammad Farkhan Maulana](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/farkhanmaul/)](https://www.linkedin.com/in/farkhanmaul/)&nbsp;
+[![Instagram: Follow farkhanmaul](https://img.shields.io/badge/-Instagram-E4405F?style=flat&logo=Instagram&logoColor=white)](https://www.instagram.com/farkhanmaul)&nbsp;
+[![Telegram: farkhanmaul](https://img.shields.io/badge/-Telegram-grey?style=flat&logo=Telegram&logoColor=white&link=https://t.me/farkhanmaul)](https://t.me/farkhanmaul)&nbsp;
+[![Linktree: farkhanmaul](https://img.shields.io/badge/-Linktree-%2300d15b?style=flat&logo=Linktree&logoColor=white&link=https://linktr.ee/farkhanmaul)](https://linktr.ee/farkhanmaul)&nbsp;
+[![Twitter: Follow @farkhanmaul](https://img.shields.io/twitter/follow/farkhanmaul?style=social)](https://twitter.com/farkhanmaul)
+---
