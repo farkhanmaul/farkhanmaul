@@ -50,3 +50,6 @@ You can click the Preview link to take a look at your changes.
 [![Linktree: farkhanmaul](https://img.shields.io/badge/-Linktree-%2300d15b?style=flat&logo=Linktree&logoColor=white&link=https://linktr.ee/farkhanmaul)](https://linktr.ee/farkhanmaul)&nbsp;
 [![Twitter: Follow @farkhanmaul](https://img.shields.io/twitter/follow/farkhanmaul?style=social)](https://twitter.com/farkhanmaul)
 ---
+
+
+<img align="center" src="https://github.com/farkhanmaul/farkhanmaul/blob/output/github-contribution-grid-snake.svg" alt="Snake">
