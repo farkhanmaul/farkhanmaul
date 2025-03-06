@@ -8,11 +8,12 @@
 <table>
 <tr>
 <td align="left">
- :office: &nbsp;I'm currently learning at <b>Ahmad Dahlan University<b>
-<br> :seedling: &nbsp;I’m currently learning <b>Javascript<b>
-<br> :speech_balloon: &nbsp;I like to talk about <b>Code<b> and <b>Algorithm<b>
-<br> :mailbox: &nbsp;Ask me anything on my <b>Twitter<b>
-<br> :computer: &nbsp;Connect with me on <b>LinkedIn<b>
+    <span style="font-weight: bold;">Professional Profile:</span><br>
+    <span style="font-weight: bold;">Recent Graduate in Informatics</span><br>
+    <span>Currently advancing my skills in <b>JavaScript</b>, focusing on modern web development practices.</span><br>
+    <span>Passionate about discussing <b>software development</b> and <b>algorithm design</b>, with a strong interest in problem-solving.</span><br>
+    <span>Feel free to reach out to me on <b><a href="https://twitter.com/yourprofile" target="_blank">Twitter</a></b> for inquiries or collaboration opportunities.</span><br>
+    <span>Connect with me professionally on <b><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></b>.</span>
 </td>
 <td align="right">
 <a href="#farkhanmaul-title">
