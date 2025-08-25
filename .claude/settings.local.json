@@ -18,12 +18,16 @@
       "Bash(npm run build:*)",
       "Bash(npm cache clean:*)",
       "WebFetch(domain:github.com)",
-      "Bash(npx next:*)"
+      "Bash(npx next:*)",
+      "Bash(cmd /c \"rmdir /s /q node_modules\")",
+      "Bash(cmd /c:*)",
+      "Bash(cmd /c \"rmdir /s /q .next\")"
     ],
     "deny": [],
     "ask": [],
     "additionalDirectories": [
-      "D:\\"
+      "D:\\",
+      "D:\\d D:\\Personal Project"
     ]
   }
 }
