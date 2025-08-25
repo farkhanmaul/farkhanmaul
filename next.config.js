@@ -4,8 +4,8 @@ const nextConfig = {
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   distDir: 'out',
-  basePath: '',
-  assetPrefix: '',
+  basePath: '/farkhanmaul',
+  assetPrefix: '/farkhanmaul/',
   images: {
     unoptimized: true
   },

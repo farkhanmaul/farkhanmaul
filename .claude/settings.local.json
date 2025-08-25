@@ -27,7 +27,8 @@
       "Bash(n)",
       "Bash(npm run dev:*)",
       "Bash(yarn install)",
-      "Bash(gh repo create:*)"
+      "Bash(gh repo create:*)",
+      "Bash(git branch:*)"
     ],
     "deny": [],
     "ask": [],
