@@ -16,8 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="cursor" id="cursor"></div>
+      <body className={`${inter.className} bg-black text-white`}>
         {children}
       </body>
     </html>

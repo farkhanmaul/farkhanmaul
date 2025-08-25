@@ -28,7 +28,8 @@
       "Bash(npm run dev:*)",
       "Bash(yarn install)",
       "Bash(gh repo create:*)",
-      "Bash(git branch:*)"
+      "Bash(git branch:*)",
+      "WebFetch(domain:advierifaldy.vercel.app)"
     ],
     "deny": [],
     "ask": [],
