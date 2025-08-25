@@ -16,7 +16,8 @@
       "Bash(git push:*)",
       "Bash(gh workflow:*)",
       "Bash(npm run build:*)",
-      "Bash(npm cache clean:*)"
+      "Bash(npm cache clean:*)",
+      "WebFetch(domain:github.com)"
     ],
     "deny": [],
     "ask": [],
