@@ -4,18 +4,32 @@
 
 @import 'aos/dist/aos.css';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #242424;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #363636;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #212b38;
+  border-radius: 8px;
 }
 
 body {
-  background: #000000;
-  color: #ffffff;
-  overflow-x: hidden;
+  @apply bg-black text-white overflow-x-hidden select-none subpixel-antialiased;
+}
+
+* {
+  @apply font-mono leading-7 tracking-wide;
 }

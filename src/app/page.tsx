@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { BackgroundGradientAnimation } from '../components/BackgroundGradientAnimation'
+import MainLayout from '../components/MainLayout'
 
 export default function Home() {
   useEffect(() => {
@@ -16,8 +16,8 @@ export default function Home() {
   }, [])
 
   return (
-    <BackgroundGradientAnimation>
-    <div className="flex flex-col min-h-screen overflow-y-hidden px-8 relative z-10">
+    <MainLayout>
+    <div className="flex flex-col min-h-screen px-8 relative z-10">
       <div
         className="z-20 mt-[20vh] text-center"
         data-aos="fade"
@@ -272,6 +272,6 @@ export default function Home() {
         </p>
       </div>
     </div>
-    </BackgroundGradientAnimation>
+    </MainLayout>
   )
 }
