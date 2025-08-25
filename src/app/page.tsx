@@ -43,7 +43,7 @@ export default function Home() {
       >
         <div className="w-24 md:w-32">
           <img
-            src="/code1.svg"
+            src="/farkhanmaul/code1.svg"
             alt=""
             className="text-white backdrop-blur-sm"
           />
@@ -93,7 +93,7 @@ export default function Home() {
       >
         <div className="w-24 md:w-32">
           <img
-            src="/planet2.svg"
+            src="/farkhanmaul/planet2.svg"
             alt=""
             className="text-white backdrop-blur-sm"
           />
@@ -157,7 +157,7 @@ export default function Home() {
       >
         <div className="w-24 md:w-32">
           <img
-            src="/telescope.svg"
+            src="/farkhanmaul/telescope.svg"
             alt=""
             className="text-white backdrop-blur-sm"
           />
@@ -206,7 +206,7 @@ export default function Home() {
         data-aos-duration="1000"
       >
         <div className="w-24 md:w-32">
-          <img src="/chat.svg" alt="" className="text-white backdrop-blur-sm" />
+          <img src="/farkhanmaul/chat.svg" alt="" className="text-white backdrop-blur-sm" />
         </div>
         <p className="text-4xl md:text-7xl font-bold mt-8">Contact</p>
         <p className="text-xl md:text-2xl mb-8 mt-4 text-slate-500">
