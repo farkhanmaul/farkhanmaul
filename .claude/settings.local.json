@@ -21,7 +21,13 @@
       "Bash(npx next:*)",
       "Bash(cmd /c \"rmdir /s /q node_modules\")",
       "Bash(cmd /c:*)",
-      "Bash(cmd /c \"rmdir /s /q .next\")"
+      "Bash(cmd /c \"rmdir /s /q .next\")",
+      "Bash(del package-lock.json)",
+      "Read(/D:\\Personal Project/**)",
+      "Bash(n)",
+      "Bash(npm run dev:*)",
+      "Bash(yarn install)",
+      "Bash(gh repo create:*)"
     ],
     "deny": [],
     "ask": [],

@@ -5,6 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
+    "build-export": "next build && next export",
+    "static-build": "node static-build.js",
+    "deploy-dev": "npm run dev",
     "start": "next start",
     "lint": "next lint"
   },
