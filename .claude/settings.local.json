@@ -17,7 +17,8 @@
       "Bash(gh workflow:*)",
       "Bash(npm run build:*)",
       "Bash(npm cache clean:*)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(npx next:*)"
     ],
     "deny": [],
     "ask": [],
