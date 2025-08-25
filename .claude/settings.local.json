@@ -11,7 +11,12 @@
       "Bash(npm install:*)",
       "Bash(powershell:*)",
       "Bash(git add:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh workflow:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm cache clean:*)"
     ],
     "deny": [],
     "ask": [],
