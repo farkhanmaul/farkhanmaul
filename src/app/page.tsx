@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -70,11 +70,11 @@ export default function Home() {
           start: 'top 70%'
         }
       }
-    )
+    );
     
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-    }
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, [])
 
   return (
