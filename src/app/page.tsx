@@ -56,6 +56,22 @@ export default function Home() {
       )
     })
     
+    // Skills badges stagger animation
+    gsap.fromTo('.skill-badge', 
+      { opacity: 0, scale: 0.8 },
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+          trigger: '.skills-container',
+          start: 'top 70%'
+        }
+      }
+    )
+    
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill())
     }
@@ -98,31 +114,23 @@ export default function Home() {
             My technical expertise
           </p>
         </h1>
-      <div
-        className="flex flex-wrap items-center justify- gap-4 mt-16"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-        <img src="https://svgl-badge.vercel.app/api/Language/HTML5?theme=dark" />
-        <img src="https://svgl-badge.vercel.app/api/Language/JavaScript?theme=dark" />
-        <img src="https://svgl-badge.vercel.app/api/Language/Node.js?theme=dark" />
-        <img src="https://svgl-badge.vercel.app/api/Language/Java?theme=dark" />
-        <img src="https://svgl-badge.vercel.app/api/Language/PHP?theme=dark" />
-        <img src="https://svgl-badge.vercel.app/api/Framework/Spring%20Boot?theme=dark" />
-        <img src="https://svgl-badge.vercel.app/api/Framework/Express?theme=dark" />
-        <img src="https://svgl-badge.vercel.app/api/Library/React?theme=dark" />
-        <img src="https://svgl-badge.vercel.app/api/Database/MySQL?theme=dark" />
-        <img src="https://svgl-badge.vercel.app/api/Database/PostgreSQL?theme=dark" />
-        <img src="https://svgl-badge.vercel.app/api/Database/Oracle?theme=dark" />
-        <img src="https://svgl-badge.vercel.app/api/Software/Git?theme=dark" />
-        <img src="https://svgl-badge.vercel.app/api/Hosting/Google%20Cloud?theme=dark" />
-        <img src="https://svgl-badge.vercel.app/api/Hosting/AWS?theme=dark" />
-      </div>
-      <div
-        className=" mt-8 flex items-center"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
+        <div className="skills-container flex flex-wrap items-center gap-4 mt-16">
+          <img className="skill-badge opacity-0" src="https://svgl-badge.vercel.app/api/Language/HTML5?theme=dark" />
+          <img className="skill-badge opacity-0" src="https://svgl-badge.vercel.app/api/Language/JavaScript?theme=dark" />
+          <img className="skill-badge opacity-0" src="https://svgl-badge.vercel.app/api/Language/Node.js?theme=dark" />
+          <img className="skill-badge opacity-0" src="https://svgl-badge.vercel.app/api/Language/Java?theme=dark" />
+          <img className="skill-badge opacity-0" src="https://svgl-badge.vercel.app/api/Language/PHP?theme=dark" />
+          <img className="skill-badge opacity-0" src="https://svgl-badge.vercel.app/api/Framework/Spring%20Boot?theme=dark" />
+          <img className="skill-badge opacity-0" src="https://svgl-badge.vercel.app/api/Framework/Express?theme=dark" />
+          <img className="skill-badge opacity-0" src="https://svgl-badge.vercel.app/api/Library/React?theme=dark" />
+          <img className="skill-badge opacity-0" src="https://svgl-badge.vercel.app/api/Database/MySQL?theme=dark" />
+          <img className="skill-badge opacity-0" src="https://svgl-badge.vercel.app/api/Database/PostgreSQL?theme=dark" />
+          <img className="skill-badge opacity-0" src="https://svgl-badge.vercel.app/api/Database/Oracle?theme=dark" />
+          <img className="skill-badge opacity-0" src="https://svgl-badge.vercel.app/api/Software/Git?theme=dark" />
+          <img className="skill-badge opacity-0" src="https://svgl-badge.vercel.app/api/Hosting/Google%20Cloud?theme=dark" />
+          <img className="skill-badge opacity-0" src="https://svgl-badge.vercel.app/api/Hosting/AWS?theme=dark" />
+        </div>
+        <div className="mt-8 flex items-center">
         <img
           className="hidden lg:block border border-stone-800 rounded-lg"
           src="https://github-readme-stats.vercel.app/api/top-langs?username=farkhanmaul&locale=en&layout=compact&theme=dark&hide_border=true&bg_color=171717&card_width=800"
