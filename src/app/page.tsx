@@ -64,43 +64,40 @@ export default function Home() {
   return (
     <MainLayout>
     <div className="flex flex-col min-h-screen px-8 relative z-10">
-      <div
-        className="z-20 mt-[20vh] text-center"
-        data-aos="fade"
-        data-aos-duration="1000"
-        data-aos-delay="1000"
-      >
-        <h1 className="text-slate-500 text-2xl font-mono">
+      <div className="z-20 mt-[20vh] text-center">
+        <h1 className="hero-welcome text-slate-500 text-2xl font-mono opacity-0">
           Welcome to My Portfolio!
         </h1>
-        <p className="text-4xl md:text-7xl font-bold mt-8">
+        <p className="hero-title text-4xl md:text-7xl font-bold mt-8 opacity-0">
           Software Developer
         </p>
-        <p className="text-4xl md:text-7xl mb-8 mt-4 text-slate-500">
+        <p className="hero-subtitle text-4xl md:text-7xl mb-8 mt-4 text-slate-500 opacity-0">
           From Jakarta, Indonesia
         </p>
-        <div className="text-4xl flex items-center justify-center mt-32">
-          <FontAwesomeIcon className="animate-bounce w-4" icon={faCaretDown} />
+        <div className="hero-arrow text-4xl flex items-center justify-center mt-32 opacity-0">
+          <div 
+            ref={heroButtonRef as any}
+            className="cursor-pointer hover:text-blue-400 transition-colors duration-300"
+          >
+            <FontAwesomeIcon className="animate-bounce w-4" icon={faCaretDown} />
+          </div>
         </div>
       </div>
 
-      <h1
-        className="opacity-90 mt-[40vh] font-mono flex flex-col"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-        <div className="w-24 md:w-32">
-          <img
-            src="/farkhanmaul/code1.svg"
-            alt=""
-            className="text-white backdrop-blur-sm"
-          />
-        </div>
-        <p className="text-4xl md:text-7xl font-bold mt-8">Skills</p>
-        <p className="text-xl md:text-2xl mb-8 mt-4 text-slate-500">
-          My technical expertise
-        </p>
-      </h1>
+      <div className="animate-section opacity-0 mt-[40vh]">
+        <h1 className="opacity-90 font-mono flex flex-col">
+          <div className="w-24 md:w-32">
+            <img
+              src="/farkhanmaul/code1.svg"
+              alt=""
+              className="text-white backdrop-blur-sm"
+            />
+          </div>
+          <p className="text-4xl md:text-7xl font-bold mt-8">Skills</p>
+          <p className="text-xl md:text-2xl mb-8 mt-4 text-slate-500">
+            My technical expertise
+          </p>
+        </h1>
       <div
         className="flex flex-wrap items-center justify- gap-4 mt-16"
         data-aos="fade-up"
