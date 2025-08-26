@@ -79,7 +79,7 @@ export default function Home() {
 
   return (
     <MainLayout>
-    <div className="flex flex-col min-h-screen px-8 relative z-10">
+      <div className="flex flex-col min-h-screen px-8 relative z-10">
       <div className="z-20 mt-[20vh] text-center">
         <h1 className="hero-welcome text-slate-500 text-2xl font-mono opacity-0">
           Welcome to My Portfolio!
@@ -322,7 +322,7 @@ export default function Home() {
           Copyright © 2025 by Farkhan Maul
         </p>
       </div>
-    </div>
+      </div>
     </MainLayout>
   )
 }
