@@ -15,6 +15,11 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  webpack: (config, { isServer }) => {
+    config.resolve.symlinks = false;
+    config.cache = false;
+    return config;
+  },
 }
 
 module.exports = nextConfig
