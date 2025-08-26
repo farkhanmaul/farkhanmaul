@@ -16,7 +16,7 @@ export default function Home() {
     gsap.registerPlugin(ScrollTrigger)
     
     // Hero animations
-    const tl = gsap.timeline()
+    const tl = gsap.timeline();
     tl.fromTo('.hero-welcome', 
       { opacity: 0, y: 30 },
       { opacity: 1, y: 0, duration: 1, delay: 0.5, ease: "power3.out" }
@@ -35,7 +35,7 @@ export default function Home() {
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" },
       '-=0.3'
-    )
+    );
     
     // Section animations
     gsap.utils.toArray('.animate-section').forEach((section: any) => {
@@ -53,8 +53,8 @@ export default function Home() {
             toggleActions: 'play none none reverse'
           }
         }
-      )
-    })
+      );
+    });
     
     // Skills badges stagger animation
     gsap.fromTo('.skill-badge', 
