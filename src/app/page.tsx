@@ -3,16 +3,62 @@
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React, { useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import MainLayout from '../components/MainLayout'
+import { useMagnetic } from '../hooks/useMagnetic'
 
 export default function Home() {
+  // Magnetic effect refs
+  const heroButtonRef = useMagnetic(0.2)
+  
   useEffect(() => {
-    AOS.init({
-      once: true,
+    gsap.registerPlugin(ScrollTrigger)
+    
+    // Hero animations
+    const tl = gsap.timeline()
+    tl.fromTo('.hero-welcome', 
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 1, delay: 0.5, ease: "power3.out" }
+    )
+    .fromTo('.hero-title', 
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1.2, ease: "power3.out" },
+      '-=0.7'
+    )
+    .fromTo('.hero-subtitle', 
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
+      '-=0.8'
+    )
+    .fromTo('.hero-arrow', 
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" },
+      '-=0.3'
+    )
+    
+    // Section animations
+    gsap.utils.toArray('.animate-section').forEach((section: any) => {
+      gsap.fromTo(section, 
+        { opacity: 0, y: 60 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse'
+          }
+        }
+      )
     })
-    AOS.refresh()
+    
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
+    }
   }, [])
 
   return (

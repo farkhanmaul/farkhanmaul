@@ -2,14 +2,16 @@
 import React, { useEffect, useRef } from "react";
 import { Vortex } from "./VortexBackground";
 import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
-import { ReactLenis } from "@studio-freight/react-lenis";
+import { useLenis } from "../hooks/useLenis";
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   const backgroundRef = useRef(null);
+  
+  // Initialize Lenis smooth scroll
+  useLenis();
 
   return (
-    <ReactLenis root>
-      <div className="overflow-x-hidden relative bg-black">
+    <div className="overflow-x-hidden relative bg-black">
         <div
           className="fixed w-full h-screen opacity-80 -z-50"
           ref={backgroundRef}
@@ -39,6 +41,6 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
           </div>
         </div>
       </div>
-    </ReactLenis>
+    </div>
   );
 }

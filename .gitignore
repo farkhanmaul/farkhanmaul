@@ -45,3 +45,6 @@ Thumbs.db
 
 # Reference repositories
 /referensi
+
+# Claude analysis folder
+/.claude
