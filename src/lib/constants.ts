@@ -71,20 +71,31 @@ export const PROJECTS = [
   {
     title: 'Quran Digital Project',
     description: 'Digital Quran application providing easy access to Quranic verses with search functionality and clean reading interface.',
-    tech: ['JavaScript', 'API Integration', 'Local Storage', 'Progressive Web App'],
+    tech: ['TypeScript', 'API Integration', 'Local Storage', 'Progressive Web App'],
     year: 2023,
     gradient: 'from-green-600 to-emerald-500',
     link: 'https://github.com/farkhanmaul/quran-project'
+  },
+  {
+    title: 'Sort Algorithm Visualizer',
+    description: 'Interactive visualization tool for sorting algorithms including bubble sort, merge sort, quick sort, and more with real-time animation and performance comparison.',
+    tech: ['JavaScript', 'HTML Canvas', 'CSS Animations', 'Algorithm Visualization'],
+    year: 2024,
+    gradient: 'from-indigo-500 to-purple-600',
+    link: 'https://github.com/farkhanmaul/sort-algo-visualize'
   }
 ] as const;
 
-// Tech stack badges
+// Tech stack badges with icons
 export const TECH_BADGES = [
-  'React',
-  'Node.js', 
-  'JavaScript',
-  'Java',
-  'Spring Boot'
+  { name: 'React', icon: '⚛️', color: 'text-blue-400' },
+  { name: 'Node.js', icon: '🟢', color: 'text-green-400' },
+  { name: 'JavaScript', icon: '🟨', color: 'text-yellow-400' },
+  { name: 'TypeScript', icon: '🔷', color: 'text-blue-500' },
+  { name: 'Next.js', icon: '⬛', color: 'text-white' },
+  { name: 'Express.js', icon: '🚀', color: 'text-gray-400' },
+  { name: 'MySQL', icon: '🐬', color: 'text-blue-600' },
+  { name: 'MongoDB', icon: '🍃', color: 'text-green-500' }
 ] as const;
 
 // Animation configuration

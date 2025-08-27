@@ -79,15 +79,15 @@ export default function About() {
   return (
     <Section id="about" className="px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center">
       <div className="flex flex-col items-center gap-4 relative" id="about-title" ref={titleRef}>
-        <h2 className="text-[20px] md:text-3xl xl:text-4xl font-medium tracking-tighter opacity-0">
+        <h2 className="text-[18px] md:text-2xl xl:text-3xl font-medium tracking-tighter opacity-0">
           I&apos;M A
         </h2>
         
-        <h2 className="text-[35px] sm:text-6xl md:text-7xl xl:text-[6rem] font-semibold tracking-tighter opacity-0" role="heading" aria-level="1">
+        <h2 className="text-[30px] sm:text-5xl md:text-6xl xl:text-[5rem] font-semibold tracking-tighter opacity-0" role="heading" aria-level="1">
           SOFTWARE DEVELOPER
         </h2>
         
-        <h2 className="text-[20px] md:text-4xl xl:text-5xl font-medium tracking-tighter flex items-center opacity-0" role="heading" aria-level="2">
+        <h2 className="text-[18px] md:text-3xl xl:text-4xl font-medium tracking-tighter flex items-center opacity-0" role="heading" aria-level="2">
           <Emoji code="1f1ee-1f1e9" className="mr-5" aria-label="Indonesian flag" />
           FROM INDONESIA
         </h2>
@@ -104,9 +104,9 @@ export default function About() {
 
       <div className="mt-20 sm:mt-24 text-center">
         <p className="text-lg opacity-60 mb-8">Specialized in modern web technologies</p>
-        <div className="flex flex-wrap gap-4 justify-center max-w-md">
+        <div className="flex flex-wrap gap-4 justify-center max-w-2xl">
           {TECH_BADGES.map((tech) => (
-            <TechBadge key={tech} name={tech} />
+            <TechBadge key={tech.name} name={tech.name} icon={tech.icon} color={tech.color} />
           ))}
         </div>
       </div>
