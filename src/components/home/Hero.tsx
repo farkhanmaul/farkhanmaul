@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import PageMarker from '@/components/PageMarker';
 import Section from '@/components/sections/Section';
-import { Emoji } from '@/components/Twemoji';
 import { useHeroAnimation } from '@/hooks/useAnimation';
 import { ArrowDown } from '@phosphor-icons/react';
+import { FiHeart } from 'react-icons/fi';
 
 /**
  * Komponen Hero - Section pembuka portfolio
@@ -18,10 +18,10 @@ export default function Hero() {
 
       <section className="flex-grow flex flex-col relative">
         <section className="flex flex-col sm:pl-[8vw] lg:pl-[12vw] pt-[10vh] sm:pt-[15vh] gap-6">
-          <p className="text-lg sm:text-xl font-medium flex gap-2" id="hero-greeting" role="text" aria-label="Greeting">
+          <p className="text-lg sm:text-xl font-medium flex items-center gap-2" id="hero-greeting" role="text" aria-label="Greeting">
             <span style={{ opacity: 0 }}>Hey</span>
             <span style={{ opacity: 0 }}>there!</span>
-            <Emoji code="1f44b" style={{ opacity: 0 }} />
+            <FiHeart className="text-red-500" style={{ opacity: 0 }} />
           </p>
 
           <div className="flex flex-col gap-2">

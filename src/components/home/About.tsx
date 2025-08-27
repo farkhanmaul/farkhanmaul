@@ -1,6 +1,5 @@
 import PageMarker from '@/components/PageMarker';
 import Section from '@/components/sections/Section';
-import { Emoji } from '@/components/Twemoji';
 import TechBadge from '@/components/ui/TechBadge';
 import { useScrollAnimation } from '@/hooks/useAnimation';
 import { TECH_BADGES } from '@/lib/constants';
@@ -8,6 +7,7 @@ import mapRange from '@/lib/mapRange';
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { FiMapPin } from 'react-icons/fi';
 
 /**
  * Komponen About - Section tentang developer
@@ -35,13 +35,18 @@ export default function About() {
         
         gsap.registerPlugin(ScrollTrigger);
 
+        // Base rotation yang selalu berputar
+        let baseRotation = 0;
+        
         const instance = ScrollTrigger.create({
           trigger: '#about',
           start: 'top bottom',
           end: 'bottom top',
           scrub: true,
           onUpdate: (self) => {
-            phi.current = mapRange(0, 1, self.progress, 1.2, 3.8);
+            // Kombinasi scroll progress dengan rotasi konstan
+            const scrollRotation = mapRange(0, 1, self.progress, 0, 2);
+            phi.current = baseRotation + scrollRotation;
           },
         });
 
@@ -64,6 +69,8 @@ export default function About() {
             { location: [106.845599, -6.208763], size: 0.05 },
           ],
           onRender: (state) => {
+            // Globe terus berputar dengan base rotation
+            baseRotation += 0.005; // Kecepatan rotasi konstan
             state.phi = phi.current;
           },
         });
@@ -92,7 +99,7 @@ export default function About() {
         </h2>
         
         <h2 className="text-[18px] md:text-3xl xl:text-4xl font-medium tracking-tighter flex items-center opacity-0" role="heading" aria-level="2">
-          <Emoji code="1f1ee-1f1e9" className="mr-5" aria-label="Indonesian flag" />
+          <FiMapPin className="mr-3 text-red-500" />
           FROM INDONESIA
         </h2>
 
@@ -110,7 +117,7 @@ export default function About() {
         <p className="text-lg opacity-60 mb-8">Specialized in modern web technologies</p>
         <div className="flex flex-wrap gap-4 justify-center max-w-2xl">
           {TECH_BADGES.map((tech) => (
-            <TechBadge key={tech.name} name={tech.name} icon={tech.icon} color={tech.color} />
+            <TechBadge key={tech.name} name={tech.name} iconType={tech.iconType} color={tech.color} />
           ))}
         </div>
       </div>

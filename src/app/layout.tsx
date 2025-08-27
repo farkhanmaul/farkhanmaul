@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import CursorProvider from '../components/CursorProvider'
+import Navigation from '../components/Navigation'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -103,6 +104,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className} suppressHydrationWarning>
         <CursorProvider>
+          <Navigation />
           {children}
         </CursorProvider>
       </body>

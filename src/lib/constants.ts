@@ -93,14 +93,14 @@ export const PROJECTS = [
 
 // Data tech stack dengan icon dan warna untuk About section
 export const TECH_BADGES = [
-  { name: 'React', icon: '⚛️', color: 'text-blue-400' },
-  { name: 'Node.js', icon: '🟢', color: 'text-green-400' },
-  { name: 'JavaScript', icon: '🟨', color: 'text-yellow-400' },
-  { name: 'TypeScript', icon: '🔷', color: 'text-blue-500' },
-  { name: 'Next.js', icon: '⬛', color: 'text-white' },
-  { name: 'Express.js', icon: '🚀', color: 'text-gray-400' },
-  { name: 'MySQL', icon: '🐬', color: 'text-blue-600' },
-  { name: 'MongoDB', icon: '🍃', color: 'text-green-500' }
+  { name: 'React', iconType: 'react', color: 'text-blue-400' },
+  { name: 'Node.js', iconType: 'nodejs', color: 'text-green-400' },
+  { name: 'JavaScript', iconType: 'javascript', color: 'text-yellow-400' },
+  { name: 'TypeScript', iconType: 'typescript', color: 'text-blue-500' },
+  { name: 'Next.js', iconType: 'nextjs', color: 'text-white' },
+  { name: 'Express.js', iconType: 'express', color: 'text-gray-400' },
+  { name: 'MySQL', iconType: 'mysql', color: 'text-blue-600' },
+  { name: 'MongoDB', iconType: 'mongodb', color: 'text-green-500' }
 ] as const;
 
 // Konfigurasi animasi GSAP untuk seluruh portfolio
