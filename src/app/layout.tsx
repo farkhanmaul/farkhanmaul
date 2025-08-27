@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Farkhan Maul - Portfolio',
-  description: 'Portfolio website of Farkhan Maul - Frontend Developer & UI/UX Designer',
+  title: 'Farkhan Maul - Software Developer',
+  description: 'Portfolio of Farkhan Maul, a passionate software developer from Jakarta, Indonesia.',
 }
 
 export default function RootLayout({
@@ -16,9 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-black text-white`}>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
