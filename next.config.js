@@ -5,6 +5,7 @@ const nextConfig = {
   trailingSlash: true,
   basePath: '/farkhanmaul',
   assetPrefix: '/farkhanmaul/',
+  distDir: 'out',
   images: {
     unoptimized: true,
   },
@@ -13,9 +14,6 @@ const nextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
   },
 }
 
