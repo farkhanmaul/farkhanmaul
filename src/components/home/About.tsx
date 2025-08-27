@@ -16,7 +16,7 @@ export default function About() {
   });
 
   return (
-    <Section id="about" className="p-12 items-center pt-36">
+    <Section id="about" className="px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center">
       <div className="flex flex-col items-center gap-4" id="about-title" ref={titleRef}>
         <h2 className="text-[24px] md:text-4xl xl:text-5xl font-medium tracking-tighter opacity-0" id="about-title">
           I&apos;M A
@@ -32,7 +32,7 @@ export default function About() {
         </h2>
       </div>
 
-      <div className="mt-16 text-center">
+      <div className="mt-20 sm:mt-24 text-center">
         <p className="text-lg opacity-60 mb-8">Specialized in modern web technologies</p>
         <div className="flex flex-wrap gap-4 justify-center max-w-md">
           {TECH_BADGES.map((tech) => (

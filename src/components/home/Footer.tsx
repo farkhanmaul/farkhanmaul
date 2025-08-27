@@ -11,24 +11,24 @@ export default function Footer() {
   });
 
   return (
-    <Section id="contact" className="p-12 justify-center items-center" dataId="contact">
+    <Section id="contact" className="px-6 sm:px-12 lg:px-20 py-16 sm:py-24 justify-center items-center" dataId="contact">
       <div className="text-center max-w-4xl">
         <h2 
           id="contact-title"
-          className="text-4xl md:text-6xl xl:text-7xl font-bold tracking-tighter mb-16 opacity-0"
+          className="text-4xl md:text-6xl xl:text-7xl font-bold tracking-tighter mb-20 sm:mb-24 opacity-0"
           role="heading"
           aria-level="2"
         >
           LET&apos;S <span className="text-yellow-300">CONNECT</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16" role="list" aria-label="Contact methods">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 sm:mb-24" role="list" aria-label="Contact methods">
           {CONTACTS.map((contact, index) => (
             <ContactCard key={contact.name} {...contact} index={index} />
           ))}
         </div>
 
-        <footer className="border-t border-white border-opacity-20 pt-8">
+        <footer className="border-t border-white border-opacity-20 pt-12">
           <p className="text-gray-400 text-sm">
             © 2025 Farkhan Maul. Crafted with passion and clean code.
           </p>

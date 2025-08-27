@@ -13,13 +13,13 @@ export default function Hero() {
   useHeroAnimation();
 
   return (
-    <Section id="hero" className="p-12 gap-4">
+    <Section id="hero" className="px-6 sm:px-12 lg:px-20 py-12 gap-4">
       <Link href="/">
         <Logo />
       </Link>
 
       <section className="flex-grow flex flex-col relative">
-        <section className="flex flex-col sm:pl-[12vw] pt-[15vh] gap-4">
+        <section className="flex flex-col sm:pl-[8vw] lg:pl-[12vw] pt-[10vh] sm:pt-[15vh] gap-6">
           <p className="text-xl sm:text-2xl font-medium flex gap-2" id="hero-greeting" role="text" aria-label="Greeting">
             <span style={{ opacity: 0 }}>Hey</span>
             <span style={{ opacity: 0 }}>there!</span>

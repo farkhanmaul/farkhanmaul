@@ -12,10 +12,10 @@ export default function Projects() {
   });
 
   return (
-    <Section id="projects" className="p-12 items-center pt-20">
+    <Section id="projects" className="px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center">
       <h2 
         id="projects-title"
-        className="text-4xl md:text-6xl xl:text-7xl font-bold tracking-tighter mb-16 text-center opacity-0"
+        className="text-4xl md:text-6xl xl:text-7xl font-bold tracking-tighter mb-20 sm:mb-24 text-center opacity-0"
         role="heading"
         aria-level="2"
       >

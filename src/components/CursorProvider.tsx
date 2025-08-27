@@ -19,18 +19,28 @@ export default function CursorProvider({ children }: CursorProviderProps) {
 
     const initCursor = () => {
       try {
+        MouseFollower.registerGSAP(require('gsap'));
+        
         cursor = new MouseFollower({
           container: document.body,
           speed: 0.3,
+          ease: 'power2.out',
+          skewing: 2,
+          skewingText: 1,
         });
 
         useCursor.setState({ instance: cursor });
       } catch (error) {
         console.warn('Mouse follower initialization failed:', error);
+        // Fallback: show default cursor
+        document.body.style.cursor = 'auto';
+        document.querySelectorAll('*').forEach(el => {
+          (el as HTMLElement).style.cursor = 'auto';
+        });
       }
     };
 
-    const timer = setTimeout(initCursor, 100);
+    const timer = setTimeout(initCursor, 500);
 
     return () => {
       clearTimeout(timer);
