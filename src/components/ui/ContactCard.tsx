@@ -19,7 +19,15 @@ export default function ContactCard({ name, value, link, color, index }: Contact
       target={link.startsWith('http') ? '_blank' : '_self'}
       rel={link.startsWith('http') ? 'noopener noreferrer' : ''}
       className={`contact-item group p-6 rounded-2xl bg-${color}-400 bg-opacity-10 backdrop-blur-sm border border-white border-opacity-10 hover:border-opacity-30 transition-all duration-300 hover:bg-opacity-20`}
-      onMouseEnter={() => cardRef.current && magnetic(cardRef.current, 0.2)}
+      onMouseEnter={() => {
+        if (cardRef.current) {
+          try {
+            magnetic(cardRef.current, 0.2);
+          } catch (error) {
+            console.warn('Magnetic effect failed:', error);
+          }
+        }
+      }}
       role="link"
       aria-label={`Contact via ${name}: ${value}`}
     >

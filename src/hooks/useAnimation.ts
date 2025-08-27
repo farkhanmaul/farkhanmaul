@@ -42,12 +42,29 @@ export const useScrollAnimation = (config: AnimationConfig) => {
 // Single Responsibility: Handle hero animations
 export const useHeroAnimation = () => {
   useEffect(() => {
-    const tl = gsap.timeline();
-    
-    tl.to('.hero-greeting *', { opacity: 1, stagger: 0.2, delay: 0.5 })
-      .to('.hero-name *', { opacity: 1, stagger: 0.15 }, '+=0.2')
-      .to('.hero-greeting2 *', { opacity: 1, stagger: 0.15 }, '+=0.2');
+    const checkAndAnimate = () => {
+      const greetingEls = document.querySelectorAll('#hero-greeting *');
+      const nameEls = document.querySelectorAll('#hero-title *');
+      const greeting2Els = document.querySelectorAll('#hero-greeting2 *');
 
-    return () => tl.kill();
+      if (greetingEls.length && nameEls.length && greeting2Els.length) {
+        const tl = gsap.timeline();
+        
+        tl.to(greetingEls, { opacity: 1, stagger: 0.2, delay: 0.5 })
+          .to(nameEls, { opacity: 1, stagger: 0.15 }, '+=0.2')
+          .to(greeting2Els, { opacity: 1, stagger: 0.15 }, '+=0.2');
+
+        return tl;
+      }
+      return null;
+    };
+
+    const timer = setTimeout(checkAndAnimate, 100);
+    
+    return () => {
+      clearTimeout(timer);
+      const timeline = checkAndAnimate();
+      if (timeline) timeline.kill();
+    };
   }, []);
 };

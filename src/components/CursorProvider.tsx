@@ -13,17 +13,34 @@ export default function CursorProvider({ children }: CursorProviderProps) {
   const { instance } = useCursor();
 
   useEffect(() => {
-    if (isMobile) return;
+    if (isMobile || typeof window === 'undefined') return;
 
-    const cursor = new MouseFollower({
-      container: document.body,
-      speed: 0.3,
-    });
+    let cursor: MouseFollower | null = null;
 
-    useCursor.setState({ instance: cursor });
+    const initCursor = () => {
+      try {
+        cursor = new MouseFollower({
+          container: document.body,
+          speed: 0.3,
+        });
+
+        useCursor.setState({ instance: cursor });
+      } catch (error) {
+        console.warn('Mouse follower initialization failed:', error);
+      }
+    };
+
+    const timer = setTimeout(initCursor, 100);
 
     return () => {
-      cursor.destroy();
+      clearTimeout(timer);
+      if (cursor) {
+        try {
+          cursor.destroy();
+        } catch (error) {
+          console.warn('Mouse follower cleanup failed:', error);
+        }
+      }
     };
   }, []);
 
