@@ -11,7 +11,7 @@ import useLenis from '@/hooks/useLenis';
 const BlurredBackground = () => {
   return (
     <>
-      <section className="w-screen h-full z-[-2] flex-grow absolute inset-0 overflow-hidden">
+      <section className="fixed w-screen h-screen z-[-1] inset-0 overflow-hidden pointer-events-none">
         <span
           id="blob-1"
           className="blur-[250px] block rounded-full w-[45rem] h-[40rem] -top-80 md:-top-16 -right-96 md:right-4 animate-spin-slow absolute bg-gradient-to-b from-[#37E7FF] via-[#E0CE92] to-[#F040BF]"

@@ -1,16 +1,18 @@
-import { useEffect, useRef, MutableRefObject } from 'react';
-import Lenis from '@studio-freight/lenis';
+import { useEffect, useRef } from 'react';
+import Lenis from 'lenis';
 
 export default function useLenis(
   callback?: ({ instance }: { instance: Lenis }) => void
 ): Lenis | null {
-  const lenisRef: MutableRefObject<Lenis | null> = useRef(null);
+  const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
     });
 
     lenisRef.current = lenis;

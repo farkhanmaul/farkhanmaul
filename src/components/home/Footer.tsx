@@ -7,7 +7,7 @@ const contacts = [
   { name: 'Email', value: 'farkhanmaul@gmail.com', link: 'mailto:farkhanmaul@gmail.com' },
   { name: 'LinkedIn', value: 'linkedin.com/in/farkhanmaul/', link: 'https://www.linkedin.com/in/farkhanmaul/' },
   { name: 'GitHub', value: 'github.com/farkhanmaul', link: 'https://github.com/farkhanmaul' },
-  { name: 'WhatsApp', value: '+62 812-3456-7890', link: 'https://wa.me/6281234567890' }
+  { name: 'Instagram', value: '@farkhanmaul', link: 'https://instagram.com/farkhanmaul' }
 ];
 
 export default function Footer() {

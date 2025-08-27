@@ -63,3 +63,39 @@ body {
     backdrop-filter: blur(2px);
   }
 }
+
+/* Ensure gradients render properly */
+.bg-gradient-to-b {
+  background: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+/* Blob animations */
+#blob-1, #blob-2, #blob-3 {
+  opacity: 0.8;
+  mix-blend-mode: multiply;
+}
+
+/* Custom cursor styles */
+.mf-cursor {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  z-index: 9999;
+  transition: transform 0.2s ease;
+}
+
+.mf-cursor.-pointer {
+  transform: scale(1.5);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Hide default cursor */
+* {
+  cursor: none !important;
+}
