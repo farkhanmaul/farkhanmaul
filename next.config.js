@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  output: 'export',
   trailingSlash: true,
   basePath: '/farkhanmaul',
   assetPrefix: '/farkhanmaul/',
@@ -13,9 +14,6 @@ const nextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  experimental: {
-    appDir: true,
   },
 }
 
