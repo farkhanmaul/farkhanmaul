@@ -3,7 +3,7 @@ import PageMarker from '@/components/PageMarker';
 import Section from '@/components/sections/Section';
 import { useHeroAnimation } from '@/hooks/useAnimation';
 import { ArrowDown } from '@phosphor-icons/react';
-import { FiHeart } from 'react-icons/fi';
+import { HiOutlineCode } from 'react-icons/hi';
 
 /**
  * Komponen Hero - Section pembuka portfolio
@@ -21,7 +21,7 @@ export default function Hero() {
           <p className="text-lg sm:text-xl font-medium flex items-center gap-2" id="hero-greeting" role="text" aria-label="Greeting">
             <span style={{ opacity: 0 }}>Hey</span>
             <span style={{ opacity: 0 }}>there!</span>
-            <FiHeart className="text-red-500" style={{ opacity: 0 }} />
+            <HiOutlineCode className="text-yellow-300" style={{ opacity: 0 }} />
           </p>
 
           <div className="flex flex-col gap-2">

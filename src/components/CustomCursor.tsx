@@ -3,39 +3,12 @@
 import { useEffect, useRef } from 'react';
 
 /**
- * Custom Cursor Component dengan trail effect
- * Berdasarkan referensi portfolio dengan multiple trailing dots
+ * Custom Cursor Component - simplified and optimized
+ * Single cursor dot dengan smooth movement
  */
 export default function CustomCursor() {
-  const trailLength = 20; // Jumlah trailing circles
-  const trailRef = useRef<Array<{ x: number; y: number }>>([]);
-  const intervalRef = useRef<NodeJS.Timeout>();
-  const previousPosition = useRef({ x: 0, y: 0 });
-
-  const updateTrail = () => {
-    // Shift semua posisi trail
-    for (let i = trailLength - 1; i > 0; i--) {
-      trailRef.current[i] = {
-        x: trailRef.current[i - 1]?.x || 0,
-        y: trailRef.current[i - 1]?.y || 0,
-      };
-    }
-
-    // Update posisi pertama dengan posisi mouse terbaru
-    trailRef.current[0] = {
-      x: previousPosition.current.x,
-      y: previousPosition.current.y,
-    };
-
-    // Update DOM elements
-    for (let i = 0; i < trailLength; i++) {
-      const trailDot = document.getElementById(`trail-dot-${i}`);
-      if (trailDot && trailRef.current[i]) {
-        trailDot.style.left = `${trailRef.current[i].x}px`;
-        trailDot.style.top = `${trailRef.current[i].y}px`;
-      }
-    }
-  };
+  const cursorRef = useRef<HTMLDivElement>(null);
+  const trailRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -44,49 +17,78 @@ export default function CustomCursor() {
     const isMobile = window.innerWidth < 768 || 'ontouchstart' in window;
     if (isMobile) return;
 
-    // Initialize trail array
-    trailRef.current = new Array(trailLength).fill({ x: 0, y: 0 });
+    const cursor = cursorRef.current;
+    const trail = trailRef.current;
+    if (!cursor || !trail) return;
 
     const handleMouseMove = (e: MouseEvent) => {
-      previousPosition.current = { x: e.clientX, y: e.clientY };
+      const x = e.clientX;
+      const y = e.clientY;
+      
+      // Update cursor position immediately
+      cursor.style.left = `${x}px`;
+      cursor.style.top = `${y}px`;
+      
+      // Update trail with slight delay for smooth following effect
+      requestAnimationFrame(() => {
+        trail.style.left = `${x}px`;
+        trail.style.top = `${y}px`;
+      });
+    };
+
+    const handleMouseEnter = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      
+      // Check for interactive elements
+      if (
+        target.tagName === 'A' ||
+        target.tagName === 'BUTTON' ||
+        target.closest('a') ||
+        target.closest('button') ||
+        target.classList.contains('cursor-pointer') ||
+        window.getComputedStyle(target).cursor === 'pointer'
+      ) {
+        cursor.classList.add('hover');
+        trail.classList.add('hover');
+      } else {
+        cursor.classList.remove('hover');
+        trail.classList.remove('hover');
+      }
     };
 
     // Add event listeners
-    window.addEventListener('mousemove', handleMouseMove);
-    intervalRef.current = setInterval(updateTrail, 16); // Update setiap 16ms (~60fps)
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseover', handleMouseEnter);
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseover', handleMouseEnter);
     };
   }, []);
 
   return (
-    <div className="cursor-container">
-      {Array.from({ length: trailLength }).map((_, index) => {
-        const size = Math.max(4, 16 - index * 0.6); // Ukuran mengecil dari 16px ke 4px
-        const opacity = Math.max(0.1, 1 - index * 0.04); // Opacity mengecil
-        
-        return (
-          <div
-            id={`trail-dot-${index}`}
-            key={index}
-            className="fixed pointer-events-none rounded-full bg-white mix-blend-mode-difference"
-            style={{
-              width: `${size}px`,
-              height: `${size}px`,
-              left: '0px',
-              top: '0px',
-              transform: 'translate(-50%, -50%)',
-              opacity: opacity,
-              zIndex: 9999 - index,
-              transition: index === 0 ? 'none' : 'left 0.1s ease, top 0.1s ease',
-            }}
-          />
-        );
-      })}
-    </div>
+    <>
+      {/* Main cursor dot */}
+      <div 
+        ref={cursorRef}
+        className="custom-cursor fixed pointer-events-none w-4 h-4 bg-white rounded-full mix-blend-mode-difference z-[9999] transition-transform duration-150"
+        style={{ 
+          transform: 'translate(-50%, -50%)',
+          left: '0px',
+          top: '0px'
+        }}
+      />
+      
+      {/* Trail cursor */}
+      <div 
+        ref={trailRef}
+        className="custom-cursor-trail fixed pointer-events-none w-8 h-8 border border-white rounded-full mix-blend-mode-difference z-[9998] transition-all duration-300"
+        style={{ 
+          transform: 'translate(-50%, -50%)',
+          left: '0px',
+          top: '0px'
+        }}
+      />
+    </>
   );
 }

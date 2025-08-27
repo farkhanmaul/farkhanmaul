@@ -35,18 +35,18 @@ export default function About() {
         
         gsap.registerPlugin(ScrollTrigger);
 
-        // Base rotation yang selalu berputar
-        let baseRotation = 0;
+        // Smooth rotation values
+        let currentPhi = 1.2;
+        let targetPhi = 1.2;
         
         const instance = ScrollTrigger.create({
           trigger: '#about',
           start: 'top bottom',
           end: 'bottom top',
-          scrub: true,
+          scrub: 1, // Smooth scrubbing
           onUpdate: (self) => {
-            // Kombinasi scroll progress dengan rotasi konstan
-            const scrollRotation = mapRange(0, 1, self.progress, 0, 2);
-            phi.current = baseRotation + scrollRotation;
+            // Update target rotation based on scroll
+            targetPhi = mapRange(0, 1, self.progress, 1.2, 5.0);
           },
         });
 
@@ -55,10 +55,10 @@ export default function About() {
           width: 384 * 1.5,
           height: 384 * 1.5,
           phi: 0,
-          theta: 0,
+          theta: 0.3,
           dark: 1,
           diffuse: 1.2,
-          mapSamples: 16000,
+          mapSamples: 20000, // Increased for smoother rendering
           mapBrightness: 6,
           baseColor: [0.3, 0.3, 0.3],
           markerColor: [255 / 255, 61 / 255, 50 / 255],
@@ -69,9 +69,14 @@ export default function About() {
             { location: [106.845599, -6.208763], size: 0.05 },
           ],
           onRender: (state) => {
-            // Globe terus berputar dengan base rotation
-            baseRotation += 0.005; // Kecepatan rotasi konstan
-            state.phi = phi.current;
+            // Smooth interpolation untuk rotasi yang halus
+            currentPhi += (targetPhi - currentPhi) * 0.02;
+            
+            // Continuous slow rotation
+            currentPhi += 0.003;
+            
+            state.phi = currentPhi;
+            state.theta += 0.001; // Slight vertical rotation
           },
         });
 
