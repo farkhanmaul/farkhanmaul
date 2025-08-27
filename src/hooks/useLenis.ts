@@ -1,16 +1,16 @@
-import { useEffect, useRef } from 'react';
-import Lenis from 'lenis';
+import { useEffect, useRef, MutableRefObject } from 'react';
+import Lenis from '@studio-freight/lenis';
 
-export const useLenis = () => {
-  const lenisRef = useRef<Lenis | null>(null);
+export default function useLenis(
+  callback?: ({ instance }: { instance: Lenis }) => void
+): Lenis | null {
+  const lenisRef: MutableRefObject<Lenis | null> = useRef(null);
 
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
     });
 
     lenisRef.current = lenis;
@@ -22,14 +22,15 @@ export const useLenis = () => {
 
     requestAnimationFrame(raf);
 
+    if (callback) {
+      callback({ instance: lenis });
+    }
+
     return () => {
       lenis.destroy();
+      lenisRef.current = null;
     };
-  }, []);
+  }, [callback]);
 
-  const scrollTo = (target: string | HTMLElement, options?: any) => {
-    lenisRef.current?.scrollTo(target, options);
-  };
-
-  return { scrollTo, lenis: lenisRef.current };
-};
+  return lenisRef.current;
+}

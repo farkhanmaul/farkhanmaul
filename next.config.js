@@ -1,22 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
   output: 'export',
   trailingSlash: true,
-  skipTrailingSlashRedirect: true,
-  distDir: 'out',
   basePath: '/farkhanmaul',
   assetPrefix: '/farkhanmaul/',
   images: {
-    unoptimized: true
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
+    unoptimized: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-  experimental: {
-    esmExternals: false,
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 }
 

@@ -10,8 +10,12 @@ module.exports = {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        'light-gold': '#fbbf24',
+        'pale-gold': '#fde047',
+        'washed-purple': '#a855f7',
       },
       animation: {
+        'spin-slow': 'spin 20s linear infinite',
         first: "moveVertical 30s ease infinite",
         second: "moveInCircle 20s reverse infinite", 
         third: "moveInCircle 40s linear infinite",
@@ -53,7 +57,13 @@ module.exports = {
           },
         },
       },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Menlo', 'Monaco', 'monospace'],
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }

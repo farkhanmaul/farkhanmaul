@@ -1,50 +1,34 @@
-import { gsap } from "gsap";
+import gsap from 'gsap';
 
-export const magnetic = (el: HTMLElement, intensity = 0.3) => {
-  let bounds: DOMRect;
+export const magnetic = (element: HTMLElement, strength = 0.3) => {
+  const bounds = element.getBoundingClientRect();
   
-  const handleMouseEnter = () => {
-    bounds = el.getBoundingClientRect();
-  };
-  
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!bounds) return;
+  const onMouseMove = (e: MouseEvent) => {
+    const x = e.clientX - bounds.left - bounds.width / 2;
+    const y = e.clientY - bounds.top - bounds.height / 2;
     
-    const { clientX, clientY } = e;
-    const { left, top, width, height } = bounds;
-    
-    const centerX = left + width / 2;
-    const centerY = top + height / 2;
-    
-    const deltaX = (clientX - centerX) * intensity;
-    const deltaY = (clientY - centerY) * intensity;
-    
-    gsap.to(el, {
-      x: deltaX,
-      y: deltaY,
+    gsap.to(element, {
       duration: 0.3,
-      ease: "power2.out",
-      overwrite: true
+      x: x * strength,
+      y: y * strength,
+      ease: 'power2.out',
     });
   };
-  
-  const handleMouseLeave = () => {
-    gsap.to(el, {
+
+  const onMouseLeave = () => {
+    gsap.to(element, {
+      duration: 0.5,
       x: 0,
       y: 0,
-      duration: 0.5,
-      ease: "elastic.out(1, 0.3)",
-      overwrite: true
+      ease: 'elastic.out(1, 0.3)',
     });
   };
-  
-  el.addEventListener('mouseenter', handleMouseEnter);
-  el.addEventListener('mousemove', handleMouseMove);
-  el.addEventListener('mouseleave', handleMouseLeave);
-  
+
+  element.addEventListener('mousemove', onMouseMove);
+  element.addEventListener('mouseleave', onMouseLeave);
+
   return () => {
-    el.removeEventListener('mouseenter', handleMouseEnter);
-    el.removeEventListener('mousemove', handleMouseMove);  
-    el.removeEventListener('mouseleave', handleMouseLeave);
+    element.removeEventListener('mousemove', onMouseMove);
+    element.removeEventListener('mouseleave', onMouseLeave);
   };
 };
