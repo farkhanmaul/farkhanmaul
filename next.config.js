@@ -3,8 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'export',
   trailingSlash: true,
-  basePath: '/j7portofolio',
-  assetPrefix: '/j7portofolio/',
+  basePath: '/farkhanmaul',
+  assetPrefix: '/farkhanmaul/',
   images: {
     unoptimized: true,
   },

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://farkhanmaul.github.io/j7portofolio',
+    url: 'https://farkhanmaul.github.io/farkhanmaul',
     title: 'Farkhan Maul - Software Developer',
     description: 'Portfolio of Farkhan Maul, a passionate Software Developer from Indonesia specializing in modern web technologies.',
     siteName: 'Farkhan Maul Portfolio',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://farkhanmaul.github.io/j7portofolio',
+    canonical: 'https://farkhanmaul.github.io/farkhanmaul',
   },
 }
 
