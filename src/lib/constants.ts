@@ -29,32 +29,52 @@ export const CONTACTS = [
 // Project information
 export const PROJECTS = [
   {
-    title: 'FRESHCAN',
-    description: 'Mobile app that scans fruit freshness level with ML backend and JWT authentication',
-    tech: ['Node.js', 'Express.js', 'MySQL', 'GCP'],
-    year: 2023,
-    gradient: 'from-blue-400 to-blue-600'
-  },
-  {
-    title: 'MOVIE HANZ',
-    description: 'Web application for exploring film data with search and detailed movie information',
-    tech: ['React.js', 'API', 'GitHub Pages'],
-    year: 2023,
-    gradient: 'from-green-400 to-green-600'
-  },
-  {
-    title: 'BNI Retail Banking',
-    description: 'Loan Management System with REST APIs, custom forms, and database integration',
-    tech: ['Spring Boot', 'jQuery', 'Oracle', 'PostgreSQL'],
+    title: 'Movie Hanz',
+    description: 'Film collection website built with JavaScript that integrates with The Movie Database API to showcase popular movies with detailed information and search functionality.',
+    tech: ['JavaScript', 'HTML', 'CSS', 'TMDb API', 'Responsive Design'],
     year: 2024,
-    gradient: 'from-purple-400 to-purple-600'
+    gradient: 'from-red-500 to-orange-500',
+    link: 'https://github.com/farkhanmaul/movie-hanz'
   },
   {
-    title: 'EMTEK HRIS',
-    description: 'Internal HR system with 40+ REST APIs for attendance, bookings, and employee management',
-    tech: ['Node.js', 'Express.js', 'MySQL'],
+    title: 'VANS x HANZ Website',
+    description: 'Modern landing page for VANS collaboration project created as final assignment for Dicoding web programming fundamentals course.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Web', 'Web Standards'],
+    year: 2024,
+    gradient: 'from-blue-500 to-purple-600',
+    link: 'https://github.com/farkhanmaul/vans-x-hanz'
+  },
+  {
+    title: 'FRESHCAN Platform',
+    description: 'Fresh product management system designed to help track and manage perishable goods with inventory control features and machine learning integration.',
+    tech: ['Node.js', 'Express.js', 'MySQL', 'GCP', 'JWT Auth', 'ML Backend'],
     year: 2023,
-    gradient: 'from-orange-400 to-orange-600'
+    gradient: 'from-cyan-500 to-blue-500',
+    link: 'https://github.com/farkhanmaul/freshcan'
+  },
+  {
+    title: 'HRIS Mobile Backend',
+    description: 'Human Resource Information System backend services providing comprehensive employee management, attendance tracking, and administrative functions.',
+    tech: ['Node.js', 'Express.js', 'MySQL', 'JWT Authentication', 'REST API'],
+    year: 2023,
+    gradient: 'from-purple-500 to-pink-500',
+    link: 'https://github.com/farkhanmaul/hris-mobile-backend'
+  },
+  {
+    title: 'Temperature Converter',
+    description: 'Interactive temperature conversion tool supporting multiple temperature scales with real-time calculation and clean user interface.',
+    tech: ['JavaScript', 'HTML', 'CSS', 'DOM Manipulation', 'Math Functions'],
+    year: 2024,
+    gradient: 'from-green-500 to-blue-500',
+    link: 'https://github.com/farkhanmaul/temp-converter'
+  },
+  {
+    title: 'Quran Digital Project',
+    description: 'Digital Quran application providing easy access to Quranic verses with search functionality and clean reading interface.',
+    tech: ['JavaScript', 'API Integration', 'Local Storage', 'Progressive Web App'],
+    year: 2023,
+    gradient: 'from-green-600 to-emerald-500',
+    link: 'https://github.com/farkhanmaul/quran-project'
   }
 ] as const;
 

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Host
+Host: https://farkhanmaul.github.io
+
+# Sitemaps
+Sitemap: https://farkhanmaul.github.io/farkhanmaul/sitemap.xml

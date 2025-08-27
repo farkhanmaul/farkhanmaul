@@ -7,6 +7,7 @@ import LoadingFallback from '@/components/ui/LoadingFallback';
 import useLenis from '@/hooks/useLenis';
 
 const About = lazy(() => import('@/components/home/About'));
+const Experience = lazy(() => import('@/components/home/Experience'));
 const Projects = lazy(() => import('@/components/home/Projects'));
 const Footer = lazy(() => import('@/components/home/Footer'));
 
@@ -60,6 +61,9 @@ export default function Home() {
       <Hero />
       <Suspense fallback={<LoadingFallback />}>
         <About />
+      </Suspense>
+      <Suspense fallback={<LoadingFallback />}>
+        <Experience />
       </Suspense>
       <Suspense fallback={<LoadingFallback />}>
         <Projects />
