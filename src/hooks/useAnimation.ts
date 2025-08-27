@@ -45,13 +45,15 @@ export const useHeroAnimation = () => {
     const checkAndAnimate = () => {
       const greetingEls = document.querySelectorAll('#hero-greeting *');
       const nameEls = document.querySelectorAll('#hero-title *');
+      const aliasEl = document.querySelector('#hero-alias');
       const greeting2Els = document.querySelectorAll('#hero-greeting2 *');
 
-      if (greetingEls.length && nameEls.length && greeting2Els.length) {
+      if (greetingEls.length && nameEls.length && aliasEl && greeting2Els.length) {
         const tl = gsap.timeline();
         
         tl.to(greetingEls, { opacity: 1, stagger: 0.2, delay: 0.5 })
           .to(nameEls, { opacity: 1, stagger: 0.15 }, '+=0.2')
+          .to(aliasEl, { opacity: 1, duration: 0.5 }, '+=0.1')
           .to(greeting2Els, { opacity: 1, stagger: 0.15 }, '+=0.2');
 
         return tl;

@@ -19,16 +19,18 @@ export default function Hero() {
             <Emoji code="1f44b" style={{ opacity: 0 }} />
           </p>
 
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold ml-[-5px] text-yellow-300 flex gap-4 tracking-tight" id="hero-title" role="banner">
-            <span style={{ opacity: 0 }}>I&apos;m</span>
-            <span style={{ opacity: 0 }} className="font-bold text-white flex flex-col relative">
-              <span className="text-base tracking-tighter opacity-80 absolute -bottom-5 right-1">
-                <span className="opacity-75">a.k.a</span> farkhanmaul
+          <div className="flex flex-col gap-2">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold ml-[-5px] text-yellow-300 flex gap-4 tracking-tight" id="hero-title" role="banner">
+              <span style={{ opacity: 0 }}>I&apos;m</span>
+              <span style={{ opacity: 0 }} className="font-bold text-white">
+                Farkhan
               </span>
-              Farkhan
-            </span>
-            <span style={{ opacity: 0 }}>.</span>
-          </h1>
+              <span style={{ opacity: 0 }}>.</span>
+            </h1>
+            <p className="text-base sm:text-lg text-gray-400 ml-1 tracking-tight" style={{ opacity: 0 }} id="hero-alias">
+              <span className="opacity-75">a.k.a</span> farkhanmaul
+            </p>
+          </div>
 
           <p className="text-lg sm:text-xl font-medium flex gap-2 text-zinc-100" id="hero-greeting2" role="text" aria-label="Welcome message">
             <span style={{ opacity: 0 }}>Welcome</span>
