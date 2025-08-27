@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'aos/dist/aos.css';
-
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
