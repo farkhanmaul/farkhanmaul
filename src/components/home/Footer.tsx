@@ -16,11 +16,13 @@ export default function Footer() {
         <h2 
           id="contact-title"
           className="text-4xl md:text-6xl xl:text-7xl font-bold tracking-tighter mb-16 opacity-0"
+          role="heading"
+          aria-level="2"
         >
           LET&apos;S <span className="text-yellow-300">CONNECT</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16" role="list" aria-label="Contact methods">
           {CONTACTS.map((contact, index) => (
             <ContactCard key={contact.name} {...contact} index={index} />
           ))}

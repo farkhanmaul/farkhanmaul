@@ -20,6 +20,8 @@ export default function ContactCard({ name, value, link, color, index }: Contact
       rel={link.startsWith('http') ? 'noopener noreferrer' : ''}
       className={`contact-item group p-6 rounded-2xl bg-${color}-400 bg-opacity-10 backdrop-blur-sm border border-white border-opacity-10 hover:border-opacity-30 transition-all duration-300 hover:bg-opacity-20`}
       onMouseEnter={() => cardRef.current && magnetic(cardRef.current, 0.2)}
+      role="link"
+      aria-label={`Contact via ${name}: ${value}`}
     >
       <h3 className={`text-xl font-semibold text-${color}-300 mb-2 group-hover:scale-105 transition-transform`}>
         {name}

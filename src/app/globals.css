@@ -26,6 +26,43 @@ body {
   @apply bg-black text-white overflow-x-hidden select-none subpixel-antialiased;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optimized rendering */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .animate-spin-slow {
+    animation: none;
+  }
+}
+
 * {
   @apply font-sans leading-7 tracking-wide;
 }

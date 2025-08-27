@@ -1,12 +1,14 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import Hero from '@/components/home/Hero';
-import About from '@/components/home/About';
-import Projects from '@/components/home/Projects';
-import Footer from '@/components/home/Footer';
+import LoadingFallback from '@/components/ui/LoadingFallback';
 import useLenis from '@/hooks/useLenis';
+
+const About = lazy(() => import('@/components/home/About'));
+const Projects = lazy(() => import('@/components/home/Projects'));
+const Footer = lazy(() => import('@/components/home/Footer'));
 
 const BlurredBackground = () => {
   return (
@@ -56,9 +58,15 @@ export default function Home() {
       <BlurredBackground />
       
       <Hero />
-      <About />
-      <Projects />
-      <Footer />
+      <Suspense fallback={<LoadingFallback />}>
+        <About />
+      </Suspense>
+      <Suspense fallback={<LoadingFallback />}>
+        <Projects />
+      </Suspense>
+      <Suspense fallback={<LoadingFallback />}>
+        <Footer />
+      </Suspense>
     </>
   );
 }

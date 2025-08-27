@@ -20,13 +20,13 @@ export default function Hero() {
 
       <section className="flex-grow flex flex-col relative">
         <section className="flex flex-col sm:pl-[12vw] pt-[15vh] gap-4">
-          <p className="text-xl sm:text-2xl font-medium flex gap-2" id="hero-greeting">
+          <p className="text-xl sm:text-2xl font-medium flex gap-2" id="hero-greeting" role="text" aria-label="Greeting">
             <span style={{ opacity: 0 }}>Hey</span>
             <span style={{ opacity: 0 }}>there!</span>
             <Emoji code="1f44b" style={{ opacity: 0 }} />
           </p>
 
-          <h1 className="text-6xl sm:text-7xl md:text-8xl font-semibold ml-[-5px] text-yellow-300 flex gap-4 tracking-tight" id="hero-name">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl font-semibold ml-[-5px] text-yellow-300 flex gap-4 tracking-tight" id="hero-title" role="banner">
             <span style={{ opacity: 0 }}>I&apos;m</span>
             <span style={{ opacity: 0 }} className="font-bold text-white flex flex-col relative">
               <span className="text-lg tracking-tighter opacity-80 absolute -bottom-6 right-1">
@@ -37,7 +37,7 @@ export default function Hero() {
             <span style={{ opacity: 0 }}>.</span>
           </h1>
 
-          <p className="text-xl sm:text-2xl font-medium flex gap-2 text-zinc-100" id="hero-greeting2">
+          <p className="text-xl sm:text-2xl font-medium flex gap-2 text-zinc-100" id="hero-greeting2" role="text" aria-label="Welcome message">
             <span style={{ opacity: 0 }}>Welcome</span>
             <span style={{ opacity: 0 }}>to</span>
             <span style={{ opacity: 0 }}>my</span>

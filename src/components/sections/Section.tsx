@@ -14,6 +14,8 @@ export default function Section({ id, className = '', children, dataId }: Sectio
       id={id}
       className={`relative w-screen min-h-screen flex flex-col ${className}`}
       data-id={dataId || id}
+      role="region"
+      aria-labelledby={`${id}-title`}
     >
       {children}
     </section>

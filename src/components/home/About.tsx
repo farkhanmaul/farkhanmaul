@@ -18,16 +18,16 @@ export default function About() {
   return (
     <Section id="about" className="p-12 items-center pt-36">
       <div className="flex flex-col items-center gap-4" id="about-title" ref={titleRef}>
-        <h2 className="text-[24px] md:text-4xl xl:text-5xl font-medium tracking-tighter opacity-0">
+        <h2 className="text-[24px] md:text-4xl xl:text-5xl font-medium tracking-tighter opacity-0" id="about-title">
           I&apos;M A
         </h2>
         
-        <h2 className="text-[40px] sm:text-7xl md:text-8xl xl:text-[7.5rem] font-semibold tracking-tighter opacity-0">
+        <h2 className="text-[40px] sm:text-7xl md:text-8xl xl:text-[7.5rem] font-semibold tracking-tighter opacity-0" role="heading" aria-level="1">
           SOFTWARE DEVELOPER
         </h2>
         
-        <h2 className="text-[24px] md:text-5xl xl:text-6xl font-medium tracking-tighter flex items-center opacity-0">
-          <Emoji code="1f1ee-1f1e9" className="mr-5" />
+        <h2 className="text-[24px] md:text-5xl xl:text-6xl font-medium tracking-tighter flex items-center opacity-0" role="heading" aria-level="2">
+          <Emoji code="1f1ee-1f1e9" className="mr-5" aria-label="Indonesian flag" />
           FROM INDONESIA
         </h2>
       </div>

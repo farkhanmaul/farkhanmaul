@@ -16,11 +16,13 @@ export default function Projects() {
       <h2 
         id="projects-title"
         className="text-4xl md:text-6xl xl:text-7xl font-bold tracking-tighter mb-16 text-center opacity-0"
+        role="heading"
+        aria-level="2"
       >
         FEATURED <span className="text-yellow-300">PROJECTS</span>
       </h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl w-full" role="list" aria-label="Featured projects">
         {PROJECTS.map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}
