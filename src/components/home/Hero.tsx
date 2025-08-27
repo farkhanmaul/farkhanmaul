@@ -1,35 +1,28 @@
 /* eslint-disable @next/next/no-img-element */
-import Logo from '@/components/Logo';
 import PageMarker from '@/components/PageMarker';
 import Section from '@/components/sections/Section';
 import { Emoji } from '@/components/Twemoji';
 import { useHeroAnimation } from '@/hooks/useAnimation';
 import { ArrowDown } from '@phosphor-icons/react';
-import dynamic from 'next/dynamic';
-
-const Link = dynamic(() => import('next/link'), { ssr: false });
 
 export default function Hero() {
   useHeroAnimation();
 
   return (
     <Section id="hero" className="px-6 sm:px-12 lg:px-20 py-12 gap-4">
-      <Link href="/">
-        <Logo />
-      </Link>
 
       <section className="flex-grow flex flex-col relative">
         <section className="flex flex-col sm:pl-[8vw] lg:pl-[12vw] pt-[10vh] sm:pt-[15vh] gap-6">
-          <p className="text-xl sm:text-2xl font-medium flex gap-2" id="hero-greeting" role="text" aria-label="Greeting">
+          <p className="text-lg sm:text-xl font-medium flex gap-2" id="hero-greeting" role="text" aria-label="Greeting">
             <span style={{ opacity: 0 }}>Hey</span>
             <span style={{ opacity: 0 }}>there!</span>
             <Emoji code="1f44b" style={{ opacity: 0 }} />
           </p>
 
-          <h1 className="text-6xl sm:text-7xl md:text-8xl font-semibold ml-[-5px] text-yellow-300 flex gap-4 tracking-tight" id="hero-title" role="banner">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold ml-[-5px] text-yellow-300 flex gap-4 tracking-tight" id="hero-title" role="banner">
             <span style={{ opacity: 0 }}>I&apos;m</span>
             <span style={{ opacity: 0 }} className="font-bold text-white flex flex-col relative">
-              <span className="text-lg tracking-tighter opacity-80 absolute -bottom-6 right-1">
+              <span className="text-base tracking-tighter opacity-80 absolute -bottom-5 right-1">
                 <span className="opacity-75">a.k.a</span> farkhanmaul
               </span>
               Farkhan
@@ -37,7 +30,7 @@ export default function Hero() {
             <span style={{ opacity: 0 }}>.</span>
           </h1>
 
-          <p className="text-xl sm:text-2xl font-medium flex gap-2 text-zinc-100" id="hero-greeting2" role="text" aria-label="Welcome message">
+          <p className="text-lg sm:text-xl font-medium flex gap-2 text-zinc-100" id="hero-greeting2" role="text" aria-label="Welcome message">
             <span style={{ opacity: 0 }}>Welcome</span>
             <span style={{ opacity: 0 }}>to</span>
             <span style={{ opacity: 0 }}>my</span>

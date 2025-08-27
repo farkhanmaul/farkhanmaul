@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="text-center max-w-4xl">
         <h2 
           id="contact-title"
-          className="text-4xl md:text-6xl xl:text-7xl font-bold tracking-tighter mb-20 sm:mb-24 opacity-0"
+          className="text-3xl md:text-5xl xl:text-6xl font-bold tracking-tighter mb-20 sm:mb-24 opacity-0"
           role="heading"
           aria-level="2"
         >

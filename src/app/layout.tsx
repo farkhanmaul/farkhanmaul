@@ -61,6 +61,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </head>
       <body className={inter.className} suppressHydrationWarning>
         <CursorProvider>
