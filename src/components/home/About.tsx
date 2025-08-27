@@ -9,10 +9,14 @@ import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
+/**
+ * Komponen About - Section tentang developer
+ * Menampilkan profesi, lokasi, tech stack, dan globe 3D interaktif
+ */
 export default function About() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const phi = useRef(1.2);
+  const phi = useRef(1.2); // Rotasi globe berdasarkan scroll
   
   useScrollAnimation({
     trigger: '#about-title',

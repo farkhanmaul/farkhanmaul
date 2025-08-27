@@ -1,4 +1,9 @@
-// Contact information
+/**
+ * File constants.ts - Data statis untuk portfolio
+ * Berisi informasi kontak, project, tech badges, dan konfigurasi animasi
+ */
+
+// Data informasi kontak dan social media
 export const CONTACTS = [
   {
     name: 'Email',
@@ -26,7 +31,7 @@ export const CONTACTS = [
   }
 ] as const;
 
-// Project information
+// Data project portfolio dari GitHub
 export const PROJECTS = [
   {
     title: 'Movie Hanz',
@@ -86,7 +91,7 @@ export const PROJECTS = [
   }
 ] as const;
 
-// Tech stack badges with icons
+// Data tech stack dengan icon dan warna untuk About section
 export const TECH_BADGES = [
   { name: 'React', icon: '⚛️', color: 'text-blue-400' },
   { name: 'Node.js', icon: '🟢', color: 'text-green-400' },
@@ -98,7 +103,7 @@ export const TECH_BADGES = [
   { name: 'MongoDB', icon: '🍃', color: 'text-green-500' }
 ] as const;
 
-// Animation configuration
+// Konfigurasi animasi GSAP untuk seluruh portfolio
 export const ANIMATION_CONFIG = {
   duration: {
     fast: 0.3,

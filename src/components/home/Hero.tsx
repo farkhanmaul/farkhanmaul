@@ -5,7 +5,12 @@ import { Emoji } from '@/components/Twemoji';
 import { useHeroAnimation } from '@/hooks/useAnimation';
 import { ArrowDown } from '@phosphor-icons/react';
 
+/**
+ * Komponen Hero - Section pembuka portfolio
+ * Menampilkan greeting, nama, dan deskripsi singkat
+ */
 export default function Hero() {
+  // Hook untuk animasi GSAP pada hero section
   useHeroAnimation();
 
   return (
