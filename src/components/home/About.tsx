@@ -2,6 +2,7 @@ import PageMarker from '@/components/PageMarker';
 import Section from '@/components/sections/Section';
 import TechBadge from '@/components/ui/TechBadge';
 import AboutModal from '@/components/AboutModal';
+import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import { useScrollAnimation } from '@/hooks/useAnimation';
 import { TECH_BADGES } from '@/lib/constants';
 import mapRange from '@/lib/mapRange';
@@ -120,9 +121,64 @@ export default function About() {
         />
       </div>
 
-      <div className="mt-20 sm:mt-24 text-center">
-        <p className="text-lg opacity-60 mb-8">Specialized in modern web technologies</p>
-        <div className="flex flex-wrap gap-4 justify-center max-w-2xl">
+      {/* Stats Section */}
+      <div className="mt-16 sm:mt-20 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mb-12">
+          <div className="group hover:scale-105 transition-transform duration-300">
+            <div className="mb-2">
+              <AnimatedCounter
+                end={1}
+                suffix="+"
+                duration={2000}
+                className="text-2xl sm:text-3xl font-bold text-yellow-300 block"
+              />
+            </div>
+            <h3 className="text-xs sm:text-sm font-medium text-white mb-1">Years Experience</h3>
+            <p className="text-xs text-gray-400">Professional development</p>
+          </div>
+          
+          <div className="group hover:scale-105 transition-transform duration-300">
+            <div className="mb-2">
+              <AnimatedCounter
+                end={40}
+                suffix="+"
+                duration={2200}
+                className="text-2xl sm:text-3xl font-bold text-yellow-300 block"
+              />
+            </div>
+            <h3 className="text-xs sm:text-sm font-medium text-white mb-1">REST APIs</h3>
+            <p className="text-xs text-gray-400">Built and maintained</p>
+          </div>
+          
+          <div className="group hover:scale-105 transition-transform duration-300">
+            <div className="mb-2">
+              <AnimatedCounter
+                end={26}
+                suffix="+"
+                duration={2400}
+                className="text-2xl sm:text-3xl font-bold text-yellow-300 block"
+              />
+            </div>
+            <h3 className="text-xs sm:text-sm font-medium text-white mb-1">Courses</h3>
+            <p className="text-xs text-gray-400">Learning journey</p>
+          </div>
+          
+          <div className="group hover:scale-105 transition-transform duration-300">
+            <div className="mb-2">
+              <AnimatedCounter
+                end={3}
+                suffix=".88"
+                duration={2600}
+                className="text-2xl sm:text-3xl font-bold text-yellow-300 block"
+              />
+            </div>
+            <h3 className="text-xs sm:text-sm font-medium text-white mb-1">GPA</h3>
+            <p className="text-xs text-gray-400">Computer Science</p>
+          </div>
+        </div>
+
+        <p className="text-base sm:text-lg opacity-60 mb-8">Specialized in modern web technologies</p>
+        <div className="flex flex-wrap gap-3 sm:gap-4 justify-center max-w-2xl mx-auto">
           {TECH_BADGES.map((tech) => (
             <TechBadge key={tech.name} name={tech.name} iconType={tech.iconType} color={tech.color} />
           ))}

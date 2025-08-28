@@ -8,7 +8,6 @@ import useLenis from '@/hooks/useLenis';
 
 // Lazy loading komponen untuk optimasi performance
 const About = lazy(() => import('@/components/home/About'));
-const StatsSection = lazy(() => import('@/components/StatsSection'));
 const Experience = lazy(() => import('@/components/home/Experience'));
 const SkillsSection = lazy(() => import('@/components/SkillsSection'));
 const Projects = lazy(() => import('@/components/home/Projects'));
@@ -71,9 +70,6 @@ export default function Home() {
       {/* Komponen lainnya dengan lazy loading */}
       <Suspense fallback={<LoadingFallback />}>
         <About />
-      </Suspense>
-      <Suspense fallback={<LoadingFallback />}>
-        <StatsSection />
       </Suspense>
       <Suspense fallback={<LoadingFallback />}>
         <Experience />

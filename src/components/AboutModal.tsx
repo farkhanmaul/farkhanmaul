@@ -59,24 +59,25 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
         ref={modalRef}
         className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none opacity-0"
       >
-        <div className="modal-content bg-black bg-opacity-90 backdrop-blur-lg border border-gray-700 rounded-2xl p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+        <div className="modal-content bg-black bg-opacity-90 backdrop-blur-lg border border-gray-700 rounded-2xl p-4 sm:p-6 md:p-8 max-w-2xl w-full max-h-[85vh] sm:max-h-[80vh] overflow-y-auto relative">
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full border border-gray-600 hover:border-gray-400 hover:bg-gray-800 transition-all duration-300"
+            className="sticky top-0 ml-auto mb-4 flex p-2 rounded-full border border-gray-600 hover:border-gray-400 hover:bg-gray-800 transition-all duration-300 z-10 bg-black bg-opacity-80"
+            style={{ width: 'fit-content' }}
           >
-            <FiX className="text-xl" />
+            <FiX className="text-lg sm:text-xl" />
           </button>
 
           {/* Content */}
-          <div className="text-white">
-            <div className="mb-8 flex flex-col gap-3">
-              <h2 className="font-semibold text-3xl lg:text-4xl tracking-tight">
+          <div className="text-white -mt-4">
+            <div className="mb-6 sm:mb-8 flex flex-col gap-3">
+              <h2 className="font-semibold text-2xl sm:text-3xl lg:text-4xl tracking-tight">
                 About me
               </h2>
             </div>
 
-            <div className="text-gray-100 text-base leading-relaxed space-y-6">
+            <div className="text-gray-100 text-sm sm:text-base leading-relaxed space-y-4 sm:space-y-6">
               <p>
                 Hey there! My full name is <b>Farkhan Maul</b>. You can find me
                 online with my username <b>farkhanmaul</b>. I&apos;m a
@@ -85,7 +86,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
               </p>
 
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-yellow-400">Professional Experience</h3>
+                <h3 className="text-base sm:text-lg font-semibold mb-3 text-yellow-400">Professional Experience</h3>
                 <div className="space-y-3">
                   <div>
                     <h4 className="font-medium text-white">Junior Software Developer - PT. Bank Negara Indonesia (BNI)</h4>
@@ -108,7 +109,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-yellow-400">Education & Certifications</h3>
+                <h3 className="text-base sm:text-lg font-semibold mb-3 text-yellow-400">Education & Certifications</h3>
                 <div className="space-y-2">
                   <p><strong>Bachelor of Computer Science</strong> - Universitas Ahmad Dahlan (GPA: 3.88/4.00)</p>
                   <p><strong>Cloud Computing Cohort</strong> - Bangkit Academy by Google, Gojek & Traveloka</p>
@@ -117,8 +118,8 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-yellow-400">Technical Skills</h3>
-                <div className="grid grid-cols-2 gap-4 text-sm">
+                <h3 className="text-base sm:text-lg font-semibold mb-3 text-yellow-400">Technical Skills</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm">
                   <div>
                     <p className="font-medium text-gray-300 mb-1">Languages:</p>
                     <p>JavaScript, Java, PHP, HTML</p>
@@ -139,10 +140,10 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-yellow-400">Let&apos;s Connect</h3>
-                <div className="flex flex-wrap gap-4">
+                <h3 className="text-base sm:text-lg font-semibold mb-3 text-yellow-400">Let&apos;s Connect</h3>
+                <div className="flex flex-wrap gap-3 sm:gap-4">
                   <a
-                    className="inline-flex items-center gap-3 font-medium border-[2px] bg-gray-600 bg-opacity-20 hover:bg-opacity-30 border-yellow-400 transition-all duration-150 ease-in-out px-4 py-2 rounded-xl text-sm"
+                    className="inline-flex items-center gap-2 sm:gap-3 font-medium border-[2px] bg-gray-600 bg-opacity-20 hover:bg-opacity-30 border-yellow-400 transition-all duration-150 ease-in-out px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm"
                     href="https://github.com/farkhanmaul"
                     target="_blank"
                     rel="noreferrer"
@@ -151,7 +152,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
                     <FiExternalLink size={16} />
                   </a>
                   <a
-                    className="inline-flex items-center gap-3 font-medium border-[2px] bg-gray-600 bg-opacity-20 hover:bg-opacity-30 border-yellow-400 transition-all duration-150 ease-in-out px-4 py-2 rounded-xl text-sm"
+                    className="inline-flex items-center gap-2 sm:gap-3 font-medium border-[2px] bg-gray-600 bg-opacity-20 hover:bg-opacity-30 border-yellow-400 transition-all duration-150 ease-in-out px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm"
                     href="https://www.linkedin.com/in/farkhanmaul/"
                     target="_blank"
                     rel="noreferrer"

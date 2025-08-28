@@ -69,10 +69,10 @@ export default function SkillsSection() {
         TECHNICAL <span className="text-yellow-300">SKILLS</span>
       </h2>
 
-      <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="max-w-4xl w-full grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
         {categories.map((category) => (
           <div key={category} className="space-y-4">
-            <h3 className="text-lg font-medium text-yellow-300 mb-6 text-center">
+            <h3 className="text-base sm:text-lg font-medium text-yellow-300 mb-4 sm:mb-6 text-center">
               {category}
             </h3>
             
@@ -87,8 +87,8 @@ export default function SkillsSection() {
                     className="group"
                   >
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-white font-medium text-sm">{skill.name}</span>
-                      <span className="text-gray-400 text-sm font-medium">{skill.level}%</span>
+                      <span className="text-white font-medium text-xs sm:text-sm">{skill.name}</span>
+                      <span className="text-gray-400 text-xs sm:text-sm font-medium">{skill.level}%</span>
                     </div>
                     
                     <div className="w-full bg-gray-800 rounded-full h-2 overflow-hidden">
