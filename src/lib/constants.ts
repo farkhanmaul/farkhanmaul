@@ -93,14 +93,18 @@ export const PROJECTS = [
 
 // Data tech stack dengan icon dan warna untuk About section
 export const TECH_BADGES = [
-  { name: 'React', iconType: 'react', color: 'text-blue-400' },
-  { name: 'Node.js', iconType: 'nodejs', color: 'text-green-400' },
+  { name: 'Java', iconType: 'java', color: 'text-orange-500' },
+  { name: 'Spring Boot', iconType: 'spring', color: 'text-green-500' },
   { name: 'JavaScript', iconType: 'javascript', color: 'text-yellow-400' },
-  { name: 'TypeScript', iconType: 'typescript', color: 'text-blue-500' },
-  { name: 'Next.js', iconType: 'nextjs', color: 'text-white' },
+  { name: 'Node.js', iconType: 'nodejs', color: 'text-green-400' },
   { name: 'Express.js', iconType: 'express', color: 'text-gray-400' },
+  { name: 'React', iconType: 'react', color: 'text-blue-400' },
   { name: 'MySQL', iconType: 'mysql', color: 'text-blue-600' },
-  { name: 'MongoDB', iconType: 'mongodb', color: 'text-green-500' }
+  { name: 'PostgreSQL', iconType: 'postgresql', color: 'text-blue-500' },
+  { name: 'Oracle DB', iconType: 'oracle', color: 'text-red-500' },
+  { name: 'Google Cloud', iconType: 'gcp', color: 'text-blue-400' },
+  { name: 'Git', iconType: 'git', color: 'text-orange-600' },
+  { name: 'Jira', iconType: 'jira', color: 'text-blue-600' }
 ] as const;
 
 // Konfigurasi animasi GSAP untuk seluruh portfolio

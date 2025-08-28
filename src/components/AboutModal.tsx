@@ -80,56 +80,69 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
               <p>
                 Hey there! My full name is <b>Farkhan Maul</b>. You can find me
                 online with my username <b>farkhanmaul</b>. I&apos;m a
-                Fullstack Web Developer passionate about creating modern web applications.
+                Software Developer with over 1 year of experience in back-end and front-end development, 
+                specializing in API integration and enterprise system development.
               </p>
 
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-blue-400">History</h3>
-                <p>
-                  I started my programming journey in 2022 with web development fundamentals.
-                  Since then, I&apos;ve been focusing on modern technologies like{' '}
-                  <a
-                    href="https://reactjs.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-blue-400 hover:text-blue-300 underline"
-                  >
-                    React
-                  </a>,{' '}
-                  <a
-                    href="https://nodejs.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-blue-400 hover:text-blue-300 underline"
-                  >
-                    Node.js
-                  </a>, and{' '}
-                  <a
-                    href="https://www.typescriptlang.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-blue-400 hover:text-blue-300 underline"
-                  >
-                    TypeScript
-                  </a>.
-                </p>
+                <h3 className="text-lg font-semibold mb-3 text-yellow-400">Professional Experience</h3>
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="font-medium text-white">Junior Software Developer - PT. Bank Negara Indonesia (BNI)</h4>
+                    <p className="text-sm text-gray-400 mb-2">Nov 2024 – May 2025 | Jakarta, ID</p>
+                    <p>
+                      Currently working in the Retail Enablers Digital Delivery Division, developing and maintaining 
+                      the Retail Productive Banking system. Built 3 REST APIs using Spring Boot with Oracle and 
+                      PostgreSQL databases, and customized form functionalities using jQuery and JavaScript.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-white">Software Developer Intern - PT. Elang Mahkota Teknologi (EMTEK)</h4>
+                    <p className="text-sm text-gray-400 mb-2">Aug 2023 – Dec 2023 | Jakarta, ID</p>
+                    <p>
+                      Created 40+ REST API endpoints for internal HRIS using Node.js, Express.js, and MySQL. 
+                      Developed features for employee attendance, room bookings, and leave management systems.
+                    </p>
+                  </div>
+                </div>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-blue-400">Skills & Expertise</h3>
-                <p>
-                  I specialize in full-stack development with experience in building
-                  responsive web applications, RESTful APIs, and database management.
-                  My recent projects include Movie Hanz, FRESHCAN platform, and 
-                  various web development solutions.
-                </p>
+                <h3 className="text-lg font-semibold mb-3 text-yellow-400">Education & Certifications</h3>
+                <div className="space-y-2">
+                  <p><strong>Bachelor of Computer Science</strong> - Universitas Ahmad Dahlan (GPA: 3.88/4.00)</p>
+                  <p><strong>Cloud Computing Cohort</strong> - Bangkit Academy by Google, Gojek & Traveloka</p>
+                  <p>Completed 26+ courses across Coursera, Dicoding, and Google Cloud Skill Boost</p>
+                </div>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-blue-400">Let&apos;s Connect</h3>
+                <h3 className="text-lg font-semibold mb-3 text-yellow-400">Technical Skills</h3>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <p className="font-medium text-gray-300 mb-1">Languages:</p>
+                    <p>JavaScript, Java, PHP, HTML</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-300 mb-1">Frameworks:</p>
+                    <p>Spring Boot, Express.js, React.js</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-300 mb-1">Databases:</p>
+                    <p>MySQL, PostgreSQL, Oracle</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-300 mb-1">Tools:</p>
+                    <p>Git, GCP, AWS, Jira, Linux</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold mb-3 text-yellow-400">Let&apos;s Connect</h3>
                 <div className="flex flex-wrap gap-4">
                   <a
-                    className="inline-flex items-center gap-3 font-medium border-[2px] bg-gray-600 bg-opacity-20 hover:bg-opacity-30 border-blue-400 transition-all duration-150 ease-in-out px-4 py-2 rounded-xl text-sm"
+                    className="inline-flex items-center gap-3 font-medium border-[2px] bg-gray-600 bg-opacity-20 hover:bg-opacity-30 border-yellow-400 transition-all duration-150 ease-in-out px-4 py-2 rounded-xl text-sm"
                     href="https://github.com/farkhanmaul"
                     target="_blank"
                     rel="noreferrer"
@@ -138,7 +151,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
                     <FiExternalLink size={16} />
                   </a>
                   <a
-                    className="inline-flex items-center gap-3 font-medium border-[2px] bg-gray-600 bg-opacity-20 hover:bg-opacity-30 border-blue-400 transition-all duration-150 ease-in-out px-4 py-2 rounded-xl text-sm"
+                    className="inline-flex items-center gap-3 font-medium border-[2px] bg-gray-600 bg-opacity-20 hover:bg-opacity-30 border-yellow-400 transition-all duration-150 ease-in-out px-4 py-2 rounded-xl text-sm"
                     href="https://www.linkedin.com/in/farkhanmaul/"
                     target="_blank"
                     rel="noreferrer"

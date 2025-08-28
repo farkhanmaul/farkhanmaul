@@ -3,28 +3,36 @@ import { useScrollAnimation } from '@/hooks/useAnimation';
 
 const EXPERIENCES = [
   {
-    year: '2024',
-    title: 'Fresh Graduate',
-    company: 'Informatics Engineering',
+    year: '2024 - 2025',
+    title: 'Junior Software Developer',
+    company: 'PT. Bank Negara Indonesia (BNI)',
+    type: 'Full Time',
+    description: 'Developing system functionalities for digital banking workflows in Retail Enablers Digital Delivery Division. Built 3 REST APIs using Spring Boot with Oracle/PostgreSQL databases and customized form functionalities using jQuery.',
+    tech: ['Spring Boot', 'Java', 'Oracle', 'PostgreSQL', 'jQuery', 'JavaScript']
+  },
+  {
+    year: '2023 - 2024',
+    title: 'Bachelor of Computer Science',
+    company: 'Universitas Ahmad Dahlan',
     type: 'Education',
-    description: 'Completed bachelor degree in Informatics Engineering with focus on software development and algorithms.',
-    tech: ['JavaScript', 'React', 'Node.js', 'Database']
+    description: 'Graduated with GPA 3.88/4.00 majoring in Informatics. Activities: Lab Assistant, Google Cloud Mentor, BEM Faculty Staff.',
+    tech: ['Algorithms', 'Data Structures', 'Software Engineering', 'Database Systems']
   },
   {
-    year: '2023-2024',
-    title: 'Web Developer Student',
-    company: 'Dicoding Academy',
+    year: '2023',
+    title: 'Software Developer Intern',
+    company: 'PT. Elang Mahkota Teknologi (EMTEK)',
+    type: 'Internship',
+    description: 'Created 40+ REST API endpoints for internal HRIS using Node.js and Express.js. Developed features for employee attendance, room bookings, and leave management systems.',
+    tech: ['Node.js', 'Express.js', 'MySQL', 'JWT', 'REST API']
+  },
+  {
+    year: '2023',
+    title: 'Cloud Computing Cohort',
+    company: 'Bangkit Academy by Google',
     type: 'Learning',
-    description: 'Intensive learning program focusing on modern web development technologies and best practices.',
-    tech: ['HTML', 'CSS', 'JavaScript', 'Web APIs']
-  },
-  {
-    year: '2022-2023',
-    title: 'Backend Developer Intern',
-    company: 'HRIS Mobile Project',
-    type: 'Project',
-    description: 'Developed backend services for Human Resource Information System mobile application.',
-    tech: ['Node.js', 'Express', 'MongoDB', 'REST API']
+    description: 'Career readiness program by Google, Gojek & Traveloka. Completed 26+ courses across Coursera, Dicoding, and Google Cloud Skill Boost. Built Freshcan mobile app as Capstone Project.',
+    tech: ['Google Cloud', 'Node.js', 'Express.js', 'MySQL', 'GCP Deployment']
   }
 ] as const;
 
@@ -43,7 +51,7 @@ export default function Experience() {
         role="heading"
         aria-level="2"
       >
-        MY <span className="text-gray-300">EXPERIENCE</span>
+        MY <span className="text-yellow-300">EXPERIENCE</span>
       </h2>
 
       <div className="max-w-4xl w-full relative">
