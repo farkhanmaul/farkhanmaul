@@ -25,7 +25,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col gap-2">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold ml-[-5px] text-yellow-300 flex gap-4 tracking-tight" id="hero-title" role="banner">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold ml-[-5px] text-yellow-300 flex gap-4 tracking-tight" id="hero-title" role="banner">
               <span style={{ opacity: 0 }}>I&apos;m</span>
               <span style={{ opacity: 0 }} className="font-bold text-white">
                 Farkhan

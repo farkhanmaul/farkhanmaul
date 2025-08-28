@@ -39,16 +39,16 @@ export default function Experience() {
     <Section id="experience" className="px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center">
       <h2 
         id="experience-title"
-        className="text-2xl md:text-4xl xl:text-5xl font-bold tracking-tighter mb-20 sm:mb-24 text-center opacity-0"
+        className="text-xl md:text-3xl xl:text-4xl font-bold tracking-tighter mb-16 sm:mb-20 text-center opacity-0"
         role="heading"
         aria-level="2"
       >
-        MY <span className="text-yellow-300">EXPERIENCE</span>
+        MY <span className="text-blue-400">EXPERIENCE</span>
       </h2>
 
       <div className="max-w-4xl w-full relative">
         {/* Vertical Timeline Line */}
-        <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-yellow-300 via-gray-600 to-gray-800"></div>
+        <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 via-gray-600 to-gray-800"></div>
 
         <div className="space-y-12">
           {EXPERIENCES.map((exp, index) => (
@@ -59,15 +59,15 @@ export default function Experience() {
               aria-label={`Experience: ${exp.title} at ${exp.company}`}
             >
               {/* Timeline Dot */}
-              <div className="absolute left-4 -translate-x-1/2 w-4 h-4 bg-yellow-300 rounded-full border-4 border-black group-hover:scale-125 transition-transform duration-300">
-                <div className="absolute inset-1 bg-yellow-300 rounded-full animate-pulse"></div>
+              <div className="absolute left-4 -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full border-4 border-black group-hover:scale-125 transition-transform duration-300">
+                <div className="absolute inset-1 bg-blue-400 rounded-full animate-pulse"></div>
               </div>
 
-              <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-yellow-300 transition-all duration-300 hover:bg-opacity-70">
+              <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-blue-400 transition-all duration-300 hover:bg-opacity-70">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-white mb-1">{exp.title}</h3>
-                    <p className="text-yellow-300 font-medium">{exp.company}</p>
+                    <p className="text-blue-300 font-medium">{exp.company}</p>
                   </div>
                   <div className="flex flex-col sm:items-end mt-2 sm:mt-0">
                     <span className="text-gray-300 font-medium">{exp.year}</span>

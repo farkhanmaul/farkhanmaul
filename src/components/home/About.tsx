@@ -1,10 +1,11 @@
 import PageMarker from '@/components/PageMarker';
 import Section from '@/components/sections/Section';
 import TechBadge from '@/components/ui/TechBadge';
+import AboutModal from '@/components/AboutModal';
 import { useScrollAnimation } from '@/hooks/useAnimation';
 import { TECH_BADGES } from '@/lib/constants';
 import mapRange from '@/lib/mapRange';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { FiMapPin } from 'react-icons/fi';
@@ -17,6 +18,7 @@ export default function About() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const phi = useRef(1.2); // Rotasi globe berdasarkan scroll
+  const [isModalOpen, setIsModalOpen] = useState(false);
   
   useScrollAnimation({
     trigger: '#about-title',
@@ -85,15 +87,15 @@ export default function About() {
   return (
     <Section id="about" className="px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center">
       <div className="flex flex-col items-center gap-4 relative" id="about-title" ref={titleRef}>
-        <h2 className="text-[18px] md:text-2xl xl:text-3xl font-medium tracking-tighter opacity-0">
+        <h2 className="text-[16px] md:text-xl xl:text-2xl font-medium tracking-tighter opacity-0">
           I&apos;M A
         </h2>
         
-        <h2 className="text-[30px] sm:text-5xl md:text-6xl xl:text-[5rem] font-semibold tracking-tighter opacity-0" role="heading" aria-level="1">
+        <h2 className="text-[24px] sm:text-3xl md:text-4xl xl:text-5xl font-semibold tracking-tighter opacity-0" role="heading" aria-level="1">
           SOFTWARE DEVELOPER
         </h2>
         
-        <h2 className="text-[18px] md:text-3xl xl:text-4xl font-medium tracking-tighter flex items-center opacity-0" role="heading" aria-level="2">
+        <h2 className="text-[16px] md:text-2xl xl:text-3xl font-medium tracking-tighter flex items-center opacity-0" role="heading" aria-level="2">
           <FiMapPin className="mr-3 text-red-500" />
           FROM INDONESIA
         </h2>
@@ -101,13 +103,7 @@ export default function About() {
         {/* Read More Button - berdasarkan referensi website */}
         <button
           className="absolute bottom-48 font-medium opacity-40 hover:opacity-80 border-[2px] border-transparent hover:bg-gray-600 hover:bg-opacity-30 hover:border-yellow-300 transition-all duration-150 ease-in-out px-3 py-2 rounded-xl text-lg sm:text-xl cursor-pointer"
-          onClick={() => {
-            // Scroll ke experience section
-            const experienceSection = document.getElementById('experience');
-            if (experienceSection) {
-              experienceSection.scrollIntoView({ behavior: 'smooth' });
-            }
-          }}
+          onClick={() => setIsModalOpen(true)}
         >
           Read more
         </button>
@@ -132,6 +128,9 @@ export default function About() {
       </div>
 
       <PageMarker />
+      
+      {/* About Modal */}
+      <AboutModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </Section>
   );
 }
