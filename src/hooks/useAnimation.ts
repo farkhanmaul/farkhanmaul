@@ -17,26 +17,35 @@ export const useScrollAnimation = (config: AnimationConfig) => {
 
     const { trigger, start = 'top 80%', delay = 0, duration = 1 } = config;
 
-    gsap.fromTo(trigger, 
-      { opacity: 0, y: 50 },
+    const elements = document.querySelectorAll(trigger);
+    if (elements.length === 0) return;
+
+    const animation = gsap.fromTo(elements, 
+      { opacity: 0, y: 30 },
       {
         opacity: 1,
         y: 0,
         duration,
         delay,
-        ease: 'power3.out',
+        stagger: 0.1,
+        ease: 'power2.out',
         scrollTrigger: {
           trigger,
           start,
-          toggleActions: 'play none none reverse'
+          end: 'bottom 20%',
+          toggleActions: 'play none none reverse',
+          once: false
         }
       }
     );
 
     return () => {
-      ScrollTrigger.getAll().forEach(t => t.kill());
+      animation.kill();
+      ScrollTrigger.getAll().forEach(t => {
+        if (t.trigger === trigger) t.kill();
+      });
     };
-  }, [config]);
+  }, [config.trigger, config.start, config.delay, config.duration]);
 };
 
 // Single Responsibility: Handle hero animations

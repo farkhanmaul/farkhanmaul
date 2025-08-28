@@ -15,7 +15,7 @@ export default function Projects() {
     <Section id="projects" className="px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center">
       <h2 
         id="projects-title"
-        className="text-2xl md:text-4xl xl:text-5xl font-bold tracking-tighter mb-20 sm:mb-24 text-center opacity-0"
+        className="text-lg md:text-2xl xl:text-3xl font-semibold tracking-tight mb-20 sm:mb-24 text-center opacity-0"
         role="heading"
         aria-level="2"
       >

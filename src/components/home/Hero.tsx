@@ -18,16 +18,16 @@ export default function Hero() {
 
       <section className="flex-grow flex flex-col relative">
         <section className="flex flex-col sm:pl-[8vw] lg:pl-[12vw] pt-[10vh] sm:pt-[15vh] gap-6">
-          <p className="text-lg sm:text-xl font-medium flex items-center gap-2" id="hero-greeting" role="text" aria-label="Greeting">
+          <p className="text-base sm:text-lg font-normal flex items-center gap-2" id="hero-greeting" role="text" aria-label="Greeting">
             <span style={{ opacity: 0 }}>Hey</span>
             <span style={{ opacity: 0 }}>there!</span>
             <HiOutlineCode className="text-yellow-300" style={{ opacity: 0 }} />
           </p>
 
           <div className="flex flex-col gap-2">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold ml-[-5px] text-yellow-300 flex gap-4 tracking-tight" id="hero-title" role="banner">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium ml-[-5px] text-yellow-300 flex gap-4 tracking-tight" id="hero-title" role="banner">
               <span style={{ opacity: 0 }}>I&apos;m</span>
-              <span style={{ opacity: 0 }} className="font-bold text-white">
+              <span style={{ opacity: 0 }} className="font-medium text-white">
                 Farkhan
               </span>
               <span style={{ opacity: 0 }}>.</span>
@@ -37,7 +37,7 @@ export default function Hero() {
             </p>
           </div>
 
-          <p className="text-lg sm:text-xl font-medium flex gap-2 text-zinc-100" id="hero-greeting2" role="text" aria-label="Welcome message">
+          <p className="text-base sm:text-lg font-normal flex gap-2 text-zinc-100" id="hero-greeting2" role="text" aria-label="Welcome message">
             <span style={{ opacity: 0 }}>Welcome</span>
             <span style={{ opacity: 0 }}>to</span>
             <span style={{ opacity: 0 }}>my</span>

@@ -87,22 +87,22 @@ export default function About() {
   return (
     <Section id="about" className="px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center">
       <div className="flex flex-col items-center gap-4 relative" id="about-title" ref={titleRef}>
-        <h2 className="text-[16px] md:text-xl xl:text-2xl font-medium tracking-tighter opacity-0">
+        <h2 className="text-sm md:text-base xl:text-lg font-normal tracking-tight opacity-0">
           I&apos;M A
         </h2>
         
-        <h2 className="text-[24px] sm:text-3xl md:text-4xl xl:text-5xl font-semibold tracking-tighter opacity-0" role="heading" aria-level="1">
+        <h2 className="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-medium tracking-tight opacity-0" role="heading" aria-level="1">
           SOFTWARE DEVELOPER
         </h2>
         
-        <h2 className="text-[16px] md:text-2xl xl:text-3xl font-medium tracking-tighter flex items-center opacity-0" role="heading" aria-level="2">
+        <h2 className="text-sm md:text-lg xl:text-xl font-normal tracking-tight flex items-center opacity-0" role="heading" aria-level="2">
           <FiMapPin className="mr-3 text-red-500" />
           FROM INDONESIA
         </h2>
 
         {/* Read More Button - berdasarkan referensi website */}
         <button
-          className="absolute bottom-48 font-medium opacity-40 hover:opacity-80 border-[2px] border-transparent hover:bg-gray-600 hover:bg-opacity-30 hover:border-yellow-300 transition-all duration-150 ease-in-out px-3 py-2 rounded-xl text-lg sm:text-xl cursor-pointer"
+          className="absolute bottom-48 font-normal opacity-40 hover:opacity-80 border-[2px] border-transparent hover:bg-gray-600 hover:bg-opacity-30 hover:border-gray-400 transition-all duration-150 ease-in-out px-3 py-2 rounded-xl text-base sm:text-lg cursor-pointer"
           onClick={() => setIsModalOpen(true)}
         >
           Read more
@@ -110,10 +110,12 @@ export default function About() {
 
         <canvas
           ref={canvasRef}
-          className="w-[384px] h-[384px] scale-[1.2] md:scale-[1.6] aspect-square absolute -bottom-32 left-1/2 -translate-x-1/2 z-[-1] opacity-60"
+          className="w-[320px] h-[320px] sm:w-[384px] sm:h-[384px] scale-[1.1] sm:scale-[1.2] md:scale-[1.4] aspect-square absolute -bottom-28 left-1/2 -translate-x-1/2 z-[-1] opacity-60 overflow-hidden"
           style={{
             maskImage: 'linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))',
             WebkitMaskImage: '-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))',
+            maxWidth: '100vw',
+            clipPath: 'inset(0)'
           }}
         />
       </div>
