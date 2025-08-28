@@ -2,7 +2,7 @@
   "name": "Farkhan Maul - Software Developer Portfolio",
   "short_name": "Farkhan Maul",
   "description": "Portfolio of Farkhan Maul, Software Developer from Indonesia",
-  "start_url": "/",
+  "start_url": "/farkhanmaul/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#F59E0B",
@@ -11,13 +11,13 @@
   "lang": "en-US",
   "icons": [
     {
-      "src": "/favicon-192x192.png",
+      "src": "/farkhanmaul/favicon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/favicon-512x512.png",
+      "src": "/farkhanmaul/favicon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"

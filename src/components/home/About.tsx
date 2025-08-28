@@ -35,18 +35,14 @@ export default function About() {
         
         gsap.registerPlugin(ScrollTrigger);
 
-        // Smooth rotation values
-        let currentPhi = 1.2;
-        let targetPhi = 1.2;
-        
         const instance = ScrollTrigger.create({
+          id: 'about-container',
           trigger: '#about',
-          start: 'top bottom',
+          start: 'top bottom', 
           end: 'bottom top',
-          scrub: 1, // Smooth scrubbing
+          scrub: true,
           onUpdate: (self) => {
-            // Update target rotation based on scroll
-            targetPhi = mapRange(0, 1, self.progress, 1.2, 5.0);
+            phi.current = mapRange(0, 1, self.progress, 1.2, 3.8);
           },
         });
 
@@ -55,28 +51,22 @@ export default function About() {
           width: 384 * 1.5,
           height: 384 * 1.5,
           phi: 0,
-          theta: 0.3,
+          theta: 0,
           dark: 1,
           diffuse: 1.2,
-          mapSamples: 20000, // Increased for smoother rendering
+          mapSamples: 12000, // Reduced for better performance
           mapBrightness: 6,
           baseColor: [0.3, 0.3, 0.3],
           markerColor: [255 / 255, 61 / 255, 50 / 255],
           glowColor: [1, 1, 1],
           opacity: 0.7,
           markers: [
-            // Indonesia coordinate
+            // Indonesia coordinate  
             { location: [106.845599, -6.208763], size: 0.05 },
           ],
           onRender: (state) => {
-            // Smooth interpolation untuk rotasi yang halus
-            currentPhi += (targetPhi - currentPhi) * 0.02;
-            
-            // Continuous slow rotation
-            currentPhi += 0.003;
-            
-            state.phi = currentPhi;
-            state.theta += 0.001; // Slight vertical rotation
+            // Simple direct assignment like reference
+            state.phi = phi.current;
           },
         });
 
@@ -107,6 +97,20 @@ export default function About() {
           <FiMapPin className="mr-3 text-red-500" />
           FROM INDONESIA
         </h2>
+
+        {/* Read More Button - berdasarkan referensi website */}
+        <button
+          className="absolute bottom-48 font-medium opacity-40 hover:opacity-80 border-[2px] border-transparent hover:bg-gray-600 hover:bg-opacity-30 hover:border-yellow-300 transition-all duration-150 ease-in-out px-3 py-2 rounded-xl text-lg sm:text-xl cursor-pointer"
+          onClick={() => {
+            // Scroll ke experience section
+            const experienceSection = document.getElementById('experience');
+            if (experienceSection) {
+              experienceSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+        >
+          Read more
+        </button>
 
         <canvas
           ref={canvasRef}
