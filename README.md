@@ -1,52 +1,78 @@
-<h1 align="left" id="macropower-title">:wave: Hello there!</h1>
+## 👋 Hello there! I'm Farkhan Maul
 
-![Version: 17.07.2022](https://img.shields.io/badge/version-25.12.2022-informational)&nbsp;
-![Visitors](https://visitor-badge.glitch.me/badge?page_id=farkhanmaul)&nbsp;
-[![GitHub: farkhanmaul](https://img.shields.io/github/followers/farkhanmaul?label=follow&style=social)](https://github.com/farkhanmaul)&nbsp;
+[![Portfolio](https://img.shields.io/badge/Portfolio-farkhanmaul.github.io-4CAF50?style=for-the-badge&logo=github&logoColor=white)](https://farkhanmaul.github.io/farkhanmaul/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-farkhanmaul-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/farkhanmaul/)
+[![Email](https://img.shields.io/badge/Email-farkhanmaul@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:farkhanmaul@gmail.com)
 
-
-<table>
-<tr>
-<td align="left">
- :office: &nbsp;I'm currently working as <b>Junior Software Developer at PT. Bank Negara Indonesia (BNI)<b>
-<br> :seedling: &nbsp;I'm currently learning <b>Spring Boot, Java, and Enterprise Systems<b>
-<br> :speech_balloon: &nbsp;I like to talk about <b>Backend Development<b> and <b>API Design<b>
-<br> :mailbox: &nbsp;Ask me anything on my <b>LinkedIn<b>
-<br> :computer: &nbsp;Connect with me on <b>LinkedIn<b>
-</td>
-<td align="right">
-<a href="#farkhanmaul-title">
-  <img src="https://github-readme-stats.vercel.app/api?username=farkhanmaul&show_icons=true&theme=react&border_color=61dafb&hide_border=true" alt="farkhanmaul" align="right"/>
-</a>
-</td>
-</tr>
-</table>
-
-<table>
-  <tr>
-    <td align="left">
-   <a href="#farkhanmaul-title">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=farkhanmaul&hide=c%23,powershell,Mathematica,Ruby,Objective-C,Objective-C%2b%2b,Cuda&title_color=61dafb&text_color=ffffff&icon_color=61dafb&bg_color=20232a&langs_count=8&layout=compact&border_color=61dafb&hide_border=true" alt="farkhanmaul" align="left"/>
-    </a>
-    </td>
-    <td align="right">
-    <a href="#farkhanmaul-title">
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=farkhanmaul&theme=react&border=61dafb&hide_border=true" alt="farkhanmaul" align="right"/>
-    </a>
-    </td>
-  </tr>
-</table>
-
-<!---
-farkhanmaul/farkhanmaul is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
-
-## 🤝🏻 Connect with Me!
-[![Email: farkhanmaul@gmail.com](https://img.shields.io/badge/-farkhanmaul@gmail.com-D14836?style=flat&logo=Gmail&logoColor=white)](mailto:farkhanmaul@gmail.com)
-[![LinkedIn: Muhammad Farkhan Maulana](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/farkhanmaul/)](https://www.linkedin.com/in/farkhanmaul/)&nbsp;
-[![Instagram: Follow farkhanmaul](https://img.shields.io/badge/-Instagram-E4405F?style=flat&logo=Instagram&logoColor=white)](https://www.instagram.com/farkhanmaul)&nbsp;
-[![Telegram: farkhanmaul](https://img.shields.io/badge/-Telegram-grey?style=flat&logo=Telegram&logoColor=white&link=https://t.me/farkhanmaul)](https://t.me/farkhanmaul)&nbsp;
-[![Linktree: farkhanmaul](https://img.shields.io/badge/-Linktree-%2300d15b?style=flat&logo=Linktree&logoColor=white&link=https://linktr.ee/farkhanmaul)](https://linktr.ee/farkhanmaul)&nbsp;
-[![Twitter: Follow @farkhanmaul](https://img.shields.io/twitter/follow/farkhanmaul?style=social)](https://twitter.com/farkhanmaul)
 ---
+
+### 💼 About Me
+
+🏢 **Currently:** Junior Software Developer at **PT. Bank Negara Indonesia (BNI)**  
+🎓 **Education:** Bachelor of Computer Science, Universitas Ahmad Dahlan (GPA: 3.88/4.00)  
+🌱 **Learning:** Spring Boot, Java Enterprise Development, and Microservices Architecture  
+💬 **Ask me about:** Backend Development, API Design, Database Management  
+⚡ **Fun fact:** Built 40+ REST APIs and completed 26+ professional courses  
+
+---
+
+### 🛠 Tech Stack
+
+**Languages & Frameworks:**
+- **Backend:** Java • Spring Boot • Node.js • Express.js
+- **Frontend:** JavaScript • React.js • Next.js • TypeScript  
+- **Database:** MySQL • PostgreSQL • Oracle Database
+- **Tools:** Git • Google Cloud Platform • AWS • Jira • Linux
+
+**Currently Working With:**
+- 🔧 Enterprise banking systems at BNI
+- 🌐 REST API development with Spring Boot
+- 📊 Database optimization (Oracle & PostgreSQL)
+- 🚀 Agile development methodology
+
+---
+
+### 📊 GitHub Statistics
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=farkhanmaul&show_icons=true&theme=tokyonight&border_radius=10&hide_border=true" alt="GitHub Stats" height="180"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=farkhanmaul&layout=compact&theme=tokyonight&border_radius=10&hide_border=true&hide=c%23,powershell,Mathematica,Ruby,Objective-C,Objective-C%2b%2b,Cuda" alt="Top Languages" height="180"/>
+</div>
+
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=farkhanmaul&theme=tokyonight&border_radius=10&hide_border=true" alt="GitHub Streak" height="200"/>
+</div>
+
+---
+
+### 🏆 Professional Highlights
+
+- 💼 **1+ Years** of professional software development experience
+- ⚡ **40+ REST APIs** built and maintained in enterprise environments
+- 📚 **26+ Courses** completed in cloud computing and web development
+- 🎓 **3.88 GPA** in Bachelor of Computer Science
+- 🏆 **Bangkit Academy Graduate** - Google's flagship program
+
+---
+
+### 🌐 Connect With Me
+
+<div align="center">
+  
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/farkhanmaul/)
+[![Portfolio](https://img.shields.io/badge/-Portfolio-000000?style=for-the-badge&logo=github&logoColor=white)](https://farkhanmaul.github.io/farkhanmaul/)
+[![Email](https://img.shields.io/badge/-Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:farkhanmaul@gmail.com)
+[![Instagram](https://img.shields.io/badge/-Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/farkhanmaul)
+[![Telegram](https://img.shields.io/badge/-Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/farkhanmaul)
+
+</div>
+
+---
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=farkhanmaul&label=Profile%20Views&color=brightgreen&style=for-the-badge" alt="Profile Views" />
+</div>
+
+<div align="center">
+  <i>💼 Available for exciting opportunities and collaborations!</i>
+</div>

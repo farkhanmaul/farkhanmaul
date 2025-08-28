@@ -3,6 +3,7 @@
 import { useEffect, lazy, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import Hero from '@/components/home/Hero';
+import Logo from '@/components/Logo';
 import LoadingFallback from '@/components/ui/LoadingFallback';
 import useLenis from '@/hooks/useLenis';
 
@@ -63,6 +64,9 @@ export default function Home() {
     <>
       {/* Background gradient animasi */}
       <BlurredBackground />
+      
+      {/* Logo */}
+      <Logo />
       
       {/* Hero section (langsung load) */}
       <Hero />

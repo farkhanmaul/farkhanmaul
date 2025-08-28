@@ -88,7 +88,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       {/* Sidebar */}
       <section
         ref={sidebarRef}
-        className="fixed inset-0 ml-auto sm:max-w-2xl px-16 sm:px-24 pb-16 pt-[16vh] bg-black z-20"
+        className="fixed inset-0 ml-auto sm:max-w-2xl px-8 sm:px-16 md:px-24 pb-16 pt-[12vh] sm:pt-[16vh] bg-gradient-to-br from-gray-900 via-black to-gray-800 backdrop-blur-md border-l border-gray-700 z-20"
         style={{
           transform: 'translateX(100%)',
         }}
@@ -102,7 +102,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               >
                 <p
                   onClick={() => handleNavigate(route)}
-                  className="block pb-3 border-b text-4xl transition-all duration-300 border-transparent group-hover:px-3 group-hover:border-yellow-300"
+                  className="block pb-3 border-b text-2xl sm:text-3xl md:text-4xl transition-all duration-300 border-transparent group-hover:px-3 group-hover:border-yellow-300 text-gray-300 group-hover:text-white"
                 >
                   {name}
                 </p>
@@ -111,7 +111,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           </section>
 
           <section>
-            <p className="opacity-75">Made with 💛</p>
+            <p className="opacity-75 text-gray-400 text-sm">Made with 💛 by Farkhan</p>
           </section>
         </section>
       </section>
