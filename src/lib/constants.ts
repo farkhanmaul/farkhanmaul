@@ -40,7 +40,7 @@ export const PROJECTS = [
     year: 2024,
     gradient: 'from-red-500 to-orange-500',
     link: 'https://github.com/farkhanmaul/movie-hanz',
-    thumbnail: 'https://api.screenshotmachine.com/screenshot?url=https://farkhanmaul.github.io/movie-hanz&device=desktop&format=jpg&cacheLimit=0'
+    thumbnail: 'https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?w=400&h=300&fit=crop&crop=center'
   },
   {
     title: 'VANS x HANZ Website',
@@ -49,7 +49,7 @@ export const PROJECTS = [
     year: 2024,
     gradient: 'from-blue-500 to-purple-600',
     link: 'https://github.com/farkhanmaul/vans-x-hanz',
-    thumbnail: 'https://api.screenshotmachine.com/screenshot?url=https://farkhanmaul.github.io/vans-x-hanz&device=desktop&format=jpg&cacheLimit=0'
+    thumbnail: 'https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?w=400&h=300&fit=crop&crop=center'
   },
   {
     title: 'FRESHCAN Platform',
@@ -58,7 +58,7 @@ export const PROJECTS = [
     year: 2023,
     gradient: 'from-cyan-500 to-blue-500',
     link: 'https://github.com/farkhanmaul/freshcan',
-    thumbnail: 'https://via.placeholder.com/400x300/1f2937/60a5fa?text=Backend+API'
+    thumbnail: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=400&h=300&fit=crop&crop=center'
   },
   {
     title: 'HRIS Mobile Backend',
@@ -67,7 +67,7 @@ export const PROJECTS = [
     year: 2023,
     gradient: 'from-purple-500 to-pink-500',
     link: 'https://github.com/farkhanmaul/hris-mobile-backend',
-    thumbnail: 'https://via.placeholder.com/400x300/1f2937/a855f7?text=HRIS+Backend'
+    thumbnail: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&crop=center'
   },
   {
     title: 'Temperature Converter',
@@ -76,7 +76,7 @@ export const PROJECTS = [
     year: 2024,
     gradient: 'from-green-500 to-blue-500',
     link: 'https://github.com/farkhanmaul/temp-converter',
-    thumbnail: 'https://api.screenshotmachine.com/screenshot?url=https://farkhanmaul.github.io/temp-converter&device=desktop&format=jpg&cacheLimit=0'
+    thumbnail: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=300&fit=crop&crop=center'
   },
   {
     title: 'Quran Digital Project',
@@ -85,7 +85,7 @@ export const PROJECTS = [
     year: 2023,
     gradient: 'from-green-600 to-emerald-500',
     link: 'https://github.com/farkhanmaul/quran-project',
-    thumbnail: 'https://via.placeholder.com/400x300/1f2937/10b981?text=Quran+Digital'
+    thumbnail: 'https://images.unsplash.com/photo-1542816417-0983c9c9ad53?w=400&h=300&fit=crop&crop=center'
   },
   {
     title: 'Sort Algorithm Visualizer',
@@ -94,7 +94,7 @@ export const PROJECTS = [
     year: 2024,
     gradient: 'from-indigo-500 to-purple-600',
     link: 'https://github.com/farkhanmaul/sort-algo-visualize',
-    thumbnail: 'https://api.screenshotmachine.com/screenshot?url=https://farkhanmaul.github.io/sort-algo-visualize&device=desktop&format=jpg&cacheLimit=0'
+    thumbnail: 'https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=400&h=300&fit=crop&crop=center'
   }
 ] as const;
 
