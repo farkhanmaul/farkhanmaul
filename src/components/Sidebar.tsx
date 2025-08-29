@@ -4,20 +4,21 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import classNames from 'classnames';
 import useLenis from '@/hooks/useLenis';
+import { FiHome, FiUser, FiBriefcase, FiFolder, FiMail } from 'react-icons/fi';
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-// Navigation routes sesuai referensi website
-const routes = {
-  Home: '#',
-  About: '#about',
-  Experience: '#experience', 
-  Projects: '#projects',
-  Contact: '#contact',
-};
+// Navigation routes sesuai referensi website dengan icons
+const routes = [
+  { name: 'Home', path: '#', icon: FiHome },
+  { name: 'About', path: '#about', icon: FiUser },
+  { name: 'Experience', path: '#experience', icon: FiBriefcase },
+  { name: 'Projects', path: '#projects', icon: FiFolder },
+  { name: 'Contact', path: '#contact', icon: FiMail },
+];
 
 /**
  * Sidebar Menu Component - berdasarkan referensi website
@@ -88,24 +89,25 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       {/* Sidebar */}
       <section
         ref={sidebarRef}
-        className="fixed inset-0 ml-auto sm:max-w-2xl px-8 sm:px-16 md:px-24 pb-16 pt-[12vh] sm:pt-[16vh] bg-gradient-to-br from-gray-900 via-black to-gray-800 backdrop-blur-md border-l border-gray-700 z-20"
+        className="fixed inset-0 ml-auto sm:max-w-2xl px-8 sm:px-16 md:px-24 pb-16 pt-[12vh] sm:pt-[16vh] bg-black bg-opacity-95 backdrop-blur-lg border-l border-yellow-500 border-opacity-30 z-20"
         style={{
           transform: 'translateX(100%)',
         }}
       >
         <section className="menu-inner flex flex-col h-full justify-between">
           <section className="menu-content flex flex-col gap-3">
-            {Object.entries(routes).map(([name, route]) => (
+            {routes.map(({ name, path, icon: Icon }) => (
               <section
                 key={name}
                 className="menu-items cursor-pointer relative group hover:text-white transition-colors duration-100"
               >
-                <p
-                  onClick={() => handleNavigate(route)}
-                  className="block pb-3 border-b text-2xl sm:text-3xl md:text-4xl transition-all duration-300 border-transparent group-hover:px-3 group-hover:border-yellow-300 text-gray-300 group-hover:text-white"
+                <div
+                  onClick={() => handleNavigate(path)}
+                  className="flex items-center gap-4 pb-3 border-b text-2xl sm:text-3xl md:text-4xl transition-all duration-300 border-transparent group-hover:px-3 group-hover:border-yellow-300 text-gray-300 group-hover:text-white"
                 >
-                  {name}
-                </p>
+                  <Icon className="text-xl sm:text-2xl md:text-3xl text-yellow-400 group-hover:text-yellow-300 transition-colors duration-300" />
+                  <span>{name}</span>
+                </div>
               </section>
             ))}
           </section>

@@ -9,7 +9,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ title, description, tech, year, gradient, link }: ProjectCardProps) {
   const CardContent = () => (
-    <div className={`relative h-full p-8 rounded-2xl bg-gradient-to-br ${gradient} bg-opacity-10 backdrop-blur-sm border border-white border-opacity-10 hover:border-opacity-30 transition-all duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden group`}>
+    <div className={`relative h-full p-8 rounded-2xl bg-yellow-400 bg-opacity-10 backdrop-blur-sm border border-yellow-500 border-opacity-20 hover:border-yellow-400 hover:border-opacity-40 transition-all duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden group`}>
       {/* Hover glow effect */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-transparent to-transparent group-hover:from-white group-hover:to-transparent opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
       
@@ -28,7 +28,7 @@ export default function ProjectCard({ title, description, tech, year, gradient, 
         {tech.map((techItem, index) => (
           <span 
             key={techItem}
-            className="px-3 py-1 bg-white bg-opacity-10 rounded-full text-sm text-gray-200 backdrop-blur-sm group-hover:bg-opacity-20 group-hover:text-white transition-all duration-300 hover:scale-110"
+            className="px-3 py-1 bg-yellow-400 bg-opacity-20 rounded-full text-sm text-gray-200 backdrop-blur-sm group-hover:bg-yellow-400 group-hover:bg-opacity-30 group-hover:text-white transition-all duration-300 hover:scale-110 border border-yellow-500 border-opacity-30"
             role="listitem"
             style={{ animationDelay: `${index * 0.1}s` }}
           >

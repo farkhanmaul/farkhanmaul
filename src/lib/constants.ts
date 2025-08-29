@@ -93,18 +93,18 @@ export const PROJECTS = [
 
 // Data tech stack dengan icon dan warna untuk About section
 export const TECH_BADGES = [
-  { name: 'Java', iconType: 'java', color: 'text-orange-500' },
-  { name: 'Spring Boot', iconType: 'spring', color: 'text-green-500' },
-  { name: 'JavaScript', iconType: 'javascript', color: 'text-yellow-400' },
-  { name: 'Node.js', iconType: 'nodejs', color: 'text-green-400' },
-  { name: 'Express.js', iconType: 'express', color: 'text-gray-400' },
-  { name: 'React', iconType: 'react', color: 'text-blue-400' },
-  { name: 'MySQL', iconType: 'mysql', color: 'text-blue-600' },
-  { name: 'PostgreSQL', iconType: 'postgresql', color: 'text-blue-500' },
-  { name: 'Oracle DB', iconType: 'oracle', color: 'text-red-500' },
-  { name: 'Google Cloud', iconType: 'gcp', color: 'text-blue-400' },
-  { name: 'Git', iconType: 'git', color: 'text-orange-600' },
-  { name: 'Jira', iconType: 'jira', color: 'text-blue-600' }
+  { name: 'Java', iconType: 'java', color: 'text-yellow-400' },
+  { name: 'Spring Boot', iconType: 'spring', color: 'text-yellow-500' },
+  { name: 'JavaScript', iconType: 'javascript', color: 'text-yellow-300' },
+  { name: 'Node.js', iconType: 'nodejs', color: 'text-yellow-400' },
+  { name: 'Express.js', iconType: 'express', color: 'text-yellow-300' },
+  { name: 'React', iconType: 'react', color: 'text-yellow-400' },
+  { name: 'MySQL', iconType: 'mysql', color: 'text-yellow-500' },
+  { name: 'PostgreSQL', iconType: 'postgresql', color: 'text-yellow-400' },
+  { name: 'Oracle DB', iconType: 'oracle', color: 'text-yellow-500' },
+  { name: 'Google Cloud', iconType: 'gcp', color: 'text-yellow-400' },
+  { name: 'Git', iconType: 'git', color: 'text-yellow-300' },
+  { name: 'Jira', iconType: 'jira', color: 'text-yellow-400' }
 ] as const;
 
 // Konfigurasi animasi GSAP untuk seluruh portfolio

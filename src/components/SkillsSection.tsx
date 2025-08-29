@@ -12,18 +12,18 @@ interface Skill {
 }
 
 const SKILLS: Skill[] = [
-  { name: 'Java', level: 85, category: 'Backend', color: 'bg-orange-500' },
-  { name: 'Spring Boot', level: 80, category: 'Backend', color: 'bg-green-500' },
+  { name: 'Java', level: 85, category: 'Backend', color: 'bg-yellow-400' },
+  { name: 'Spring Boot', level: 80, category: 'Backend', color: 'bg-yellow-500' },
   { name: 'JavaScript', level: 90, category: 'Frontend', color: 'bg-yellow-400' },
-  { name: 'Node.js', level: 85, category: 'Backend', color: 'bg-green-400' },
-  { name: 'Express.js', level: 85, category: 'Backend', color: 'bg-gray-600' },
-  { name: 'React.js', level: 80, category: 'Frontend', color: 'bg-blue-400' },
-  { name: 'MySQL', level: 85, category: 'Database', color: 'bg-blue-600' },
-  { name: 'PostgreSQL', level: 75, category: 'Database', color: 'bg-blue-500' },
-  { name: 'Oracle DB', level: 70, category: 'Database', color: 'bg-red-500' },
-  { name: 'Git', level: 85, category: 'Tools', color: 'bg-orange-600' },
-  { name: 'Google Cloud', level: 75, category: 'Tools', color: 'bg-blue-400' },
-  { name: 'Jira', level: 80, category: 'Tools', color: 'bg-blue-600' }
+  { name: 'Node.js', level: 85, category: 'Backend', color: 'bg-yellow-500' },
+  { name: 'Express.js', level: 85, category: 'Backend', color: 'bg-yellow-300' },
+  { name: 'React.js', level: 80, category: 'Frontend', color: 'bg-yellow-400' },
+  { name: 'MySQL', level: 85, category: 'Database', color: 'bg-yellow-500' },
+  { name: 'PostgreSQL', level: 75, category: 'Database', color: 'bg-yellow-400' },
+  { name: 'Oracle DB', level: 70, category: 'Database', color: 'bg-yellow-300' },
+  { name: 'Git', level: 85, category: 'Tools', color: 'bg-yellow-400' },
+  { name: 'Google Cloud', level: 75, category: 'Tools', color: 'bg-yellow-500' },
+  { name: 'Jira', level: 80, category: 'Tools', color: 'bg-yellow-400' }
 ];
 
 export default function SkillsSection() {
@@ -35,6 +35,12 @@ export default function SkillsSection() {
     duration: 1
   });
 
+  useScrollAnimation({
+    trigger: '#skills-container',
+    start: 'top 85%',
+    duration: 0.8
+  });
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -43,17 +49,33 @@ export default function SkillsSection() {
             const index = parseInt(entry.target.getAttribute('data-index') || '0');
             setTimeout(() => {
               setVisibleBars(prev => new Set([...prev, index]));
-            }, index * 100);
+            }, index * 200);
+          } else {
+            // Reset animation when out of view for re-animation
+            const index = parseInt(entry.target.getAttribute('data-index') || '0');
+            setVisibleBars(prev => {
+              const newSet = new Set(prev);
+              newSet.delete(index);
+              return newSet;
+            });
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: '0px 0px -20% 0px' }
     );
 
-    const skillBars = document.querySelectorAll('[data-skill-bar]');
-    skillBars.forEach(bar => observer.observe(bar));
+    const setupObserver = () => {
+      const skillBars = document.querySelectorAll('[data-skill-bar]');
+      skillBars.forEach(bar => observer.observe(bar));
+    };
 
-    return () => observer.disconnect();
+    // Delay to ensure DOM is ready
+    const timer = setTimeout(setupObserver, 500);
+
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
   }, []);
 
   const categories = ['Frontend', 'Backend', 'Database', 'Tools'] as const;
@@ -93,7 +115,7 @@ export default function SkillsSection() {
                     
                     <div className="w-full bg-gray-800 rounded-full h-2 overflow-hidden">
                       <div 
-                        className={`h-full ${skill.color} transition-all duration-1000 ease-out`}
+                        className={`h-full ${skill.color} transition-all duration-1500 ease-out`}
                         style={{
                           width: visibleBars.has(globalIndex) ? `${skill.level}%` : '0%'
                         }}

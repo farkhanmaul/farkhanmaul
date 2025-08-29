@@ -103,7 +103,7 @@ export default function About() {
 
         {/* Read More Button - berdasarkan referensi website */}
         <button
-          className="absolute bottom-48 font-normal opacity-40 hover:opacity-80 border-[2px] border-transparent hover:bg-gray-600 hover:bg-opacity-30 hover:border-gray-400 transition-all duration-150 ease-in-out px-3 py-2 rounded-xl text-base sm:text-lg cursor-pointer"
+          className="absolute bottom-48 font-medium opacity-90 hover:opacity-100 border-2 border-yellow-400 border-opacity-80 bg-yellow-400 bg-opacity-20 hover:bg-yellow-400 hover:bg-opacity-30 hover:border-yellow-300 transition-all duration-300 ease-in-out px-6 py-3 rounded-xl text-base sm:text-lg cursor-pointer text-yellow-200 hover:text-white backdrop-blur-md shadow-lg hover:shadow-yellow-400/20 hover:scale-105"
           onClick={() => setIsModalOpen(true)}
         >
           Read more
