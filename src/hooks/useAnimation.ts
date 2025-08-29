@@ -56,6 +56,7 @@ export const useHeroAnimation = () => {
       const nameEls = document.querySelectorAll('#hero-title *');
       const aliasEl = document.querySelector('#hero-alias');
       const greeting2Els = document.querySelectorAll('#hero-greeting2 *');
+      const descriptionEl = document.querySelector('#hero-description');
 
       if (greetingEls.length && nameEls.length && aliasEl && greeting2Els.length) {
         const tl = gsap.timeline();
@@ -64,6 +65,10 @@ export const useHeroAnimation = () => {
           .to(nameEls, { opacity: 1, stagger: 0.15 }, '+=0.2')
           .to(aliasEl, { opacity: 1, duration: 0.5 }, '+=0.1')
           .to(greeting2Els, { opacity: 1, stagger: 0.15 }, '+=0.2');
+        
+        if (descriptionEl) {
+          tl.to(descriptionEl, { opacity: 1, y: 0, duration: 0.8 }, '+=0.3');
+        }
 
         return tl;
       }

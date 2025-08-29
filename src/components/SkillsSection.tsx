@@ -12,18 +12,25 @@ interface Skill {
 }
 
 const SKILLS: Skill[] = [
-  { name: 'Java', level: 85, category: 'Backend', color: 'bg-yellow-400' },
-  { name: 'Spring Boot', level: 80, category: 'Backend', color: 'bg-yellow-500' },
-  { name: 'JavaScript', level: 90, category: 'Frontend', color: 'bg-yellow-400' },
-  { name: 'Node.js', level: 85, category: 'Backend', color: 'bg-yellow-500' },
-  { name: 'Express.js', level: 85, category: 'Backend', color: 'bg-yellow-300' },
-  { name: 'React.js', level: 80, category: 'Frontend', color: 'bg-yellow-400' },
-  { name: 'MySQL', level: 85, category: 'Database', color: 'bg-yellow-500' },
-  { name: 'PostgreSQL', level: 75, category: 'Database', color: 'bg-yellow-400' },
-  { name: 'Oracle DB', level: 70, category: 'Database', color: 'bg-yellow-300' },
-  { name: 'Git', level: 85, category: 'Tools', color: 'bg-yellow-400' },
-  { name: 'Google Cloud', level: 75, category: 'Tools', color: 'bg-yellow-500' },
-  { name: 'Jira', level: 80, category: 'Tools', color: 'bg-yellow-400' }
+  // Frontend - Blue tones
+  { name: 'JavaScript', level: 90, category: 'Frontend', color: 'bg-gradient-to-r from-yellow-400 to-amber-400' },
+  { name: 'React.js', level: 80, category: 'Frontend', color: 'bg-gradient-to-r from-blue-400 to-cyan-400' },
+  
+  // Backend - Warm tones  
+  { name: 'Java', level: 85, category: 'Backend', color: 'bg-gradient-to-r from-amber-400 to-orange-400' },
+  { name: 'Spring Boot', level: 80, category: 'Backend', color: 'bg-gradient-to-r from-green-400 to-emerald-400' },
+  { name: 'Node.js', level: 85, category: 'Backend', color: 'bg-gradient-to-r from-lime-400 to-green-400' },
+  { name: 'Express.js', level: 85, category: 'Backend', color: 'bg-gradient-to-r from-gray-400 to-slate-400' },
+  
+  // Database - Cool tones
+  { name: 'MySQL', level: 85, category: 'Database', color: 'bg-gradient-to-r from-orange-400 to-red-400' },
+  { name: 'PostgreSQL', level: 75, category: 'Database', color: 'bg-gradient-to-r from-blue-400 to-indigo-400' },
+  { name: 'Oracle DB', level: 70, category: 'Database', color: 'bg-gradient-to-r from-red-400 to-pink-400' },
+  
+  // Tools - Mixed tones
+  { name: 'Git', level: 85, category: 'Tools', color: 'bg-gradient-to-r from-orange-400 to-amber-400' },
+  { name: 'Google Cloud', level: 75, category: 'Tools', color: 'bg-gradient-to-r from-blue-400 to-sky-400' },
+  { name: 'Jira', level: 80, category: 'Tools', color: 'bg-gradient-to-r from-blue-500 to-blue-600' }
 ];
 
 export default function SkillsSection() {
@@ -42,52 +49,56 @@ export default function SkillsSection() {
   });
 
   useEffect(() => {
-    // Reset semua animasi terlebih dahulu
-    setVisibleBars(new Set());
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const index = parseInt(entry.target.getAttribute('data-index') || '0');
           
           if (entry.isIntersecting) {
-            // Trigger animation dengan delay
+            // Trigger animation dengan delay bertahap
             setTimeout(() => {
               setVisibleBars(prev => {
                 const newSet = new Set(prev);
                 newSet.add(index);
                 return newSet;
               });
-            }, index * 100); // Reduced delay for faster animation
-          } else {
-            // Reset animation when out of view
-            setVisibleBars(prev => {
-              const newSet = new Set(prev);
-              newSet.delete(index);
-              return newSet;
-            });
+            }, (index % 4) * 150); // Animasi per kategori dengan delay
           }
         });
       },
       { 
-        threshold: 0.2,
-        rootMargin: '0px 0px -10% 0px'
+        threshold: 0.3,
+        rootMargin: '-10% 0px -10% 0px'
       }
     );
 
-    const setupObserver = () => {
-      const skillBars = document.querySelectorAll('[data-skill-bar]');
-      console.log('Setting up observer for', skillBars.length, 'skill bars'); // Debug log
-      skillBars.forEach(bar => {
-        observer.observe(bar);
-      });
+    // Observe skills container instead of individual bars
+    const observeSkillsContainer = () => {
+      const skillsContainer = document.getElementById('skills-container');
+      if (skillsContainer) {
+        const skillBars = skillsContainer.querySelectorAll('[data-skill-bar]');
+        
+        // Setup observer for each skill bar
+        skillBars.forEach(bar => {
+          observer.observe(bar);
+        });
+        
+        return skillBars.length;
+      }
+      return 0;
     };
 
-    // Delay to ensure DOM is ready
-    const timer = setTimeout(setupObserver, 200);
+    // Multiple attempts to setup observer
+    const timer1 = setTimeout(() => {
+      const count = observeSkillsContainer();
+      if (count === 0) {
+        // Try again after longer delay
+        setTimeout(observeSkillsContainer, 500);
+      }
+    }, 100);
 
     return () => {
-      clearTimeout(timer);
+      clearTimeout(timer1);
       observer.disconnect();
     };
   }, []);

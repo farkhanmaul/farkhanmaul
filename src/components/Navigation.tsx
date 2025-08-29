@@ -18,7 +18,7 @@ export default function Navigation() {
         <Burger 
           opened={menuOpen} 
           onClick={setMenuOpen}
-          className="bg-black bg-opacity-50 backdrop-blur-sm rounded-full p-3 border border-gray-700"
+          className="bg-gradient-to-br from-gray-900 via-black to-gray-800 backdrop-blur-xl rounded-full p-3 border-2 border-yellow-400 border-opacity-40 shadow-lg hover:shadow-yellow-400/20 transition-all duration-300"
         />
       </div>
 

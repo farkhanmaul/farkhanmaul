@@ -40,7 +40,7 @@ export const PROJECTS = [
     year: 2024,
     gradient: 'from-red-500 to-orange-500',
     link: 'https://github.com/farkhanmaul/movie-hanz',
-    thumbnail: 'https://raw.githubusercontent.com/farkhanmaul/movie-hanz/main/preview.png'
+    thumbnail: 'https://api.screenshotmachine.com/screenshot?url=https://farkhanmaul.github.io/movie-hanz&device=desktop&format=jpg&cacheLimit=0'
   },
   {
     title: 'VANS x HANZ Website',
@@ -49,7 +49,7 @@ export const PROJECTS = [
     year: 2024,
     gradient: 'from-blue-500 to-purple-600',
     link: 'https://github.com/farkhanmaul/vans-x-hanz',
-    thumbnail: 'https://raw.githubusercontent.com/farkhanmaul/vans-x-hanz/main/preview.png'
+    thumbnail: 'https://api.screenshotmachine.com/screenshot?url=https://farkhanmaul.github.io/vans-x-hanz&device=desktop&format=jpg&cacheLimit=0'
   },
   {
     title: 'FRESHCAN Platform',
@@ -58,7 +58,7 @@ export const PROJECTS = [
     year: 2023,
     gradient: 'from-cyan-500 to-blue-500',
     link: 'https://github.com/farkhanmaul/freshcan',
-    thumbnail: 'https://raw.githubusercontent.com/farkhanmaul/freshcan/main/preview.png'
+    thumbnail: 'https://via.placeholder.com/400x300/1f2937/60a5fa?text=Backend+API'
   },
   {
     title: 'HRIS Mobile Backend',
@@ -66,7 +66,8 @@ export const PROJECTS = [
     tech: ['Node.js', 'Express.js', 'MySQL', 'JWT Authentication', 'REST API'],
     year: 2023,
     gradient: 'from-purple-500 to-pink-500',
-    link: 'https://github.com/farkhanmaul/hris-mobile-backend'
+    link: 'https://github.com/farkhanmaul/hris-mobile-backend',
+    thumbnail: 'https://via.placeholder.com/400x300/1f2937/a855f7?text=HRIS+Backend'
   },
   {
     title: 'Temperature Converter',
@@ -75,7 +76,7 @@ export const PROJECTS = [
     year: 2024,
     gradient: 'from-green-500 to-blue-500',
     link: 'https://github.com/farkhanmaul/temp-converter',
-    thumbnail: 'https://raw.githubusercontent.com/farkhanmaul/temp-converter/main/preview.png'
+    thumbnail: 'https://api.screenshotmachine.com/screenshot?url=https://farkhanmaul.github.io/temp-converter&device=desktop&format=jpg&cacheLimit=0'
   },
   {
     title: 'Quran Digital Project',
@@ -84,7 +85,7 @@ export const PROJECTS = [
     year: 2023,
     gradient: 'from-green-600 to-emerald-500',
     link: 'https://github.com/farkhanmaul/quran-project',
-    thumbnail: 'https://raw.githubusercontent.com/farkhanmaul/quran-project/main/preview.png'
+    thumbnail: 'https://via.placeholder.com/400x300/1f2937/10b981?text=Quran+Digital'
   },
   {
     title: 'Sort Algorithm Visualizer',
@@ -93,24 +94,24 @@ export const PROJECTS = [
     year: 2024,
     gradient: 'from-indigo-500 to-purple-600',
     link: 'https://github.com/farkhanmaul/sort-algo-visualize',
-    thumbnail: 'https://raw.githubusercontent.com/farkhanmaul/sort-algo-visualize/main/preview.png'
+    thumbnail: 'https://api.screenshotmachine.com/screenshot?url=https://farkhanmaul.github.io/sort-algo-visualize&device=desktop&format=jpg&cacheLimit=0'
   }
 ] as const;
 
 // Data tech stack dengan icon dan warna untuk About section
 export const TECH_BADGES = [
-  { name: 'Java', iconType: 'java', color: 'text-yellow-400' },
-  { name: 'Spring Boot', iconType: 'spring', color: 'text-yellow-500' },
+  { name: 'Java', iconType: 'java', color: 'text-amber-400' },
+  { name: 'Spring Boot', iconType: 'spring', color: 'text-yellow-400' },
   { name: 'JavaScript', iconType: 'javascript', color: 'text-yellow-300' },
-  { name: 'Node.js', iconType: 'nodejs', color: 'text-yellow-400' },
-  { name: 'Express.js', iconType: 'express', color: 'text-yellow-300' },
-  { name: 'React', iconType: 'react', color: 'text-yellow-400' },
-  { name: 'MySQL', iconType: 'mysql', color: 'text-yellow-500' },
-  { name: 'PostgreSQL', iconType: 'postgresql', color: 'text-yellow-400' },
-  { name: 'Oracle DB', iconType: 'oracle', color: 'text-yellow-500' },
-  { name: 'Google Cloud', iconType: 'gcp', color: 'text-yellow-400' },
-  { name: 'Git', iconType: 'git', color: 'text-yellow-300' },
-  { name: 'Jira', iconType: 'jira', color: 'text-yellow-400' }
+  { name: 'Node.js', iconType: 'nodejs', color: 'text-lime-400' },
+  { name: 'Express.js', iconType: 'express', color: 'text-amber-300' },
+  { name: 'React', iconType: 'react', color: 'text-blue-400' },
+  { name: 'MySQL', iconType: 'mysql', color: 'text-orange-400' },
+  { name: 'PostgreSQL', iconType: 'postgresql', color: 'text-blue-400' },
+  { name: 'Oracle DB', iconType: 'oracle', color: 'text-red-400' },
+  { name: 'Google Cloud', iconType: 'gcp', color: 'text-blue-400' },
+  { name: 'Git', iconType: 'git', color: 'text-orange-400' },
+  { name: 'Jira', iconType: 'jira', color: 'text-blue-400' }
 ] as const;
 
 // Konfigurasi animasi GSAP untuk seluruh portfolio
