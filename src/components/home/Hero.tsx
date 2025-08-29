@@ -97,16 +97,15 @@ export default function Hero() {
         </section>
       </div>
 
-        <PageMarker />
+      <PageMarker />
 
-        <section className="absolute bottom-0 right-0">
-          <div className="flex items-center justify-center">
-            <svg className="w-48 sm:w-[300px] absolute z-[-1] animate-spin-slow" viewBox="0 0 346 346" fill="none">
-              <circle cx="172" cy="172" r="172" stroke="#facc15" strokeWidth="1.54255" strokeDasharray="10.09 10.09" opacity="0.6" />
-            </svg>
-            <ArrowDown size={40} className="text-yellow-400" strokeWidth={2} />
-          </div>
-        </section>
+      <section className="absolute bottom-0 right-0">
+        <div className="flex items-center justify-center">
+          <svg className="w-48 sm:w-[300px] absolute z-[-1] animate-spin-slow" viewBox="0 0 346 346" fill="none">
+            <circle cx="172" cy="172" r="172" stroke="#facc15" strokeWidth="1.54255" strokeDasharray="10.09 10.09" opacity="0.6" />
+          </svg>
+          <ArrowDown size={40} className="text-yellow-400" strokeWidth={2} />
+        </div>
       </section>
     </Section>
   );
