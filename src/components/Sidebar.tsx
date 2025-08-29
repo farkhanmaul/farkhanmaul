@@ -89,7 +89,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       {/* Sidebar */}
       <section
         ref={sidebarRef}
-        className="fixed inset-0 ml-auto sm:max-w-2xl px-8 sm:px-16 md:px-24 pb-16 pt-[12vh] sm:pt-[16vh] bg-black bg-opacity-95 backdrop-blur-lg border-l border-yellow-500 border-opacity-30 z-20"
+        className="fixed inset-0 ml-auto sm:max-w-2xl px-8 sm:px-16 md:px-24 pb-16 pt-[12vh] sm:pt-[16vh] bg-gradient-to-br from-gray-900 via-black to-gray-800 backdrop-blur-xl border-l-2 border-yellow-400 border-opacity-40 z-20 shadow-2xl shadow-black/50"
         style={{
           transform: 'translateX(100%)',
         }}
@@ -103,10 +103,13 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               >
                 <div
                   onClick={() => handleNavigate(path)}
-                  className="flex items-center gap-4 pb-3 border-b text-2xl sm:text-3xl md:text-4xl transition-all duration-300 border-transparent group-hover:px-3 group-hover:border-yellow-300 text-gray-300 group-hover:text-white"
+                  className="flex items-center gap-4 pb-3 border-b text-2xl sm:text-3xl md:text-4xl transition-all duration-300 border-transparent group-hover:px-3 group-hover:border-yellow-300 text-gray-300 group-hover:text-white cursor-pointer"
                 >
-                  <Icon className="text-xl sm:text-2xl md:text-3xl text-yellow-400 group-hover:text-yellow-300 transition-colors duration-300" />
-                  <span>{name}</span>
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-20 scale-0 group-hover:scale-150 transition-all duration-300"></div>
+                    <Icon className="relative text-2xl sm:text-3xl md:text-4xl text-yellow-400 group-hover:text-yellow-300 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12" />
+                  </div>
+                  <span className="transition-all duration-300 group-hover:translate-x-2">{name}</span>
                 </div>
               </section>
             ))}

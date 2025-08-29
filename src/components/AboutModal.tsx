@@ -59,23 +59,24 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
         ref={modalRef}
         className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none opacity-0"
       >
-        <div className="modal-content bg-black bg-opacity-95 backdrop-blur-lg border border-yellow-500 border-opacity-30 rounded-2xl p-3 sm:p-4 max-w-2xl w-full max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-yellow-500 hover:scrollbar-thumb-yellow-400 relative">
+        <div className="modal-content bg-gradient-to-br from-gray-900 via-black to-gray-800 backdrop-blur-xl border-2 border-yellow-400 border-opacity-40 rounded-2xl p-4 sm:p-6 max-w-3xl w-full max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-track-gray-900 scrollbar-thumb-yellow-400 hover:scrollbar-thumb-yellow-300 relative shadow-2xl shadow-yellow-500/20">
           {/* Close Button */}
-          <div className="flex justify-end mb-2">
+          <div className="flex justify-end mb-3">
             <button
               onClick={onClose}
-              className="flex p-1.5 rounded-full border border-yellow-500 border-opacity-50 hover:border-yellow-400 hover:bg-yellow-400 hover:bg-opacity-10 transition-all duration-300 bg-black bg-opacity-60"
+              className="flex p-2 rounded-full border-2 border-yellow-400 border-opacity-60 hover:border-yellow-300 hover:bg-yellow-400 hover:bg-opacity-20 transition-all duration-300 bg-gradient-to-br from-yellow-400/10 to-transparent hover:scale-110 hover:rotate-90 shadow-lg"
             >
-              <FiX className="text-yellow-300 text-base" />
+              <FiX className="text-yellow-300 text-lg hover:text-white transition-colors duration-300" />
             </button>
           </div>
 
           {/* Content */}
           <div className="text-white pr-1">
-            <div className="mb-4 sm:mb-6">
-              <h2 className="font-medium text-xl sm:text-2xl tracking-tight">
-                About me
+            <div className="mb-6 sm:mb-8 text-center">
+              <h2 className="font-bold text-2xl sm:text-3xl tracking-tight bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-clip-text text-transparent">
+                About Me
               </h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-300 mx-auto mt-2 rounded-full"></div>
             </div>
 
             <div className="text-gray-200 text-sm leading-relaxed space-y-2.5">

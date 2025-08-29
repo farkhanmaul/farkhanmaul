@@ -52,8 +52,8 @@ export default function TechBadge({ name, iconType, color = 'text-yellow-300' }:
   };
 
   return (
-    <span className="inline-flex items-center px-3 py-2 rounded-full text-sm font-normal bg-gray-900 bg-opacity-50 backdrop-blur-sm border border-gray-700 hover:border-gray-500 hover:bg-opacity-70 transition-all duration-300 group hover:scale-105">
-      <span className="mr-2 text-yellow-300 group-hover:scale-110 transition-transform duration-300">
+    <span className="inline-flex items-center px-3 py-2 rounded-full text-sm font-normal bg-gray-900 bg-opacity-50 backdrop-blur-sm border border-yellow-500 border-opacity-30 hover:border-yellow-400 hover:bg-opacity-70 transition-all duration-300 group hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/20">
+      <span className={`mr-2 ${color} group-hover:scale-110 transition-transform duration-300 group-hover:rotate-12`}>
         {getIcon(iconType)}
       </span>
       <span className="text-gray-200 group-hover:text-white transition-colors duration-300">

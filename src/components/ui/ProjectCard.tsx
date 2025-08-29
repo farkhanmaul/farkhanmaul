@@ -5,11 +5,36 @@ interface ProjectCardProps {
   year: number;
   gradient: string;
   link?: string;
+  thumbnail?: string;
 }
 
-export default function ProjectCard({ title, description, tech, year, gradient, link }: ProjectCardProps) {
+export default function ProjectCard({ title, description, tech, year, gradient, link, thumbnail }: ProjectCardProps) {
   const CardContent = () => (
     <div className={`relative h-full p-8 rounded-2xl bg-yellow-400 bg-opacity-10 backdrop-blur-sm border border-yellow-500 border-opacity-20 hover:border-yellow-400 hover:border-opacity-40 transition-all duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden group`}>
+      {/* Thumbnail Preview on Hover */}
+      {thumbnail && (
+        <div className="absolute inset-0 bg-black bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-center justify-center rounded-2xl">
+          <div className="w-full h-full p-4 flex flex-col items-center justify-center">
+            <div className="w-full max-w-xs h-48 bg-gray-800 rounded-lg mb-4 flex items-center justify-center border border-yellow-400 border-opacity-30">
+              <img 
+                src={thumbnail} 
+                alt={`${title} preview`}
+                className="w-full h-full object-cover rounded-lg opacity-90"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = 'none';
+                  (e.target as HTMLImageElement).nextElementSibling!.classList.remove('hidden');
+                }}
+              />
+              <div className="hidden text-yellow-300 text-sm text-center">
+                <div className="text-4xl mb-2">🖥️</div>
+                <p>Preview Unavailable</p>
+              </div>
+            </div>
+            <p className="text-yellow-300 text-xs text-center">Website Preview</p>
+          </div>
+        </div>
+      )}
+      
       {/* Hover glow effect */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-transparent to-transparent group-hover:from-white group-hover:to-transparent opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
       

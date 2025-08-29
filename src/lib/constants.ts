@@ -39,7 +39,8 @@ export const PROJECTS = [
     tech: ['JavaScript', 'HTML', 'CSS', 'TMDb API', 'Responsive Design'],
     year: 2024,
     gradient: 'from-red-500 to-orange-500',
-    link: 'https://github.com/farkhanmaul/movie-hanz'
+    link: 'https://github.com/farkhanmaul/movie-hanz',
+    thumbnail: 'https://raw.githubusercontent.com/farkhanmaul/movie-hanz/main/preview.png'
   },
   {
     title: 'VANS x HANZ Website',
@@ -47,7 +48,8 @@ export const PROJECTS = [
     tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Web', 'Web Standards'],
     year: 2024,
     gradient: 'from-blue-500 to-purple-600',
-    link: 'https://github.com/farkhanmaul/vans-x-hanz'
+    link: 'https://github.com/farkhanmaul/vans-x-hanz',
+    thumbnail: 'https://raw.githubusercontent.com/farkhanmaul/vans-x-hanz/main/preview.png'
   },
   {
     title: 'FRESHCAN Platform',
@@ -55,7 +57,8 @@ export const PROJECTS = [
     tech: ['Node.js', 'Express.js', 'MySQL', 'GCP', 'JWT Auth', 'ML Backend'],
     year: 2023,
     gradient: 'from-cyan-500 to-blue-500',
-    link: 'https://github.com/farkhanmaul/freshcan'
+    link: 'https://github.com/farkhanmaul/freshcan',
+    thumbnail: 'https://raw.githubusercontent.com/farkhanmaul/freshcan/main/preview.png'
   },
   {
     title: 'HRIS Mobile Backend',
@@ -71,7 +74,8 @@ export const PROJECTS = [
     tech: ['JavaScript', 'HTML', 'CSS', 'DOM Manipulation', 'Math Functions'],
     year: 2024,
     gradient: 'from-green-500 to-blue-500',
-    link: 'https://github.com/farkhanmaul/temp-converter'
+    link: 'https://github.com/farkhanmaul/temp-converter',
+    thumbnail: 'https://raw.githubusercontent.com/farkhanmaul/temp-converter/main/preview.png'
   },
   {
     title: 'Quran Digital Project',
@@ -79,7 +83,8 @@ export const PROJECTS = [
     tech: ['TypeScript', 'API Integration', 'Local Storage', 'Progressive Web App'],
     year: 2023,
     gradient: 'from-green-600 to-emerald-500',
-    link: 'https://github.com/farkhanmaul/quran-project'
+    link: 'https://github.com/farkhanmaul/quran-project',
+    thumbnail: 'https://raw.githubusercontent.com/farkhanmaul/quran-project/main/preview.png'
   },
   {
     title: 'Sort Algorithm Visualizer',
@@ -87,7 +92,8 @@ export const PROJECTS = [
     tech: ['JavaScript', 'HTML Canvas', 'CSS Animations', 'Algorithm Visualization'],
     year: 2024,
     gradient: 'from-indigo-500 to-purple-600',
-    link: 'https://github.com/farkhanmaul/sort-algo-visualize'
+    link: 'https://github.com/farkhanmaul/sort-algo-visualize',
+    thumbnail: 'https://raw.githubusercontent.com/farkhanmaul/sort-algo-visualize/main/preview.png'
   }
 ] as const;
 

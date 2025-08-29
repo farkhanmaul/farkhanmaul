@@ -42,17 +42,25 @@ export default function SkillsSection() {
   });
 
   useEffect(() => {
+    // Reset semua animasi terlebih dahulu
+    setVisibleBars(new Set());
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          const index = parseInt(entry.target.getAttribute('data-index') || '0');
+          
           if (entry.isIntersecting) {
-            const index = parseInt(entry.target.getAttribute('data-index') || '0');
+            // Trigger animation dengan delay
             setTimeout(() => {
-              setVisibleBars(prev => new Set([...prev, index]));
-            }, index * 200);
+              setVisibleBars(prev => {
+                const newSet = new Set(prev);
+                newSet.add(index);
+                return newSet;
+              });
+            }, index * 100); // Reduced delay for faster animation
           } else {
-            // Reset animation when out of view for re-animation
-            const index = parseInt(entry.target.getAttribute('data-index') || '0');
+            // Reset animation when out of view
             setVisibleBars(prev => {
               const newSet = new Set(prev);
               newSet.delete(index);
@@ -61,16 +69,22 @@ export default function SkillsSection() {
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -20% 0px' }
+      { 
+        threshold: 0.2,
+        rootMargin: '0px 0px -10% 0px'
+      }
     );
 
     const setupObserver = () => {
       const skillBars = document.querySelectorAll('[data-skill-bar]');
-      skillBars.forEach(bar => observer.observe(bar));
+      console.log('Setting up observer for', skillBars.length, 'skill bars'); // Debug log
+      skillBars.forEach(bar => {
+        observer.observe(bar);
+      });
     };
 
     // Delay to ensure DOM is ready
-    const timer = setTimeout(setupObserver, 500);
+    const timer = setTimeout(setupObserver, 200);
 
     return () => {
       clearTimeout(timer);
@@ -91,7 +105,7 @@ export default function SkillsSection() {
         TECHNICAL <span className="text-yellow-300">SKILLS</span>
       </h2>
 
-      <div className="max-w-4xl w-full grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+      <div id="skills-container" className="max-w-4xl w-full grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
         {categories.map((category) => (
           <div key={category} className="space-y-4">
             <h3 className="text-base sm:text-lg font-medium text-yellow-300 mb-4 sm:mb-6 text-center">
