@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import React from 'react';
 import PageMarker from '@/components/PageMarker';
 import { useHeroAnimation } from '@/hooks/useAnimation';
 import { ArrowDown } from '@phosphor-icons/react';
