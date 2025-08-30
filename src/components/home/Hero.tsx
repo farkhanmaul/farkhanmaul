@@ -15,7 +15,6 @@ export default function Hero() {
 
   return (
     <Section id="hero" className="px-6 sm:px-12 lg:px-20 py-12 gap-4">
-
       <div className="flex-grow grid grid-cols-1 lg:grid-cols-2 gap-8 relative">
         {/* Left Column - Text Content */}
         <section className="flex flex-col justify-center pl-4 sm:pl-[8vw] lg:pl-[4vw] pt-[10vh] sm:pt-[15vh] lg:pt-0 gap-6">
