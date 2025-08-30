@@ -79,100 +79,104 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
               <div className="w-16 h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-300 mx-auto mt-1 rounded-full"></div>
             </div>
 
-            <div className="flex-1 grid grid-cols-1 lg:grid-cols-4 gap-3 text-gray-200 text-xs leading-relaxed overflow-hidden">
-              {/* Intro Column */}
-              <div className="space-y-3">
-                <div>
-                  <p className="font-light mb-2">
-                    Hey! I&apos;m <strong className="text-yellow-300">Farkhan Maul</strong> (farkhanmaul), a
-                    Software Developer with 1+ years experience in full-stack development.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-medium mb-2 text-yellow-400">Connect</h3>
-                  <div className="flex flex-col gap-1">
-                    <a
-                      className="inline-flex items-center gap-1 font-light border bg-gray-600 bg-opacity-20 hover:bg-opacity-30 border-yellow-400 transition-all duration-150 ease-in-out px-2 py-1 rounded text-xs"
-                      href="https://github.com/farkhanmaul"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      GitHub <FiExternalLink size={10} />
-                    </a>
-                    <a
-                      className="inline-flex items-center gap-1 font-light border bg-gray-600 bg-opacity-20 hover:bg-opacity-30 border-yellow-400 transition-all duration-150 ease-in-out px-2 py-1 rounded text-xs"
-                      href="https://www.linkedin.com/in/farkhanmaul/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      LinkedIn <FiExternalLink size={10} />
-                    </a>
+            {/* Content organized in distinct sections */}
+            <div className="flex-1 flex flex-col gap-4 overflow-y-auto">
+              {/* Intro Section */}
+              <div className="bg-slate-800/30 p-4 rounded-lg border border-yellow-400/20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <p className="font-light mb-3 text-sm">
+                      Hey! I&apos;m <strong className="text-yellow-300">Farkhan Maul</strong> (farkhanmaul), a
+                      Software Developer with 1+ years experience in full-stack development.
+                    </p>
                   </div>
-                </div>
-              </div>
-
-              {/* Experience Column */}
-              <div className="space-y-3">
-                <div>
-                  <h3 className="text-xs font-medium mb-2 text-yellow-400">Experience</h3>
-                  <div className="space-y-2">
-                    <div>
-                      <h4 className="font-medium text-white text-xs"><strong className="text-yellow-300">Jr. Software Developer</strong></h4>
-                      <p className="text-xs text-gray-400">PT. Bank Negara Indonesia</p>
-                      <p className="text-xs text-gray-500">Nov 2024 – Present</p>
-                      <p className="text-xs font-light">3 REST APIs, Spring Boot, Oracle/PostgreSQL</p>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-white text-xs"><strong className="text-yellow-300">Software Developer Intern</strong></h4>
-                      <p className="text-xs text-gray-400">PT. Elang Mahkota Teknologi</p>
-                      <p className="text-xs text-gray-500">Aug 2023 – Dec 2023</p>
-                      <p className="text-xs font-light">40+ API endpoints, Node.js, MySQL</p>
+                  <div>
+                    <h3 className="text-sm font-medium mb-2 text-yellow-400">Connect</h3>
+                    <div className="flex flex-wrap gap-2">
+                      <a
+                        className="inline-flex items-center gap-1 font-light border bg-gray-600 bg-opacity-20 hover:bg-opacity-30 border-yellow-400 transition-all duration-150 ease-in-out px-2 py-1 rounded text-xs"
+                        href="https://github.com/farkhanmaul"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        GitHub <FiExternalLink size={10} />
+                      </a>
+                      <a
+                        className="inline-flex items-center gap-1 font-light border bg-gray-600 bg-opacity-20 hover:bg-opacity-30 border-yellow-400 transition-all duration-150 ease-in-out px-2 py-1 rounded text-xs"
+                        href="https://www.linkedin.com/in/farkhanmaul/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        LinkedIn <FiExternalLink size={10} />
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Education Column */}
-              <div className="space-y-3">
-                <div>
-                  <h3 className="text-xs font-medium mb-2 text-yellow-400">Education</h3>
-                  <div className="space-y-2">
-                    <div>
-                      <h4 className="font-medium text-white text-xs"><strong className="text-yellow-300">Bachelor Computer Science</strong></h4>
-                      <p className="text-xs text-gray-400">Universitas Ahmad Dahlan</p>
-                      <p className="text-xs text-gray-500">2021 – 2025</p>
-                      <p className="text-xs font-light">GPA: 3.88/4.00</p>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-white text-xs"><strong className="text-yellow-300">Cloud Computing Cohort</strong></h4>
-                      <p className="text-xs text-gray-400">Bangkit Academy by Google, Gojek & Traveloka</p>
-                      <p className="text-xs text-gray-500">2023</p>
-                      <p className="text-xs font-light">26+ technical certifications</p>
-                    </div>
+              {/* Experience Section */}
+              <div className="bg-slate-800/30 p-4 rounded-lg border border-yellow-400/20">
+                <h3 className="text-lg font-semibold mb-3 text-yellow-300 flex items-center gap-2">
+                  💼 Professional Experience
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-slate-900/40 p-3 rounded border border-slate-600/30">
+                    <h4 className="font-semibold text-white text-sm mb-1">Jr. Software Developer</h4>
+                    <p className="text-sm text-yellow-300 font-medium">PT. Bank Negara Indonesia</p>
+                    <p className="text-xs text-gray-400 mb-2">Nov 2024 – Present</p>
+                    <p className="text-xs font-light text-gray-300">Developed 3+ REST APIs using Spring Boot with Oracle/PostgreSQL databases</p>
+                  </div>
+                  <div className="bg-slate-900/40 p-3 rounded border border-slate-600/30">
+                    <h4 className="font-semibold text-white text-sm mb-1">Software Developer Intern</h4>
+                    <p className="text-sm text-yellow-300 font-medium">PT. Elang Mahkota Teknologi</p>
+                    <p className="text-xs text-gray-400 mb-2">Aug 2023 – Dec 2023</p>
+                    <p className="text-xs font-light text-gray-300">Built 40+ API endpoints using Node.js and MySQL</p>
                   </div>
                 </div>
               </div>
 
-              {/* Skills & Achievements Column */}
-              <div className="space-y-3">
-                <div>
-                  <h3 className="text-xs font-medium mb-2 text-yellow-400">Skills</h3>
-                  <div className="space-y-1 text-xs">
-                    <p className="font-light"><span className="text-gray-300">Frontend:</span> React, JavaScript, HTML/CSS</p>
-                    <p className="font-light"><span className="text-gray-300">Backend:</span> Java, Node.js, Spring Boot</p>
-                    <p className="font-light"><span className="text-gray-300">Database:</span> MySQL, PostgreSQL, Oracle</p>
-                    <p className="font-light"><span className="text-gray-300">Tools:</span> Git, GCP, AWS, Jira</p>
+              {/* Education Section */}
+              <div className="bg-slate-800/30 p-4 rounded-lg border border-yellow-400/20">
+                <h3 className="text-lg font-semibold mb-3 text-yellow-300 flex items-center gap-2">
+                  🎓 Education Background
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-slate-900/40 p-3 rounded border border-slate-600/30">
+                    <h4 className="font-semibold text-white text-sm mb-1">Bachelor of Computer Science</h4>
+                    <p className="text-sm text-yellow-300 font-medium">Universitas Ahmad Dahlan</p>
+                    <p className="text-xs text-gray-400 mb-2">2021 – 2025</p>
+                    <p className="text-xs font-light text-gray-300">Current GPA: 3.88/4.00 - Excellent Academic Performance</p>
+                  </div>
+                  <div className="bg-slate-900/40 p-3 rounded border border-slate-600/30">
+                    <h4 className="font-semibold text-white text-sm mb-1">Cloud Computing Cohort</h4>
+                    <p className="text-sm text-yellow-300 font-medium">Bangkit Academy</p>
+                    <p className="text-xs text-gray-400 mb-2">by Google, Gojek & Traveloka - 2023</p>
+                    <p className="text-xs font-light text-gray-300">Earned 26+ technical certifications in cloud computing</p>
                   </div>
                 </div>
-                
-                <div>
-                  <h3 className="text-xs font-medium mb-2 text-yellow-400">Achievements</h3>
-                  <div className="space-y-1 text-xs">
-                    <p className="font-light">🚀 1+ years professional development</p>
-                    <p className="font-light">⚡ 40+ REST APIs built</p>
-                    <p className="font-light">📚 26+ technical certifications</p>
-                    <p className="font-light">🎯 3.88 GPA in Computer Science</p>
+              </div>
+
+              {/* Skills & Achievements Section */}
+              <div className="bg-slate-800/30 p-4 rounded-lg border border-yellow-400/20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-yellow-300">💻 Technical Skills</h3>
+                    <div className="space-y-2 text-sm">
+                      <p className="font-light"><span className="text-yellow-400 font-medium">Frontend:</span> React, JavaScript, HTML/CSS</p>
+                      <p className="font-light"><span className="text-yellow-400 font-medium">Backend:</span> Java, Node.js, Spring Boot</p>
+                      <p className="font-light"><span className="text-yellow-400 font-medium">Database:</span> MySQL, PostgreSQL, Oracle</p>
+                      <p className="font-light"><span className="text-yellow-400 font-medium">Tools:</span> Git, GCP, AWS, Jira</p>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-yellow-300">🏆 Key Achievements</h3>
+                    <div className="space-y-1 text-sm">
+                      <p className="font-light flex items-center gap-2">🚀 1+ years professional development</p>
+                      <p className="font-light flex items-center gap-2">⚡ 40+ REST APIs built</p>
+                      <p className="font-light flex items-center gap-2">📚 26+ technical certifications</p>
+                      <p className="font-light flex items-center gap-2">🎯 3.88 GPA in Computer Science</p>
+                    </div>
                   </div>
                 </div>
               </div>

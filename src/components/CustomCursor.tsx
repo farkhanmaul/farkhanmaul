@@ -4,13 +4,13 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
 /**
- * Enhanced Custom Cursor Component with smooth following effect
- * Multiple cursor elements with smooth animations
+ * Custom Cursor Component with stroke/line trace effects
+ * Creates flowing line trails that follow cursor movement
  */
 export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
-  const outerCursorRef = useRef<HTMLDivElement>(null);
-  const trailDotsRef = useRef<HTMLDivElement[]>([]);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const trailPoints = useRef<{x: number, y: number, life: number}[]>([]);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
@@ -22,23 +22,42 @@ export default function CustomCursor() {
     if (isMobile) return;
 
     const cursor = cursorRef.current;
-    const outerCursor = outerCursorRef.current;
-    if (!cursor || !outerCursor) return;
+    const canvas = canvasRef.current;
+    if (!cursor || !canvas) return;
 
-    // Mouse tracking with smooth interpolation
-    let targetX = 0;
-    let targetY = 0;
-    let currentX = 0;
-    let currentY = 0;
+    // Setup canvas
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let animationId: number;
+    let lastTrailUpdate = 0;
 
     const handleMouseMove = (e: MouseEvent) => {
-      targetX = e.clientX;
-      targetY = e.clientY;
       setMousePos({ x: e.clientX, y: e.clientY });
       
       // Update main cursor immediately
-      cursor.style.left = `${targetX}px`;
-      cursor.style.top = `${targetY}px`;
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+
+      // Throttle trail updates for better performance
+      const now = Date.now();
+      if (now - lastTrailUpdate > 16) { // ~60fps limit
+        // Add new trail point
+        trailPoints.current.push({
+          x: e.clientX,
+          y: e.clientY,
+          life: 1.0
+        });
+
+        // Limit trail length for performance
+        if (trailPoints.current.length > 30) {
+          trailPoints.current.shift();
+        }
+        
+        lastTrailUpdate = now;
+      }
     };
 
     const handleMouseEnter = (e: MouseEvent) => {
@@ -56,109 +75,98 @@ export default function CustomCursor() {
       setIsHovered(isInteractive);
       
       if (isInteractive) {
-        gsap.to(cursor, { scale: 0.5, duration: 0.2 });
-        gsap.to(outerCursor, { scale: 1.5, duration: 0.3 });
+        gsap.to(cursor, { scale: 1.5, duration: 0.2 });
       } else {
         gsap.to(cursor, { scale: 1, duration: 0.2 });
-        gsap.to(outerCursor, { scale: 1, duration: 0.3 });
       }
     };
 
-    // Smooth following animation for outer cursor
-    const animateOuterCursor = () => {
-      // Smooth interpolation
-      const ease = 0.15;
-      currentX += (targetX - currentX) * ease;
-      currentY += (targetY - currentY) * ease;
+    // Animation loop for trail effect - optimized for performance
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      outerCursor.style.left = `${currentX}px`;
-      outerCursor.style.top = `${currentY}px`;
-      
-      requestAnimationFrame(animateOuterCursor);
+      // Update and draw trail
+      if (trailPoints.current.length > 1) {
+        // Use simple line drawing for better performance
+        ctx.strokeStyle = 'rgba(250, 204, 21, 0.4)';
+        ctx.lineWidth = 2;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.globalAlpha = 0.8;
+
+        ctx.beginPath();
+        for (let i = 0; i < trailPoints.current.length - 1; i++) {
+          const point = trailPoints.current[i];
+          const nextPoint = trailPoints.current[i + 1];
+          
+          // Simplified fade out
+          point.life -= 0.03;
+          
+          if (point.life > 0) {
+            if (i === 0) {
+              ctx.moveTo(point.x, point.y);
+            } else {
+              ctx.lineTo(point.x, point.y);
+            }
+          }
+        }
+        
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+        
+        // Remove dead trail points less frequently for performance
+        if (Math.random() < 0.1) {
+          trailPoints.current = trailPoints.current.filter(point => point.life > 0);
+        }
+      }
+
+      animationId = requestAnimationFrame(animate);
     };
 
-    // Start animations
-    animateOuterCursor();
+    // Handle window resize
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    // Start animation
+    animate();
 
     // Add event listeners
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseover', handleMouseEnter);
+    window.addEventListener('resize', handleResize);
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseover', handleMouseEnter);
-    };
-  }, []);
-
-  // Generate trail dots
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    
-    const isMobile = window.innerWidth < 768 || 'ontouchstart' in window;
-    if (isMobile) return;
-
-    // Create trailing effect with multiple dots
-    const trailCount = 8;
-    const trailPositions: { x: number; y: number }[] = Array(trailCount).fill({ x: 0, y: 0 });
-    
-    let animationId: number;
-    
-    const animateTrail = () => {
-      // Update trail positions with delay
-      for (let i = trailCount - 1; i > 0; i--) {
-        trailPositions[i] = { 
-          x: trailPositions[i - 1].x, 
-          y: trailPositions[i - 1].y 
-        };
-      }
-      trailPositions[0] = mousePos;
-      
-      // Update DOM elements
-      trailDotsRef.current.forEach((dot, index) => {
-        if (dot && trailPositions[index]) {
-          const scale = (trailCount - index) / trailCount;
-          const opacity = scale * 0.6;
-          
-          gsap.set(dot, {
-            x: trailPositions[index].x,
-            y: trailPositions[index].y,
-            scale: scale * 0.3,
-            opacity: opacity
-          });
-        }
-      });
-      
-      animationId = requestAnimationFrame(animateTrail);
-    };
-    
-    animateTrail();
-    
-    return () => {
+      window.removeEventListener('resize', handleResize);
       if (animationId) {
         cancelAnimationFrame(animationId);
       }
     };
-  }, [mousePos]);
+  }, []);
+
 
   return (
     <>
-      {/* Main cursor dot */}
-      <div 
-        ref={cursorRef}
-        className="custom-cursor fixed pointer-events-none w-2 h-2 bg-yellow-400 rounded-full z-[9999] transition-all duration-200"
+      {/* Canvas for stroke trail effect */}
+      <canvas
+        ref={canvasRef}
+        className="custom-cursor-canvas fixed pointer-events-none top-0 left-0 z-[9998]"
         style={{ 
-          transform: 'translate(-50%, -50%)',
-          left: '0px',
-          top: '0px',
-          filter: 'blur(0px)'
+          width: '100vw',
+          height: '100vh'
         }}
       />
       
-      {/* Outer cursor ring */}
+      {/* Main cursor dot */}
       <div 
-        ref={outerCursorRef}
-        className={`custom-cursor-outer fixed pointer-events-none w-8 h-8 border rounded-full z-[9998] transition-all duration-300 ${
-          isHovered ? 'border-blue-400 border-2' : 'border-yellow-400/50 border-1'
+        ref={cursorRef}
+        className={`custom-cursor fixed pointer-events-none rounded-full z-[9999] transition-all duration-200 ${
+          isHovered 
+            ? 'w-4 h-4 bg-blue-400 shadow-lg shadow-blue-400/50' 
+            : 'w-3 h-3 bg-yellow-400 shadow-md shadow-yellow-400/30'
         }`}
         style={{ 
           transform: 'translate(-50%, -50%)',
@@ -166,22 +174,6 @@ export default function CustomCursor() {
           top: '0px'
         }}
       />
-      
-      {/* Trail dots */}
-      {Array.from({ length: 8 }).map((_, index) => (
-        <div
-          key={index}
-          ref={(el) => {
-            if (el) trailDotsRef.current[index] = el;
-          }}
-          className="custom-cursor-trail fixed pointer-events-none w-1 h-1 bg-yellow-400/40 rounded-full z-[9997]"
-          style={{ 
-            transform: 'translate(-50%, -50%)',
-            left: '0px',
-            top: '0px'
-          }}
-        />
-      ))}
     </>
   );
 }

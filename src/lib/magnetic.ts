@@ -4,8 +4,13 @@ export const magnetic = (element: HTMLElement, strength = 0.3) => {
   if (!element || typeof window === 'undefined') return () => {};
   
   const bounds = element.getBoundingClientRect();
+  let lastUpdate = 0;
   
   const onMouseMove = (e: MouseEvent) => {
+    // Throttle for performance
+    const now = Date.now();
+    if (now - lastUpdate < 32) return; // ~30fps limit
+    
     try {
       const x = e.clientX - bounds.left - bounds.width / 2;
       const y = e.clientY - bounds.top - bounds.height / 2;
@@ -16,6 +21,8 @@ export const magnetic = (element: HTMLElement, strength = 0.3) => {
         y: y * strength,
         ease: 'power2.out',
       });
+      
+      lastUpdate = now;
     } catch (error) {
       console.warn('Magnetic mousemove animation failed:', error);
     }

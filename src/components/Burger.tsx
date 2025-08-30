@@ -20,15 +20,17 @@ export default function Burger({ opened, className, onClick }: BurgerProps) {
     'block w-6 h-[2px] bg-white transition-all duration-300 ease-out transform-gpu';
 
   return (
-    <section
+    <button
+      type="button"
       className={classNames(
-        'burger h-8 w-10 flex flex-col justify-center gap-[7px] cursor-pointer relative z-[1000] p-2 -m-2', // Added padding untuk area klik lebih besar
+        'burger h-8 w-10 flex flex-col justify-center gap-[7px] cursor-pointer relative z-[1000]',
         'hover:scale-110 active:scale-95 transition-transform duration-300',
         className,
       )}
       onClick={() => onClick?.(!opened)}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      aria-label={opened ? 'Close menu' : 'Open menu'}
     >
       {/* Top line */}
       <span
@@ -68,6 +70,6 @@ export default function Burger({ opened, className, onClick }: BurgerProps) {
           hovered ? 'bg-yellow-300 opacity-10 scale-150' : 'opacity-0 scale-100'
         )}
       />
-    </section>
+    </button>
   );
 }
