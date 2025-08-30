@@ -28,7 +28,7 @@ export default function Experience() {
   });
 
   return (
-    <section 
+    <div 
       id="experience" 
       className="relative w-screen min-h-screen flex flex-col px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center"
       role="region"
@@ -93,6 +93,6 @@ export default function Experience() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

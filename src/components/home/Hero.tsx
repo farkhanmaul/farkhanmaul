@@ -14,7 +14,7 @@ export default function Hero() {
   useHeroAnimation();
 
   return (
-    <section 
+    <div 
       id="hero" 
       className="relative w-screen min-h-screen flex flex-col px-6 sm:px-12 lg:px-20 py-12 gap-4"
       role="region"
@@ -134,6 +134,6 @@ export default function Hero() {
           <ArrowDown size={40} className="text-cyan-400" strokeWidth={2} />
         </div>
       </section>
-    </section>
+    </div>
   );
 }

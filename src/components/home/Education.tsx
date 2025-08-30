@@ -30,7 +30,7 @@ export default function Education() {
   });
 
   return (
-    <section 
+    <div 
       id="education" 
       className="relative w-screen min-h-screen flex flex-col px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center bg-slate-950/30"
       role="region"
@@ -111,6 +111,6 @@ export default function Education() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
