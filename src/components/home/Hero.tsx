@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import PageMarker from '@/components/PageMarker';
-import Section from '@/components/sections/Section';
 import { useHeroAnimation } from '@/hooks/useAnimation';
 import { ArrowDown } from '@phosphor-icons/react';
 import { HiOutlineCode } from 'react-icons/hi';
@@ -14,7 +13,12 @@ export default function Hero() {
   useHeroAnimation();
 
   return (
-    <Section id="hero" className="px-6 sm:px-12 lg:px-20 py-12 gap-4">
+    <section 
+      id="hero" 
+      className="relative w-screen min-h-screen flex flex-col px-6 sm:px-12 lg:px-20 py-12 gap-4"
+      role="region"
+      aria-labelledby="hero-title"
+    >
       <div className="flex-grow grid grid-cols-1 lg:grid-cols-2 gap-8 relative">
         {/* Left Column - Text Content */}
         <section className="flex flex-col justify-center pl-4 sm:pl-[8vw] lg:pl-[4vw] pt-[10vh] sm:pt-[15vh] lg:pt-0 gap-6">
@@ -129,6 +133,6 @@ export default function Hero() {
           <ArrowDown size={40} className="text-cyan-400" strokeWidth={2} />
         </div>
       </section>
-    </Section>
+    </section>
   );
 }

@@ -1,4 +1,3 @@
-import Section from '@/components/sections/Section';
 import { useScrollAnimation } from '@/hooks/useAnimation';
 
 const EDUCATION = [
@@ -30,7 +29,12 @@ export default function Education() {
   });
 
   return (
-    <Section id="education" className="px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center bg-slate-950/30">
+    <section 
+      id="education" 
+      className="relative w-screen min-h-screen flex flex-col px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center bg-slate-950/30"
+      role="region"
+      aria-labelledby="education-title"
+    >
       <h2 
         id="education-title"
         className="text-lg md:text-2xl xl:text-3xl font-semibold tracking-tight mb-16 sm:mb-20 text-center opacity-0"
@@ -106,6 +110,6 @@ export default function Education() {
           ))}
         </div>
       </div>
-    </Section>
+    </section>
   );
 }

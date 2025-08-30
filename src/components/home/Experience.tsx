@@ -1,4 +1,3 @@
-import Section from '@/components/sections/Section';
 import { useScrollAnimation } from '@/hooks/useAnimation';
 
 const EXPERIENCES = [
@@ -28,7 +27,12 @@ export default function Experience() {
   });
 
   return (
-    <Section id="experience" className="px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center">
+    <section 
+      id="experience" 
+      className="relative w-screen min-h-screen flex flex-col px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center"
+      role="region"
+      aria-labelledby="experience-title"
+    >
       <h2 
         id="experience-title"
         className="text-lg md:text-2xl xl:text-3xl font-semibold tracking-tight mb-16 sm:mb-20 text-center opacity-0"
@@ -88,6 +92,6 @@ export default function Experience() {
           ))}
         </div>
       </div>
-    </Section>
+    </section>
   );
 }
