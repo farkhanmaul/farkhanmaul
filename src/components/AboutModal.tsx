@@ -59,42 +59,42 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
         ref={modalRef}
         className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none opacity-0"
       >
-        <div className="modal-content bg-gradient-to-br from-gray-900 via-black to-gray-800 backdrop-blur-xl border-2 border-yellow-400 border-opacity-40 rounded-2xl p-3 sm:p-4 max-w-4xl w-full h-[85vh] overflow-hidden relative shadow-2xl shadow-yellow-500/20 flex flex-col">
+        <div className="modal-content bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-xl border-2 border-cyan-400 border-opacity-40 rounded-2xl p-3 sm:p-4 max-w-4xl w-full h-[85vh] overflow-hidden relative shadow-2xl shadow-cyan-500/20 flex flex-col">
           {/* Close Button */}
           <div className="flex justify-end mb-2 shrink-0">
             <button
               onClick={onClose}
-              className="flex p-1.5 rounded-full border-2 border-yellow-400 border-opacity-60 hover:border-yellow-300 hover:bg-yellow-400 hover:bg-opacity-20 transition-all duration-300 bg-gradient-to-br from-yellow-400/10 to-transparent hover:scale-110 hover:rotate-90 shadow-lg"
+              className="flex p-1.5 rounded-full border-2 border-cyan-400 border-opacity-60 hover:border-cyan-300 hover:bg-cyan-400 hover:bg-opacity-20 transition-all duration-300 bg-gradient-to-br from-cyan-400/10 to-transparent hover:scale-110 hover:rotate-90 shadow-lg"
             >
-              <FiX className="text-yellow-300 text-base hover:text-white transition-colors duration-300" />
+              <FiX className="text-cyan-300 text-base hover:text-white transition-colors duration-300" />
             </button>
           </div>
 
           {/* Content */}
           <div className="text-white flex-1 flex flex-col overflow-hidden">
             <div className="mb-3 text-center shrink-0">
-              <h2 className="font-bold text-xl sm:text-2xl tracking-tight bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-clip-text text-transparent">
+              <h2 className="font-bold text-xl sm:text-2xl tracking-tight bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-300 bg-clip-text text-transparent">
                 About Me
               </h2>
-              <div className="w-16 h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-300 mx-auto mt-1 rounded-full"></div>
+              <div className="w-16 h-0.5 bg-gradient-to-r from-cyan-400 to-cyan-300 mx-auto mt-1 rounded-full"></div>
             </div>
 
             {/* Content organized in distinct sections */}
             <div className="flex-1 flex flex-col gap-4 overflow-y-auto">
               {/* Intro Section */}
-              <div className="bg-slate-800/30 p-4 rounded-lg border border-yellow-400/20">
+              <div className="bg-slate-800/30 p-4 rounded-lg border border-cyan-400/20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <p className="font-light mb-3 text-sm">
-                      Hey! I&apos;m <strong className="text-yellow-300">Farkhan Maul</strong> (farkhanmaul), a
+                      Hey! I&apos;m <strong className="text-cyan-300">Farkhan Maul</strong> (farkhanmaul), a
                       Software Developer with 1+ years experience in full-stack development.
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-sm font-medium mb-2 text-yellow-400">Connect</h3>
+                    <h3 className="text-sm font-medium mb-2 text-cyan-400">Connect</h3>
                     <div className="flex flex-wrap gap-2">
                       <a
-                        className="inline-flex items-center gap-1 font-light border bg-gray-600 bg-opacity-20 hover:bg-opacity-30 border-yellow-400 transition-all duration-150 ease-in-out px-2 py-1 rounded text-xs"
+                        className="inline-flex items-center gap-1 font-light border bg-slate-600/20 hover:bg-slate-600/30 border-cyan-400 transition-all duration-150 ease-in-out px-2 py-1 rounded text-xs backdrop-blur-sm"
                         href="https://github.com/farkhanmaul"
                         target="_blank"
                         rel="noreferrer"
@@ -102,7 +102,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
                         GitHub <FiExternalLink size={10} />
                       </a>
                       <a
-                        className="inline-flex items-center gap-1 font-light border bg-gray-600 bg-opacity-20 hover:bg-opacity-30 border-yellow-400 transition-all duration-150 ease-in-out px-2 py-1 rounded text-xs"
+                        className="inline-flex items-center gap-1 font-light border bg-slate-600/20 hover:bg-slate-600/30 border-cyan-400 transition-all duration-150 ease-in-out px-2 py-1 rounded text-xs backdrop-blur-sm"
                         href="https://www.linkedin.com/in/farkhanmaul/"
                         target="_blank"
                         rel="noreferrer"
@@ -115,8 +115,8 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
               </div>
 
               {/* Experience Section */}
-              <div className="bg-slate-800/30 p-4 rounded-lg border border-yellow-400/20">
-                <h3 className="text-lg font-semibold mb-3 text-yellow-300 flex items-center gap-2">
+              <div className="bg-slate-800/30 p-4 rounded-lg border border-cyan-400/20">
+                <h3 className="text-lg font-semibold mb-3 text-cyan-300 flex items-center gap-2">
                   💼 Professional Experience
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -3,36 +3,20 @@ import { useScrollAnimation } from '@/hooks/useAnimation';
 
 const EXPERIENCES = [
   {
-    year: '2024 - 2025',
+    year: '2024 - Present',
     title: 'Junior Software Developer',
     company: 'PT. Bank Negara Indonesia (BNI)',
     type: 'Full Time',
-    description: 'Developing system functionalities for digital banking workflows in Retail Enablers Digital Delivery Division. Built 3 REST APIs using Spring Boot with Oracle/PostgreSQL databases and customized form functionalities using jQuery.',
+    description: 'Developing system functionalities for digital banking workflows in Retail Enablers Digital Delivery Division. Built 3+ REST APIs using Spring Boot with Oracle/PostgreSQL databases and customized form functionalities using jQuery.',
     tech: ['Spring Boot', 'Java', 'Oracle', 'PostgreSQL', 'jQuery', 'JavaScript']
   },
   {
-    year: '2023 - 2024',
-    title: 'Bachelor of Computer Science',
-    company: 'Universitas Ahmad Dahlan',
-    type: 'Education',
-    description: 'Graduated with GPA 3.88/4.00 majoring in Informatics. Activities: Lab Assistant, Google Cloud Mentor, BEM Faculty Staff.',
-    tech: ['Algorithms', 'Data Structures', 'Software Engineering', 'Database Systems']
-  },
-  {
-    year: '2023',
+    year: 'Aug 2023 - Dec 2023',
     title: 'Software Developer Intern',
     company: 'PT. Elang Mahkota Teknologi (EMTEK)',
     type: 'Internship',
-    description: 'Created 40+ REST API endpoints for internal HRIS using Node.js and Express.js. Developed features for employee attendance, room bookings, and leave management systems.',
-    tech: ['Node.js', 'Express.js', 'MySQL', 'JWT', 'REST API']
-  },
-  {
-    year: '2023',
-    title: 'Cloud Computing Cohort',
-    company: 'Bangkit Academy by Google',
-    type: 'Learning',
-    description: 'Career readiness program by Google, Gojek & Traveloka. Completed 26+ courses across Coursera, Dicoding, and Google Cloud Skill Boost. Built Freshcan mobile app as Capstone Project.',
-    tech: ['Google Cloud', 'Node.js', 'Express.js', 'MySQL', 'GCP Deployment']
+    description: 'Created 40+ REST API endpoints for internal HRIS using Node.js and Express.js. Developed features for employee attendance, room bookings, and leave management systems with JWT authentication.',
+    tech: ['Node.js', 'Express.js', 'MySQL', 'JWT', 'REST API', 'HRIS Systems']
   }
 ] as const;
 
@@ -51,12 +35,12 @@ export default function Experience() {
         role="heading"
         aria-level="2"
       >
-        MY <span className="text-yellow-300">EXPERIENCE</span>
+        MY <span className="text-cyan-400">EXPERIENCE</span>
       </h2>
 
       <div className="max-w-4xl w-full relative">
         {/* Vertical Timeline Line */}
-        <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gray-400 via-gray-600 to-gray-800"></div>
+        <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 via-cyan-500 to-cyan-600"></div>
 
         <div className="space-y-12">
           {EXPERIENCES.map((exp, index) => (
@@ -67,8 +51,8 @@ export default function Experience() {
               aria-label={`Experience: ${exp.title} at ${exp.company}`}
             >
               {/* Timeline Dot */}
-              <div className="absolute left-4 -translate-x-1/2 w-4 h-4 bg-yellow-400 rounded-full border-4 border-black group-hover:scale-125 transition-transform duration-300">
-                <div className="absolute inset-1 bg-yellow-400 rounded-full animate-pulse"></div>
+              <div className="absolute left-4 -translate-x-1/2 w-4 h-4 bg-cyan-400 rounded-full border-4 border-black group-hover:scale-125 transition-transform duration-300">
+                <div className="absolute inset-1 bg-cyan-400 rounded-full animate-pulse"></div>
               </div>
 
               <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-gray-500 transition-all duration-300 hover:bg-opacity-70">
@@ -93,7 +77,7 @@ export default function Experience() {
                   {exp.tech.map((techItem) => (
                     <span 
                       key={techItem}
-                      className="px-3 py-1 bg-yellow-300 bg-opacity-10 text-yellow-300 rounded-full text-xs font-normal border border-yellow-300 border-opacity-30"
+                      className="px-3 py-1 bg-cyan-400/10 text-cyan-300 rounded-full text-xs font-normal border border-cyan-400/30 backdrop-blur-sm"
                     >
                       {techItem}
                     </span>

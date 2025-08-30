@@ -16,6 +16,9 @@ module.exports = {
       },
       animation: {
         'spin-slow': 'spin 20s linear infinite',
+        'spin-reverse': 'spin 15s linear infinite reverse',
+        'float': 'float 6s ease-in-out infinite',
+        'float-delayed': 'float 6s ease-in-out infinite 3s',
         first: "moveVertical 30s ease infinite",
         second: "moveInCircle 20s reverse infinite", 
         third: "moveInCircle 40s linear infinite",
@@ -23,6 +26,14 @@ module.exports = {
         fifth: "moveInCircle 20s ease infinite",
       },
       keyframes: {
+        float: {
+          "0%, 100%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+        },
         moveHorizontal: {
           "0%": {
             transform: "translateX(-50%) translateY(-10%)",

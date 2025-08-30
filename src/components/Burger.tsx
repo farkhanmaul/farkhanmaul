@@ -16,15 +16,14 @@ interface BurgerProps {
 export default function Burger({ opened, className, onClick }: BurgerProps) {
   const [hovered, setHovered] = useState(false);
   
-  const lineClassName =
-    'block w-6 h-[2px] bg-white transition-all duration-300 ease-out transform-gpu';
-
   return (
     <button
       type="button"
       className={classNames(
-        'burger h-8 w-10 flex flex-col justify-center gap-[7px] cursor-pointer relative z-[1000]',
-        'hover:scale-110 active:scale-95 transition-transform duration-300',
+        'burger h-10 w-10 flex flex-col justify-center items-center gap-[6px] cursor-pointer relative z-[1000]',
+        'hover:scale-105 active:scale-95 transition-all duration-300',
+        'bg-slate-800/80 backdrop-blur-sm border border-slate-600/50 rounded-lg',
+        'hover:bg-slate-700/80 hover:border-cyan-400/50',
         className,
       )}
       onClick={() => onClick?.(!opened)}
@@ -35,39 +34,35 @@ export default function Burger({ opened, className, onClick }: BurgerProps) {
       {/* Top line */}
       <span
         className={classNames(
-          lineClassName,
-          opened ? 'rotate-45 translate-y-[7px] bg-yellow-300' : 'rotate-0 translate-y-0',
-          hovered && !opened && 'translate-x-1 bg-yellow-300',
-          !hovered && !opened && 'bg-white',
+          'block w-5 h-[2px] bg-slate-300 transition-all duration-300 ease-out transform-gpu rounded-full',
+          opened ? 'rotate-45 translate-y-[8px] bg-cyan-400' : 'rotate-0 translate-y-0',
+          hovered && !opened && 'bg-cyan-300',
         )}
       />
       
       {/* Middle line - fades out when opened */}
       <span
         className={classNames(
-          lineClassName,
+          'block w-5 h-[2px] bg-slate-300 transition-all duration-300 ease-out transform-gpu rounded-full',
           opened ? 'opacity-0 scale-x-0' : 'opacity-100 scale-x-100',
-          !opened && 'ml-3',
-          hovered && !opened && 'bg-yellow-300 ml-2',
-          !hovered && !opened && 'bg-white ml-3',
+          hovered && !opened && 'bg-cyan-300',
         )}
       />
       
       {/* Bottom line */}
       <span
         className={classNames(
-          lineClassName,
-          opened ? '-rotate-45 -translate-y-[7px] bg-yellow-300' : 'rotate-0 translate-y-0',
-          hovered && !opened && 'translate-x-2 bg-yellow-300',
-          !hovered && !opened && 'bg-white',
+          'block w-5 h-[2px] bg-slate-300 transition-all duration-300 ease-out transform-gpu rounded-full',
+          opened ? '-rotate-45 -translate-y-[8px] bg-cyan-400' : 'rotate-0 translate-y-0',
+          hovered && !opened && 'bg-cyan-300',
         )}
       />
       
       {/* Subtle glow effect on hover */}
       <div 
         className={classNames(
-          'absolute inset-0 rounded-full transition-all duration-300',
-          hovered ? 'bg-yellow-300 opacity-10 scale-150' : 'opacity-0 scale-100'
+          'absolute inset-0 rounded-lg transition-all duration-300 pointer-events-none',
+          hovered ? 'bg-cyan-400/10 shadow-lg shadow-cyan-400/20' : 'opacity-0'
         )}
       />
     </button>

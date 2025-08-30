@@ -81,41 +81,62 @@ export default function CustomCursor() {
       }
     };
 
-    // Animation loop for trail effect - optimized for performance
+    // Animation loop for aesthetic trail effect
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       // Update and draw trail
       if (trailPoints.current.length > 1) {
-        // Use simple line drawing for better performance
-        ctx.strokeStyle = 'rgba(250, 204, 21, 0.4)';
-        ctx.lineWidth = 2;
+        // Create gradient trail effect
+        const gradient = ctx.createLinearGradient(
+          trailPoints.current[0]?.x || 0, 
+          trailPoints.current[0]?.y || 0,
+          trailPoints.current[trailPoints.current.length - 1]?.x || 0,
+          trailPoints.current[trailPoints.current.length - 1]?.y || 0
+        );
+        gradient.addColorStop(0, 'rgba(34, 211, 238, 0.8)'); // cyan-400
+        gradient.addColorStop(0.5, 'rgba(56, 189, 248, 0.6)'); // blue-400  
+        gradient.addColorStop(1, 'rgba(147, 197, 253, 0.2)'); // blue-300
+
+        ctx.strokeStyle = gradient;
+        ctx.lineWidth = 3;
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
-        ctx.globalAlpha = 0.8;
 
-        ctx.beginPath();
-        for (let i = 0; i < trailPoints.current.length - 1; i++) {
-          const point = trailPoints.current[i];
-          const nextPoint = trailPoints.current[i + 1];
+        // Draw multiple passes for glow effect
+        for (let pass = 0; pass < 2; pass++) {
+          ctx.beginPath();
+          ctx.lineWidth = pass === 0 ? 1 : 3;
+          ctx.globalAlpha = pass === 0 ? 1 : 0.6;
           
-          // Simplified fade out
-          point.life -= 0.03;
-          
-          if (point.life > 0) {
-            if (i === 0) {
-              ctx.moveTo(point.x, point.y);
-            } else {
-              ctx.lineTo(point.x, point.y);
+          for (let i = 0; i < trailPoints.current.length - 1; i++) {
+            const point = trailPoints.current[i];
+            const nextPoint = trailPoints.current[i + 1];
+            
+            if (pass === 1) point.life -= 0.025; // Slower fade
+            
+            if (point.life > 0) {
+              const opacity = Math.pow(point.life, 1.5); // Smoother fade curve
+              
+              if (i === 0) {
+                ctx.moveTo(point.x, point.y);
+              } else {
+                // Smooth curves for more aesthetic lines
+                const prevPoint = trailPoints.current[i - 1];
+                const controlX = (prevPoint.x + point.x) / 2;
+                const controlY = (prevPoint.y + point.y) / 2;
+                ctx.quadraticCurveTo(prevPoint.x, prevPoint.y, controlX, controlY);
+              }
             }
           }
+          
+          ctx.stroke();
         }
         
-        ctx.stroke();
         ctx.globalAlpha = 1;
         
-        // Remove dead trail points less frequently for performance
-        if (Math.random() < 0.1) {
+        // Clean up dead points
+        if (Math.random() < 0.08) {
           trailPoints.current = trailPoints.current.filter(point => point.life > 0);
         }
       }
@@ -165,8 +186,8 @@ export default function CustomCursor() {
         ref={cursorRef}
         className={`custom-cursor fixed pointer-events-none rounded-full z-[9999] transition-all duration-200 ${
           isHovered 
-            ? 'w-4 h-4 bg-blue-400 shadow-lg shadow-blue-400/50' 
-            : 'w-3 h-3 bg-yellow-400 shadow-md shadow-yellow-400/30'
+            ? 'w-4 h-4 bg-cyan-400 shadow-lg shadow-cyan-400/50 ring-2 ring-cyan-300/30' 
+            : 'w-3 h-3 bg-cyan-300 shadow-md shadow-cyan-300/40'
         }`}
         style={{ 
           transform: 'translate(-50%, -50%)',
