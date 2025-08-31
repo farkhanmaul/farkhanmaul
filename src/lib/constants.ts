@@ -40,7 +40,7 @@ export const PROJECTS = [
     year: 2024,
     gradient: 'from-red-500 to-orange-500',
     link: 'https://github.com/farkhanmaul/movie-hanz',
-    thumbnail: '/images/projects/movie-hanz.png'
+    thumbnail: 'https://opengraph.githubassets.com/1/farkhanmaul/movie-hanz'
   },
   {
     title: 'VANS x HANZ Website',
@@ -49,7 +49,7 @@ export const PROJECTS = [
     year: 2024,
     gradient: 'from-blue-500 to-purple-600',
     link: 'https://github.com/farkhanmaul/vans-x-hanz',
-    thumbnail: '/images/projects/vans-x-hanz.png'
+    thumbnail: 'https://opengraph.githubassets.com/1/farkhanmaul/vans-x-hanz'
   },
   {
     title: 'FRESHCAN Platform',
@@ -58,7 +58,7 @@ export const PROJECTS = [
     year: 2023,
     gradient: 'from-cyan-500 to-blue-500',
     link: 'https://github.com/farkhanmaul/freshcan',
-    thumbnail: '/images/projects/freshcan.png'
+    thumbnail: 'https://opengraph.githubassets.com/1/farkhanmaul/freshcan'
   },
   {
     title: 'HRIS Mobile Backend',
@@ -67,7 +67,7 @@ export const PROJECTS = [
     year: 2023,
     gradient: 'from-purple-500 to-pink-500',
     link: 'https://github.com/farkhanmaul/hris-mobile-backend',
-    thumbnail: '/images/projects/hris-mobile-backend.png'
+    thumbnail: 'https://opengraph.githubassets.com/1/farkhanmaul/hris-mobile-backend'
   },
   {
     title: 'Temperature Converter',
@@ -76,7 +76,7 @@ export const PROJECTS = [
     year: 2024,
     gradient: 'from-green-500 to-blue-500',
     link: 'https://github.com/farkhanmaul/temp-converter',
-    thumbnail: '/images/projects/temp-converter.png'
+    thumbnail: 'https://opengraph.githubassets.com/1/farkhanmaul/temp-converter'
   },
   {
     title: 'Quran Digital Project',
@@ -85,7 +85,7 @@ export const PROJECTS = [
     year: 2023,
     gradient: 'from-green-600 to-emerald-500',
     link: 'https://github.com/farkhanmaul/quran-project',
-    thumbnail: '/images/projects/quran-project.png'
+    thumbnail: 'https://opengraph.githubassets.com/1/farkhanmaul/quran-project'
   },
   {
     title: 'Sort Algorithm Visualizer',
@@ -94,7 +94,7 @@ export const PROJECTS = [
     year: 2024,
     gradient: 'from-indigo-500 to-purple-600',
     link: 'https://github.com/farkhanmaul/sort-algo-visualize',
-    thumbnail: '/images/projects/sort-algo-visualize.png'
+    thumbnail: 'https://opengraph.githubassets.com/1/farkhanmaul/sort-algo-visualize'
   }
 ] as const;
 

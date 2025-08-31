@@ -2,23 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom scrollbar */
+/* Custom scrollbar for main page */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #242424;
+  background: rgba(30, 41, 59, 0.3);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #363636;
+  background: rgba(34, 211, 238, 0.6);
   border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #212b38;
+  background: rgba(34, 211, 238, 0.8);
   border-radius: 8px;
+}
+
+/* Custom scrollbar for modal */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.7);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 211, 238, 0.9);
 }
 
 /* Base styles */

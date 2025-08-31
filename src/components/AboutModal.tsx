@@ -21,6 +21,13 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
     const modal = modalRef.current;
     if (!modal) return;
 
+    // Prevent body scroll when modal is open, but allow modal content to scroll
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
     const tl = gsap.timeline();
     
     tl.to('.modal-content', {
@@ -37,6 +44,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
 
     return () => {
       tl.kill();
+      document.body.style.overflow = '';
     };
   }, [isOpen]);
 
@@ -93,7 +101,8 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
             className="flex-1 overflow-y-auto px-3 sm:px-4 pb-3 sm:pb-4 custom-scrollbar"
             style={{
               scrollbarWidth: 'thin',
-              scrollbarColor: '#22d3ee #1e293b'
+              scrollbarColor: '#22d3ee #1e293b',
+              minHeight: 0 // Important for flexbox scrolling
             }}
           >
             <div className="text-white space-y-4">
