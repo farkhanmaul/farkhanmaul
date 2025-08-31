@@ -7,8 +7,8 @@
 export const CONTACTS = [
   {
     name: 'Email',
-    value: 'farkhanmaul@gmail.com',
-    link: 'mailto:farkhanmaul@gmail.com',
+    value: 'farkhanmaul25@gmail.com',
+    link: 'mailto:farkhanmaul25@gmail.com',
     color: 'sky'
   },
   {
@@ -28,6 +28,12 @@ export const CONTACTS = [
     value: '@farkhanmaul',
     link: 'https://instagram.com/farkhanmaul',
     color: 'green'
+  },
+  {
+    name: 'X (Twitter)',
+    value: '@farkhanmaul',
+    link: 'https://twitter.com/farkhanmaul',
+    color: 'slate'
   }
 ] as const;
 

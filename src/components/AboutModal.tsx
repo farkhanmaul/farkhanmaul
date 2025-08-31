@@ -170,13 +170,19 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <p className="font-light mb-4 text-sm leading-relaxed text-slate-200">
-                      Hey! I&apos;m <strong className="text-cyan-300 font-semibold">Farkhan Maul</strong> (farkhanmaul), a
-                      Software Developer with 1+ years experience in full-stack development.
+                      Hey! I&apos;m <strong className="text-cyan-300 font-semibold">Muhammad Farkhan Maulana</strong> (farkhanmaul), a
+                      Software Developer with over 1 year of experience in back-end and front-end development, specializing in API integration and enterprise system development.
                     </p>
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold mb-3 text-cyan-400 tracking-wide">Connect</h3>
                     <div className="flex flex-wrap gap-2">
+                      <a
+                        className="inline-flex items-center gap-1.5 font-light border bg-slate-600/30 hover:bg-slate-600/40 border-cyan-400/60 hover:border-cyan-300 transition-all duration-200 ease-in-out px-3 py-1.5 rounded-lg text-xs backdrop-blur-sm hover:scale-105"
+                        href="mailto:farkhanmaul25@gmail.com"
+                      >
+                        Email <FiExternalLink size={10} />
+                      </a>
                       <a
                         className="inline-flex items-center gap-1.5 font-light border bg-slate-600/30 hover:bg-slate-600/40 border-cyan-400/60 hover:border-cyan-300 transition-all duration-200 ease-in-out px-3 py-1.5 rounded-lg text-xs backdrop-blur-sm hover:scale-105"
                         href="https://github.com/farkhanmaul"
@@ -205,17 +211,17 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-gradient-to-br from-slate-900/60 to-slate-800/40 p-4 rounded-lg border border-slate-600/40 backdrop-blur-sm hover:border-cyan-400/30 transition-all duration-300 group">
-                    <h4 className="font-semibold text-white text-sm mb-2 group-hover:text-cyan-300 transition-colors">Jr. Software Developer</h4>
-                    <p className="text-sm text-cyan-300 font-medium mb-1">PT. Bank Negara Indonesia</p>
-                    <p className="text-xs text-slate-400 mb-3">Nov 2024 – Present</p>
-                    <p className="text-xs font-light text-slate-300 leading-relaxed">Developed 3+ REST APIs using Spring Boot with Oracle/PostgreSQL databases</p>
+                    <h4 className="font-semibold text-white text-sm mb-2 group-hover:text-cyan-300 transition-colors">Junior Software Developer</h4>
+                    <p className="text-sm text-cyan-300 font-medium mb-1">PT. Bank Negara Indonesia (BNI)</p>
+                    <p className="text-xs text-slate-400 mb-3">Nov 2024 – May 2025</p>
+                    <p className="text-xs font-light text-slate-300 leading-relaxed">Developed 3 REST APIs using Spring Boot with Oracle/PostgreSQL databases for Retail Productive Banking system</p>
                   </div>
                   
                   <div className="bg-gradient-to-br from-slate-900/60 to-slate-800/40 p-4 rounded-lg border border-slate-600/40 backdrop-blur-sm hover:border-cyan-400/30 transition-all duration-300 group">
                     <h4 className="font-semibold text-white text-sm mb-2 group-hover:text-cyan-300 transition-colors">Software Developer Intern</h4>
-                    <p className="text-sm text-cyan-300 font-medium mb-1">PT. Elang Mahkota Teknologi</p>
+                    <p className="text-sm text-cyan-300 font-medium mb-1">PT. Elang Mahkota Teknologi (EMTEK)</p>
                     <p className="text-xs text-slate-400 mb-3">Aug 2023 – Dec 2023</p>
-                    <p className="text-xs font-light text-slate-300 leading-relaxed">Built 40+ API endpoints using Node.js and MySQL</p>
+                    <p className="text-xs font-light text-slate-300 leading-relaxed">Created 40+ REST API endpoints for internal HRIS with Node.js, Express.js, and MySQL</p>
                   </div>
                 </div>
               </div>
@@ -229,15 +235,15 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
                   <div className="bg-gradient-to-br from-slate-900/60 to-slate-800/40 p-4 rounded-lg border border-slate-600/40 backdrop-blur-sm hover:border-yellow-400/30 transition-all duration-300 group">
                     <h4 className="font-semibold text-white text-sm mb-2 group-hover:text-yellow-300 transition-colors">Bachelor of Computer Science</h4>
                     <p className="text-sm text-yellow-300 font-medium mb-1">Universitas Ahmad Dahlan</p>
-                    <p className="text-xs text-slate-400 mb-3">2021 – 2025</p>
-                    <p className="text-xs font-light text-slate-300 leading-relaxed">Current GPA: 3.88/4.00 - Excellent Academic Performance</p>
+                    <p className="text-xs text-slate-400 mb-3">Sep 2020 – Sep 2024</p>
+                    <p className="text-xs font-light text-slate-300 leading-relaxed">Majored in Informatics with GPA 3.88/4.00. Lab Assistant & Google Cloud Mentor</p>
                   </div>
                   
                   <div className="bg-gradient-to-br from-slate-900/60 to-slate-800/40 p-4 rounded-lg border border-slate-600/40 backdrop-blur-sm hover:border-yellow-400/30 transition-all duration-300 group">
                     <h4 className="font-semibold text-white text-sm mb-2 group-hover:text-yellow-300 transition-colors">Cloud Computing Cohort</h4>
-                    <p className="text-sm text-yellow-300 font-medium mb-1">Bangkit Academy</p>
-                    <p className="text-xs text-slate-400 mb-3">by Google, Gojek & Traveloka - 2023</p>
-                    <p className="text-xs font-light text-slate-300 leading-relaxed">Earned 26+ technical certifications in cloud computing</p>
+                    <p className="text-sm text-yellow-300 font-medium mb-1">Bangkit Academy by Google</p>
+                    <p className="text-xs text-slate-400 mb-3">Feb 2023 – Jul 2023</p>
+                    <p className="text-xs font-light text-slate-300 leading-relaxed">Completed 5 Coursera courses, 7 Dicoding classes, 14 Google Cloud courses with 8 quests</p>
                   </div>
                 </div>
               </div>
@@ -248,20 +254,20 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
                   <div>
                     <h3 className="text-sm font-semibold mb-4 text-yellow-300 tracking-wide">💻 Technical Skills</h3>
                     <div className="space-y-3 text-sm">
-                      <p className="font-light text-slate-200"><span className="text-yellow-400 font-semibold">Frontend:</span> React, JavaScript, HTML/CSS</p>
-                      <p className="font-light text-slate-200"><span className="text-yellow-400 font-semibold">Backend:</span> Java, Node.js, Spring Boot</p>
+                      <p className="font-light text-slate-200"><span className="text-yellow-400 font-semibold">Languages:</span> JavaScript, Java, Node.js, PHP, HTML</p>
+                      <p className="font-light text-slate-200"><span className="text-yellow-400 font-semibold">Frameworks:</span> Spring Boot, Express.js, Hapi.js, React.js</p>
                       <p className="font-light text-slate-200"><span className="text-yellow-400 font-semibold">Database:</span> MySQL, PostgreSQL, Oracle</p>
-                      <p className="font-light text-slate-200"><span className="text-yellow-400 font-semibold">Tools:</span> Git, GCP, AWS, Jira</p>
+                      <p className="font-light text-slate-200"><span className="text-yellow-400 font-semibold">Tools:</span> Git, GCP, AWS, Trello, Jira, Linux</p>
                     </div>
                   </div>
                   
                   <div>
                     <h3 className="text-sm font-semibold mb-4 text-yellow-300 tracking-wide">🏆 Key Achievements</h3>
                     <div className="space-y-2 text-sm">
-                      <p className="font-light flex items-center gap-2 text-slate-200">🚀 1+ years professional development</p>
-                      <p className="font-light flex items-center gap-2 text-slate-200">⚡ 40+ REST APIs built</p>
-                      <p className="font-light flex items-center gap-2 text-slate-200">📚 26+ technical certifications</p>
-                      <p className="font-light flex items-center gap-2 text-slate-200">🎯 3.88 GPA in Computer Science</p>
+                      <p className="font-light flex items-center gap-2 text-slate-200">🚀 1+ year professional development experience</p>
+                      <p className="font-light flex items-center gap-2 text-slate-200">⚡ 40+ REST API endpoints created</p>
+                      <p className="font-light flex items-center gap-2 text-slate-200">📚 Google Cloud & Bangkit Academy graduate</p>
+                      <p className="font-light flex items-center gap-2 text-slate-200">🎯 3.88 GPA - Lab Assistant & Mentor</p>
                     </div>
                   </div>
                 </div>
