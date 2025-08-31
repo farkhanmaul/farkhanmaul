@@ -21,13 +21,6 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
     const modal = modalRef.current;
     if (!modal) return;
 
-    // Prevent body scroll when modal is open
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-
     const tl = gsap.timeline();
     
     tl.to('.modal-content', {
@@ -44,7 +37,6 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
 
     return () => {
       tl.kill();
-      document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
 
@@ -66,9 +58,9 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
         ref={modalRef}
         className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none opacity-0"
       >
-        <div className="modal-content bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-xl border-2 border-cyan-400 border-opacity-40 rounded-2xl p-3 sm:p-4 max-w-4xl w-full h-[85vh] relative shadow-2xl shadow-cyan-500/20 flex flex-col">
+        <div className="modal-content bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-xl border-2 border-cyan-400 border-opacity-40 rounded-2xl max-w-4xl w-full h-[85vh] relative shadow-2xl shadow-cyan-500/20 flex flex-col overflow-hidden">
           {/* Close Button */}
-          <div className="flex justify-end mb-2 shrink-0">
+          <div className="flex justify-end p-3 sm:p-4 pb-0 shrink-0">
             <button
               onClick={onClose}
               className="flex p-1.5 rounded-full border-2 border-cyan-400 border-opacity-60 hover:border-cyan-300 hover:bg-cyan-400 hover:bg-opacity-20 transition-all duration-300 bg-gradient-to-br from-cyan-400/10 to-transparent hover:scale-110 hover:rotate-90 shadow-lg"
@@ -77,17 +69,19 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
             </button>
           </div>
 
-          {/* Content */}
-          <div className="text-white flex-1 flex flex-col">
-            <div className="mb-3 text-center shrink-0">
+          {/* Header */}
+          <div className="px-3 sm:px-4 pb-3 shrink-0">
+            <div className="text-center">
               <h2 className="font-bold text-xl sm:text-2xl tracking-tight bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-300 bg-clip-text text-transparent">
                 About Me
               </h2>
               <div className="w-16 h-0.5 bg-gradient-to-r from-cyan-400 to-cyan-300 mx-auto mt-1 rounded-full"></div>
             </div>
+          </div>
 
-            {/* Content organized in distinct sections */}
-            <div className="flex-1 flex flex-col gap-4 overflow-y-auto pr-2" style={{ maxHeight: 'calc(85vh - 120px)' }}>
+          {/* Scrollable Content */}
+          <div className="flex-1 overflow-y-auto px-3 sm:px-4 pb-3 sm:pb-4">
+            <div className="text-white space-y-4">
               {/* Intro Section */}
               <div className="bg-slate-800/30 p-4 rounded-lg border border-cyan-400/20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
