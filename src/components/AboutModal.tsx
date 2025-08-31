@@ -73,36 +73,34 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
         onClick={onClose}
       >
         <div 
-          className="modal-content bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-xl border-2 border-cyan-400 border-opacity-40 rounded-2xl max-w-4xl w-full h-[85vh] relative shadow-2xl shadow-cyan-500/20 flex flex-col overflow-hidden"
+          className="modal-content bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-xl border-2 border-cyan-400 border-opacity-40 rounded-2xl max-w-4xl w-full relative shadow-2xl shadow-cyan-500/20"
           onClick={(e) => e.stopPropagation()}
+          style={{ height: '85vh', display: 'flex', flexDirection: 'column' }}
         >
-          {/* Close Button */}
-          <div className="flex justify-end p-3 sm:p-4 pb-0 shrink-0">
-            <button
-              onClick={onClose}
-              className="flex p-1.5 rounded-full border-2 border-cyan-400 border-opacity-60 hover:border-cyan-300 hover:bg-cyan-400 hover:bg-opacity-20 transition-all duration-300 bg-gradient-to-br from-cyan-400/10 to-transparent hover:scale-110 hover:rotate-90 shadow-lg"
-            >
-              <FiX className="text-cyan-300 text-base hover:text-white transition-colors duration-300" />
-            </button>
-          </div>
-
-          {/* Header */}
-          <div className="px-3 sm:px-4 pb-3 shrink-0">
-            <div className="text-center">
-              <h2 className="font-bold text-xl sm:text-2xl tracking-tight bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-300 bg-clip-text text-transparent">
-                About Me
-              </h2>
-              <div className="w-16 h-0.5 bg-gradient-to-r from-cyan-400 to-cyan-300 mx-auto mt-1 rounded-full"></div>
+          {/* Header with Close Button */}
+          <div className="flex-shrink-0 p-4 border-b border-slate-700/30">
+            <div className="flex justify-between items-start">
+              <div className="flex-1 text-center">
+                <h2 className="font-bold text-xl sm:text-2xl tracking-tight bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-300 bg-clip-text text-transparent">
+                  About Me
+                </h2>
+                <div className="w-16 h-0.5 bg-gradient-to-r from-cyan-400 to-cyan-300 mx-auto mt-1 rounded-full"></div>
+              </div>
+              <button
+                onClick={onClose}
+                className="flex p-1.5 rounded-full border-2 border-cyan-400 border-opacity-60 hover:border-cyan-300 hover:bg-cyan-400 hover:bg-opacity-20 transition-all duration-300 bg-gradient-to-br from-cyan-400/10 to-transparent hover:scale-110 hover:rotate-90 shadow-lg ml-4"
+              >
+                <FiX className="text-cyan-300 text-base hover:text-white transition-colors duration-300" />
+              </button>
             </div>
           </div>
 
-          {/* Scrollable Content */}
+          {/* Scrollable Content Area */}
           <div 
-            className="flex-1 overflow-y-auto px-3 sm:px-4 pb-3 sm:pb-4 custom-scrollbar"
+            className="flex-1 overflow-y-scroll p-4 custom-scrollbar"
             style={{
               scrollbarWidth: 'thin',
-              scrollbarColor: '#22d3ee #1e293b',
-              minHeight: 0 // Important for flexbox scrolling
+              scrollbarColor: '#22d3ee #1e293b'
             }}
           >
             <div className="text-white space-y-4">
