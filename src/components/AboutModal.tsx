@@ -46,7 +46,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
       <div
         onClick={onClose}
         className={classNames(
-          'fixed inset-0 bg-black transition-opacity duration-300 z-50',
+          'fixed inset-0 bg-black transition-opacity duration-300 z-40',
           isOpen
             ? 'pointer-events-auto opacity-60'
             : 'pointer-events-none opacity-0',
@@ -56,9 +56,18 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
       {/* Modal */}
       <div
         ref={modalRef}
-        className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none opacity-0"
+        className={classNames(
+          'fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300',
+          isOpen 
+            ? 'pointer-events-auto opacity-100'
+            : 'pointer-events-none opacity-0'
+        )}
+        onClick={onClose}
       >
-        <div className="modal-content bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-xl border-2 border-cyan-400 border-opacity-40 rounded-2xl max-w-4xl w-full h-[85vh] relative shadow-2xl shadow-cyan-500/20 flex flex-col overflow-hidden">
+        <div 
+          className="modal-content bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-xl border-2 border-cyan-400 border-opacity-40 rounded-2xl max-w-4xl w-full h-[85vh] relative shadow-2xl shadow-cyan-500/20 flex flex-col overflow-hidden"
+          onClick={(e) => e.stopPropagation()}
+        >
           {/* Close Button */}
           <div className="flex justify-end p-3 sm:p-4 pb-0 shrink-0">
             <button
@@ -80,7 +89,13 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
           </div>
 
           {/* Scrollable Content */}
-          <div className="flex-1 overflow-y-auto px-3 sm:px-4 pb-3 sm:pb-4">
+          <div 
+            className="flex-1 overflow-y-auto px-3 sm:px-4 pb-3 sm:pb-4 custom-scrollbar"
+            style={{
+              scrollbarWidth: 'thin',
+              scrollbarColor: '#22d3ee #1e293b'
+            }}
+          >
             <div className="text-white space-y-4">
               {/* Intro Section */}
               <div className="bg-slate-800/30 p-4 rounded-lg border border-cyan-400/20">
