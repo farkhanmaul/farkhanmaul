@@ -14,9 +14,7 @@ interface SidebarProps {
 const routes = [
   { name: 'Home', path: '#', icon: FiHome },
   { name: 'About', path: '#about', icon: FiUser },
-  { name: 'Experience', path: '#experience', icon: FiBriefcase },
-  { name: 'Education', path: '#education', icon: FiBookOpen },
-  { name: 'Skills', path: '#skills', icon: FiFolder },
+  { name: 'Skills', path: '#skills', icon: FiBriefcase },
   { name: 'Projects', path: '#projects', icon: FiFolder },
   { name: 'Contact', path: '#contact', icon: FiMail },
 ];

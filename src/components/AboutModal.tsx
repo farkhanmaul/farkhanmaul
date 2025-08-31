@@ -127,17 +127,44 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
                   💼 Professional Experience
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-slate-900/40 p-3 rounded border border-slate-600/30">
+                  <div className="bg-slate-900/40 p-3 rounded border border-slate-600/30 hover:border-cyan-400/50 hover:bg-slate-800/60 transition-all duration-300 cursor-pointer group relative">
                     <h4 className="font-semibold text-white text-sm mb-1">Jr. Software Developer</h4>
                     <p className="text-sm text-yellow-300 font-medium">PT. Bank Negara Indonesia</p>
                     <p className="text-xs text-gray-400 mb-2">Nov 2024 – Present</p>
                     <p className="text-xs font-light text-gray-300">Developed 3+ REST APIs using Spring Boot with Oracle/PostgreSQL databases</p>
+                    
+                    {/* Hover Details */}
+                    <div className="absolute left-0 top-full mt-2 w-72 bg-slate-900/95 backdrop-blur-sm border border-cyan-400/30 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-xl">
+                      <h5 className="text-sm font-semibold text-cyan-300 mb-2">Key Responsibilities & Achievements:</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Designed and developed REST APIs for banking applications</li>
+                        <li>• Implemented secure authentication and authorization systems</li>
+                        <li>• Optimized database queries for improved performance</li>
+                        <li>• Collaborated with cross-functional teams using Agile methodology</li>
+                        <li>• Maintained code quality through unit testing and code reviews</li>
+                      </ul>
+                      <p className="text-xs text-cyan-400 mt-2 font-medium">Tech Stack: Spring Boot, Oracle DB, PostgreSQL, Git, Jira</p>
+                    </div>
                   </div>
-                  <div className="bg-slate-900/40 p-3 rounded border border-slate-600/30">
+                  
+                  <div className="bg-slate-900/40 p-3 rounded border border-slate-600/30 hover:border-cyan-400/50 hover:bg-slate-800/60 transition-all duration-300 cursor-pointer group relative">
                     <h4 className="font-semibold text-white text-sm mb-1">Software Developer Intern</h4>
                     <p className="text-sm text-yellow-300 font-medium">PT. Elang Mahkota Teknologi</p>
                     <p className="text-xs text-gray-400 mb-2">Aug 2023 – Dec 2023</p>
                     <p className="text-xs font-light text-gray-300">Built 40+ API endpoints using Node.js and MySQL</p>
+                    
+                    {/* Hover Details */}
+                    <div className="absolute left-0 top-full mt-2 w-72 bg-slate-900/95 backdrop-blur-sm border border-cyan-400/30 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-xl">
+                      <h5 className="text-sm font-semibold text-cyan-300 mb-2">Key Responsibilities & Achievements:</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Developed RESTful APIs for e-commerce platform</li>
+                        <li>• Built user authentication and session management</li>
+                        <li>• Created database schemas and optimized queries</li>
+                        <li>• Implemented error handling and logging systems</li>
+                        <li>• Participated in daily standups and sprint planning</li>
+                      </ul>
+                      <p className="text-xs text-cyan-400 mt-2 font-medium">Tech Stack: Node.js, Express.js, MySQL, Postman, Git</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -148,17 +175,44 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
                   🎓 Education Background
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-slate-900/40 p-3 rounded border border-slate-600/30">
+                  <div className="bg-slate-900/40 p-3 rounded border border-slate-600/30 hover:border-yellow-400/50 hover:bg-slate-800/60 transition-all duration-300 cursor-pointer group relative">
                     <h4 className="font-semibold text-white text-sm mb-1">Bachelor of Computer Science</h4>
                     <p className="text-sm text-yellow-300 font-medium">Universitas Ahmad Dahlan</p>
                     <p className="text-xs text-gray-400 mb-2">2021 – 2025</p>
                     <p className="text-xs font-light text-gray-300">Current GPA: 3.88/4.00 - Excellent Academic Performance</p>
+                    
+                    {/* Hover Details */}
+                    <div className="absolute left-0 top-full mt-2 w-72 bg-slate-900/95 backdrop-blur-sm border border-yellow-400/30 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-xl">
+                      <h5 className="text-sm font-semibold text-yellow-300 mb-2">Academic Highlights & Activities:</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Maintained high academic performance (3.88/4.00 GPA)</li>
+                        <li>• Completed comprehensive software engineering curriculum</li>
+                        <li>• Active participant in coding competitions and hackathons</li>
+                        <li>• Developed multiple full-stack projects as part of coursework</li>
+                        <li>• Member of Computer Science Student Association</li>
+                      </ul>
+                      <p className="text-xs text-yellow-400 mt-2 font-medium">Focus: Software Development, Data Structures, Algorithms, Database Systems</p>
+                    </div>
                   </div>
-                  <div className="bg-slate-900/40 p-3 rounded border border-slate-600/30">
+                  
+                  <div className="bg-slate-900/40 p-3 rounded border border-slate-600/30 hover:border-yellow-400/50 hover:bg-slate-800/60 transition-all duration-300 cursor-pointer group relative">
                     <h4 className="font-semibold text-white text-sm mb-1">Cloud Computing Cohort</h4>
                     <p className="text-sm text-yellow-300 font-medium">Bangkit Academy</p>
                     <p className="text-xs text-gray-400 mb-2">by Google, Gojek & Traveloka - 2023</p>
                     <p className="text-xs font-light text-gray-300">Earned 26+ technical certifications in cloud computing</p>
+                    
+                    {/* Hover Details */}
+                    <div className="absolute left-0 top-full mt-2 w-72 bg-slate-900/95 backdrop-blur-sm border border-yellow-400/30 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-xl">
+                      <h5 className="text-sm font-semibold text-yellow-300 mb-2">Program Achievements & Certifications:</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Completed intensive 6-month cloud computing program</li>
+                        <li>• Earned Google Cloud Professional certifications</li>
+                        <li>• Built and deployed scalable cloud applications</li>
+                        <li>• Collaborated on team capstone project</li>
+                        <li>• Mentored by industry professionals from top tech companies</li>
+                      </ul>
+                      <p className="text-xs text-yellow-400 mt-2 font-medium">Focus: Google Cloud Platform, DevOps, Microservices, Container Orchestration</p>
+                    </div>
                   </div>
                 </div>
               </div>
