@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface AboutModalProps {
   isOpen: boolean;
@@ -8,9 +8,18 @@ interface AboutModalProps {
 }
 
 export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (isOpen) {
+      // Prevent body scroll
       document.body.style.overflow = 'hidden';
+      
+      // Force focus on scrollable area
+      if (scrollRef.current) {
+        scrollRef.current.focus();
+        scrollRef.current.scrollTop = 0; // Reset scroll position
+      }
     } else {
       document.body.style.overflow = '';
     }
@@ -19,6 +28,56 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
       document.body.style.overflow = '';
     };
   }, [isOpen]);
+
+  // Handle all scroll-related events
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isOpen) return;
+      
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    const handleWheel = (e: WheelEvent) => {
+      if (!isOpen) return;
+      
+      // Only allow scrolling within the modal
+      const target = e.target as HTMLElement;
+      if (scrollRef.current && scrollRef.current.contains(target)) {
+        return; // Allow scroll within modal
+      }
+      
+      // Prevent page scroll
+      e.preventDefault();
+      e.stopPropagation();
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isOpen) return;
+      
+      // Only allow scrolling within the modal
+      const target = e.target as HTMLElement;
+      if (scrollRef.current && scrollRef.current.contains(target)) {
+        return; // Allow scroll within modal
+      }
+      
+      // Prevent page scroll
+      e.preventDefault();
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleKeyDown, { passive: false });
+      document.addEventListener('wheel', handleWheel, { passive: false });
+      document.addEventListener('touchmove', handleTouchMove, { passive: false });
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('wheel', handleWheel);
+      document.removeEventListener('touchmove', handleTouchMove);
+    };
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -99,6 +158,18 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
           </div>
 
           <div 
+            ref={scrollRef}
+            tabIndex={0}
+            role="dialog"
+            aria-label="About modal content"
+            onWheel={(e) => {
+              // Ensure wheel events are handled by this container
+              e.stopPropagation();
+            }}
+            onTouchMove={(e) => {
+              // Ensure touch scroll events are handled by this container
+              e.stopPropagation();
+            }}
             style={{
               position: 'absolute',
               top: '60px',
@@ -106,11 +177,58 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
               right: 0,
               bottom: 0,
               overflowY: 'scroll',
+              overflowX: 'hidden',
               padding: '16px',
-              color: 'white'
+              color: 'white',
+              outline: 'none', // Remove focus outline
+              // Force hardware acceleration
+              transform: 'translateZ(0)',
+              WebkitOverflowScrolling: 'touch', // iOS smooth scrolling
+              // Custom scrollbar
+              scrollbarWidth: 'thin',
+              scrollbarColor: '#22d3ee #374151'
             }}
           >
             <h3 style={{ marginBottom: '16px', color: '#22d3ee' }}>SCROLL TEST</h3>
+            
+            <div style={{ marginBottom: '16px', padding: '12px', backgroundColor: '#0f172a', border: '1px solid #22d3ee', borderRadius: '8px' }}>
+              <p style={{ fontSize: '14px', marginBottom: '8px' }}>Debug Info:</p>
+              <button
+                onClick={() => {
+                  if (scrollRef.current) {
+                    scrollRef.current.scrollTop += 200;
+                  }
+                }}
+                style={{
+                  padding: '8px 16px',
+                  backgroundColor: '#22d3ee',
+                  color: 'black',
+                  border: 'none',
+                  borderRadius: '4px',
+                  cursor: 'pointer',
+                  marginRight: '8px'
+                }}
+              >
+                Scroll Down (Programmatic)
+              </button>
+              <button
+                onClick={() => {
+                  if (scrollRef.current) {
+                    scrollRef.current.scrollTo({ top: 1000, behavior: 'smooth' });
+                  }
+                }}
+                style={{
+                  padding: '8px 16px',
+                  backgroundColor: '#22d3ee',
+                  color: 'black',
+                  border: 'none',
+                  borderRadius: '4px',
+                  cursor: 'pointer'
+                }}
+              >
+                Jump to Bottom
+              </button>
+            </div>
             
             <div style={{ height: '200px', backgroundColor: '#374151', marginBottom: '16px', padding: '16px', borderRadius: '8px' }}>
               <p>Content Block 1 - TOP</p>
