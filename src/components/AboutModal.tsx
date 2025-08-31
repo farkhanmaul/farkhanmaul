@@ -73,13 +73,19 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
         onClick={onClose}
       >
         <div 
-          className="modal-content bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-xl border-2 border-cyan-400 border-opacity-40 rounded-2xl max-w-4xl w-full relative shadow-2xl shadow-cyan-500/20"
+          className="modal-content bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-xl border-2 border-cyan-400 border-opacity-40 rounded-2xl max-w-4xl w-full shadow-2xl shadow-cyan-500/20"
           onClick={(e) => e.stopPropagation()}
-          style={{ height: '85vh', display: 'flex', flexDirection: 'column' }}
+          style={{ 
+            height: '85vh',
+            position: 'relative'
+          }}
         >
-          {/* Header with Close Button */}
-          <div className="flex-shrink-0 p-4 border-b border-slate-700/30">
-            <div className="flex justify-between items-start">
+          {/* Fixed Header */}
+          <div 
+            className="absolute top-0 left-0 right-0 p-4 border-b border-slate-700/30 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-t-2xl"
+            style={{ height: '80px' }}
+          >
+            <div className="flex justify-between items-start h-full">
               <div className="flex-1 text-center">
                 <h2 className="font-bold text-xl sm:text-2xl tracking-tight bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-300 bg-clip-text text-transparent">
                   About Me
@@ -88,17 +94,20 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
               </div>
               <button
                 onClick={onClose}
-                className="flex p-1.5 rounded-full border-2 border-cyan-400 border-opacity-60 hover:border-cyan-300 hover:bg-cyan-400 hover:bg-opacity-20 transition-all duration-300 bg-gradient-to-br from-cyan-400/10 to-transparent hover:scale-110 hover:rotate-90 shadow-lg ml-4"
+                className="flex p-1.5 rounded-full border-2 border-cyan-400 border-opacity-60 hover:border-cyan-300 hover:bg-cyan-400 hover:bg-opacity-20 transition-all duration-300 bg-gradient-to-br from-cyan-400/10 to-transparent hover:scale-110 hover:rotate-90 shadow-lg"
               >
                 <FiX className="text-cyan-300 text-base hover:text-white transition-colors duration-300" />
               </button>
             </div>
           </div>
 
-          {/* Scrollable Content Area */}
+          {/* Scrollable Content - Position Absolute with calculated height */}
           <div 
-            className="flex-1 overflow-y-scroll p-4 custom-scrollbar"
+            className="absolute left-0 right-0 bottom-0 p-4 custom-scrollbar"
             style={{
+              top: '80px',
+              overflowY: 'scroll',
+              height: 'calc(100% - 80px)',
               scrollbarWidth: 'thin',
               scrollbarColor: '#22d3ee #1e293b'
             }}
@@ -246,6 +255,29 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
                       <p className="font-light flex items-center gap-2">📚 26+ technical certifications</p>
                       <p className="font-light flex items-center gap-2">🎯 3.88 GPA in Computer Science</p>
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Test Content for Scroll - Remove after testing */}
+              <div className="bg-slate-800/30 p-4 rounded-lg border border-yellow-400/20">
+                <h3 className="text-lg font-semibold mb-3 text-yellow-300">🧪 Test Content (untuk testing scroll)</h3>
+                <div className="space-y-4">
+                  <p className="text-gray-300">Ini adalah konten test untuk memastikan modal bisa di-scroll.</p>
+                  <div className="h-32 bg-slate-700/30 rounded p-4">
+                    <p className="text-gray-400">Content block 1</p>
+                  </div>
+                  <div className="h-32 bg-slate-700/30 rounded p-4">
+                    <p className="text-gray-400">Content block 2</p>
+                  </div>
+                  <div className="h-32 bg-slate-700/30 rounded p-4">
+                    <p className="text-gray-400">Content block 3</p>
+                  </div>
+                  <div className="h-32 bg-slate-700/30 rounded p-4">
+                    <p className="text-gray-400">Content block 4 - Ini harus terlihat jika scroll bekerja</p>
+                  </div>
+                  <div className="h-32 bg-slate-700/30 rounded p-4">
+                    <p className="text-gray-400">Content block 5 - Bottom content untuk test</p>
                   </div>
                 </div>
               </div>
