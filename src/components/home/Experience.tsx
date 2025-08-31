@@ -28,34 +28,17 @@ export default function Experience() {
   });
 
   return (
-    <div 
-      id="experience" 
-      className="relative w-screen min-h-screen flex flex-col px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center"
-      role="region"
-      aria-labelledby="experience-title"
-    >
-      <h2 
-        id="experience-title"
-        className="text-lg md:text-2xl xl:text-3xl font-semibold tracking-tight mb-16 sm:mb-20 text-center opacity-0"
-        role="heading"
-        aria-level="2"
-      >
+    <div id="experience" className="relative w-screen min-h-screen flex flex-col px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center" role="region">
+      <h2 id="experience-title" className="text-lg md:text-2xl xl:text-3xl font-semibold tracking-tight mb-16 sm:mb-20 text-center opacity-0">
         MY <span className="text-cyan-400">EXPERIENCE</span>
       </h2>
 
       <div className="max-w-4xl w-full relative">
-        {/* Vertical Timeline Line */}
         <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 via-cyan-500 to-cyan-600"></div>
 
         <div className="space-y-12">
           {EXPERIENCES.map((exp, index) => (
-            <article 
-              key={`${exp.year}-${index}`}
-              className="relative pl-16 group"
-              role="article"
-              aria-label={`Experience: ${exp.title} at ${exp.company}`}
-            >
-              {/* Timeline Dot */}
+            <article key={`${exp.year}-${index}`} className="relative pl-16 group">
               <div className="absolute left-4 -translate-x-1/2 w-4 h-4 bg-cyan-400 rounded-full border-4 border-black group-hover:scale-125 transition-transform duration-300">
                 <div className="absolute inset-1 bg-cyan-400 rounded-full animate-pulse"></div>
               </div>
@@ -80,10 +63,7 @@ export default function Experience() {
 
                 <div className="flex flex-wrap gap-2">
                   {exp.tech.map((techItem) => (
-                    <span 
-                      key={techItem}
-                      className="px-3 py-1 bg-cyan-400/10 text-cyan-300 rounded-full text-xs font-normal border border-cyan-400/30 backdrop-blur-sm"
-                    >
+                    <span key={techItem} className="px-3 py-1 bg-cyan-400/10 text-cyan-300 rounded-full text-xs font-normal border border-cyan-400/30 backdrop-blur-sm">
                       {techItem}
                     </span>
                   ))}

@@ -30,34 +30,17 @@ export default function Education() {
   });
 
   return (
-    <div 
-      id="education" 
-      className="relative w-screen min-h-screen flex flex-col px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center bg-slate-950/30"
-      role="region"
-      aria-labelledby="education-title"
-    >
-      <h2 
-        id="education-title"
-        className="text-lg md:text-2xl xl:text-3xl font-semibold tracking-tight mb-16 sm:mb-20 text-center opacity-0"
-        role="heading"
-        aria-level="2"
-      >
+    <div id="education" className="relative w-screen min-h-screen flex flex-col px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center bg-slate-950/30" role="region">
+      <h2 id="education-title" className="text-lg md:text-2xl xl:text-3xl font-semibold tracking-tight mb-16 sm:mb-20 text-center opacity-0">
         MY <span className="text-blue-400">EDUCATION</span>
       </h2>
 
       <div className="max-w-4xl w-full relative">
-        {/* Vertical Timeline Line */}
         <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 via-blue-500 to-blue-600"></div>
 
         <div className="space-y-12">
           {EDUCATION.map((edu, index) => (
-            <article 
-              key={`${edu.year}-${index}`}
-              className="relative pl-16 group"
-              role="article"
-              aria-label={`Education: ${edu.title} at ${edu.institution}`}
-            >
-              {/* Timeline Dot */}
+            <article key={`${edu.year}-${index}`} className="relative pl-16 group">
               <div className="absolute left-4 -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full border-4 border-black group-hover:scale-125 transition-transform duration-300">
                 <div className="absolute inset-1 bg-blue-400 rounded-full animate-pulse"></div>
               </div>
@@ -80,28 +63,20 @@ export default function Education() {
                   {edu.description}
                 </p>
 
-                {/* Achievements */}
                 <div className="mb-4">
                   <h4 className="text-sm font-medium text-blue-300 mb-2">Key Achievements:</h4>
                   <div className="flex flex-wrap gap-2">
                     {edu.achievements.map((achievement) => (
-                      <span 
-                        key={achievement}
-                        className="px-2 py-1 bg-blue-500/10 text-blue-200 rounded text-xs font-normal border border-blue-500/20 backdrop-blur-sm"
-                      >
+                      <span key={achievement} className="px-2 py-1 bg-blue-500/10 text-blue-200 rounded text-xs font-normal border border-blue-500/20 backdrop-blur-sm">
                         {achievement}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                {/* Technologies */}
                 <div className="flex flex-wrap gap-2">
                   {edu.tech.map((techItem) => (
-                    <span 
-                      key={techItem}
-                      className="px-3 py-1 bg-blue-400/10 text-blue-300 rounded-full text-xs font-normal border border-blue-400/30 backdrop-blur-sm"
-                    >
+                    <span key={techItem} className="px-3 py-1 bg-blue-400/10 text-blue-300 rounded-full text-xs font-normal border border-blue-400/30 backdrop-blur-sm">
                       {techItem}
                     </span>
                   ))}
