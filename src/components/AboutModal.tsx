@@ -66,7 +66,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
         ref={modalRef}
         className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none opacity-0"
       >
-        <div className="modal-content bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-xl border-2 border-cyan-400 border-opacity-40 rounded-2xl p-3 sm:p-4 max-w-4xl w-full h-[85vh] overflow-hidden relative shadow-2xl shadow-cyan-500/20 flex flex-col">
+        <div className="modal-content bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-xl border-2 border-cyan-400 border-opacity-40 rounded-2xl p-3 sm:p-4 max-w-4xl w-full h-[85vh] relative shadow-2xl shadow-cyan-500/20 flex flex-col">
           {/* Close Button */}
           <div className="flex justify-end mb-2 shrink-0">
             <button
@@ -78,7 +78,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
           </div>
 
           {/* Content */}
-          <div className="text-white flex-1 flex flex-col overflow-hidden">
+          <div className="text-white flex-1 flex flex-col">
             <div className="mb-3 text-center shrink-0">
               <h2 className="font-bold text-xl sm:text-2xl tracking-tight bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-300 bg-clip-text text-transparent">
                 About Me
@@ -87,7 +87,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
             </div>
 
             {/* Content organized in distinct sections */}
-            <div className="flex-1 flex flex-col gap-4 overflow-y-auto">
+            <div className="flex-1 flex flex-col gap-4 overflow-y-auto pr-2" style={{ maxHeight: 'calc(85vh - 120px)' }}>
               {/* Intro Section */}
               <div className="bg-slate-800/30 p-4 rounded-lg border border-cyan-400/20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -134,16 +134,14 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
                     <p className="text-xs font-light text-gray-300">Developed 3+ REST APIs using Spring Boot with Oracle/PostgreSQL databases</p>
                     
                     {/* Hover Details */}
-                    <div className="absolute left-0 top-full mt-2 w-72 bg-slate-900/95 backdrop-blur-sm border border-cyan-400/30 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-xl">
-                      <h5 className="text-sm font-semibold text-cyan-300 mb-2">Key Responsibilities & Achievements:</h5>
+                    <div className="absolute left-0 top-full mt-2 w-60 bg-slate-900/95 backdrop-blur-sm border border-cyan-400/30 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-xl">
+                      <h5 className="text-xs font-semibold text-cyan-300 mb-2">Key Focus:</h5>
                       <ul className="text-xs text-gray-300 space-y-1">
-                        <li>• Designed and developed REST APIs for banking applications</li>
-                        <li>• Implemented secure authentication and authorization systems</li>
-                        <li>• Optimized database queries for improved performance</li>
-                        <li>• Collaborated with cross-functional teams using Agile methodology</li>
-                        <li>• Maintained code quality through unit testing and code reviews</li>
+                        <li>• Banking REST APIs</li>
+                        <li>• Authentication systems</li>
+                        <li>• Database optimization</li>
                       </ul>
-                      <p className="text-xs text-cyan-400 mt-2 font-medium">Tech Stack: Spring Boot, Oracle DB, PostgreSQL, Git, Jira</p>
+                      <p className="text-xs text-cyan-400 mt-2 font-medium">Spring Boot • Oracle • PostgreSQL</p>
                     </div>
                   </div>
                   
@@ -154,16 +152,14 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
                     <p className="text-xs font-light text-gray-300">Built 40+ API endpoints using Node.js and MySQL</p>
                     
                     {/* Hover Details */}
-                    <div className="absolute left-0 top-full mt-2 w-72 bg-slate-900/95 backdrop-blur-sm border border-cyan-400/30 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-xl">
-                      <h5 className="text-sm font-semibold text-cyan-300 mb-2">Key Responsibilities & Achievements:</h5>
+                    <div className="absolute left-0 top-full mt-2 w-60 bg-slate-900/95 backdrop-blur-sm border border-cyan-400/30 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-xl">
+                      <h5 className="text-xs font-semibold text-cyan-300 mb-2">Key Focus:</h5>
                       <ul className="text-xs text-gray-300 space-y-1">
-                        <li>• Developed RESTful APIs for e-commerce platform</li>
-                        <li>• Built user authentication and session management</li>
-                        <li>• Created database schemas and optimized queries</li>
-                        <li>• Implemented error handling and logging systems</li>
-                        <li>• Participated in daily standups and sprint planning</li>
+                        <li>• HRIS REST APIs (40+)</li>
+                        <li>• User authentication</li>
+                        <li>• Database design</li>
                       </ul>
-                      <p className="text-xs text-cyan-400 mt-2 font-medium">Tech Stack: Node.js, Express.js, MySQL, Postman, Git</p>
+                      <p className="text-xs text-cyan-400 mt-2 font-medium">Node.js • Express.js • MySQL</p>
                     </div>
                   </div>
                 </div>
@@ -182,16 +178,14 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
                     <p className="text-xs font-light text-gray-300">Current GPA: 3.88/4.00 - Excellent Academic Performance</p>
                     
                     {/* Hover Details */}
-                    <div className="absolute left-0 top-full mt-2 w-72 bg-slate-900/95 backdrop-blur-sm border border-yellow-400/30 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-xl">
-                      <h5 className="text-sm font-semibold text-yellow-300 mb-2">Academic Highlights & Activities:</h5>
+                    <div className="absolute left-0 top-full mt-2 w-60 bg-slate-900/95 backdrop-blur-sm border border-yellow-400/30 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-xl">
+                      <h5 className="text-xs font-semibold text-yellow-300 mb-2">Academic Focus:</h5>
                       <ul className="text-xs text-gray-300 space-y-1">
-                        <li>• Maintained high academic performance (3.88/4.00 GPA)</li>
-                        <li>• Completed comprehensive software engineering curriculum</li>
-                        <li>• Active participant in coding competitions and hackathons</li>
-                        <li>• Developed multiple full-stack projects as part of coursework</li>
-                        <li>• Member of Computer Science Student Association</li>
+                        <li>• GPA 3.88/4.00</li>
+                        <li>• Lab Assistant</li>
+                        <li>• Full-stack projects</li>
                       </ul>
-                      <p className="text-xs text-yellow-400 mt-2 font-medium">Focus: Software Development, Data Structures, Algorithms, Database Systems</p>
+                      <p className="text-xs text-yellow-400 mt-2 font-medium">Software Engineering • Algorithms • Database</p>
                     </div>
                   </div>
                   
@@ -202,16 +196,14 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
                     <p className="text-xs font-light text-gray-300">Earned 26+ technical certifications in cloud computing</p>
                     
                     {/* Hover Details */}
-                    <div className="absolute left-0 top-full mt-2 w-72 bg-slate-900/95 backdrop-blur-sm border border-yellow-400/30 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-xl">
-                      <h5 className="text-sm font-semibold text-yellow-300 mb-2">Program Achievements & Certifications:</h5>
+                    <div className="absolute left-0 top-full mt-2 w-60 bg-slate-900/95 backdrop-blur-sm border border-yellow-400/30 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-xl">
+                      <h5 className="text-xs font-semibold text-yellow-300 mb-2">Program Focus:</h5>
                       <ul className="text-xs text-gray-300 space-y-1">
-                        <li>• Completed intensive 6-month cloud computing program</li>
-                        <li>• Earned Google Cloud Professional certifications</li>
-                        <li>• Built and deployed scalable cloud applications</li>
-                        <li>• Collaborated on team capstone project</li>
-                        <li>• Mentored by industry professionals from top tech companies</li>
+                        <li>• 26+ Certifications</li>
+                        <li>• Capstone: Freshcan App</li>
+                        <li>• Cloud deployment</li>
                       </ul>
-                      <p className="text-xs text-yellow-400 mt-2 font-medium">Focus: Google Cloud Platform, DevOps, Microservices, Container Orchestration</p>
+                      <p className="text-xs text-yellow-400 mt-2 font-medium">Google Cloud • DevOps • Node.js</p>
                     </div>
                   </div>
                 </div>
