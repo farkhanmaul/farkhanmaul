@@ -20,7 +20,7 @@ const EDUCATION = [
     achievements: ['26+ Certifications', 'Capstone Project: Freshcan App', 'Google Cloud Certified', 'Dicoding Graduate'],
     tech: ['Google Cloud Platform', 'Node.js', 'Express.js', 'MySQL', 'Cloud Architecture', 'DevOps']
   }
-] as const;
+];
 
 export default function Education() {
   useScrollAnimation({
@@ -30,7 +30,7 @@ export default function Education() {
   });
 
   return (
-    <div id="education" className="relative w-screen min-h-screen flex flex-col px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center bg-slate-950/30" role="region">
+    <div id="education" className="relative w-screen min-h-screen flex flex-col px-6 sm:px-12 lg:px-20 py-16 sm:py-24 items-center" role="region">
       <h2 id="education-title" className="text-lg md:text-2xl xl:text-3xl font-semibold tracking-tight mb-16 sm:mb-20 text-center opacity-0">
         MY <span className="text-blue-400">EDUCATION</span>
       </h2>

@@ -4,26 +4,23 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import classNames from 'classnames';
 import useLenis from '@/hooks/useLenis';
-import { FiHome, FiUser, FiBriefcase, FiFolder, FiMail } from 'react-icons/fi';
+import { FiHome, FiUser, FiBriefcase, FiFolder, FiMail, FiBookOpen } from 'react-icons/fi';
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-// Navigation routes sesuai referensi website dengan icons
 const routes = [
   { name: 'Home', path: '#', icon: FiHome },
   { name: 'About', path: '#about', icon: FiUser },
   { name: 'Experience', path: '#experience', icon: FiBriefcase },
+  { name: 'Education', path: '#education', icon: FiBookOpen },
+  { name: 'Skills', path: '#skills', icon: FiFolder },
   { name: 'Projects', path: '#projects', icon: FiFolder },
   { name: 'Contact', path: '#contact', icon: FiMail },
 ];
 
-/**
- * Sidebar Menu Component - berdasarkan referensi website
- * Slide-in navigation menu dari kanan dengan GSAP animations
- */
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const sidebarRef = useRef<HTMLDivElement>(null);
   const lenis = useLenis(({ instance }) => instance);

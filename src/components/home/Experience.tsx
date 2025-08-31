@@ -18,7 +18,7 @@ const EXPERIENCES = [
     description: 'Created 40+ REST API endpoints for internal HRIS using Node.js and Express.js. Developed features for employee attendance, room bookings, and leave management systems with JWT authentication.',
     tech: ['Node.js', 'Express.js', 'MySQL', 'JWT', 'REST API', 'HRIS Systems']
   }
-] as const;
+];
 
 export default function Experience() {
   useScrollAnimation({

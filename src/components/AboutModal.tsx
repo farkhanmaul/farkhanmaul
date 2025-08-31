@@ -21,7 +21,13 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
     const modal = modalRef.current;
     if (!modal) return;
 
-    // GSAP animation untuk modal
+    // Prevent body scroll when modal is open
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
     const tl = gsap.timeline();
     
     tl.to('.modal-content', {
@@ -38,6 +44,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
 
     return () => {
       tl.kill();
+      document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
 
