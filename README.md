@@ -76,14 +76,24 @@
 
 ## 📊 GitHub Analytics
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=farkhanmaul&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=ff6444&icon_color=ff6444&text_color=c9d1d9" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=farkhanmaul&theme=radical&hide_border=true&background=0d1117&stroke=ff6444&ring=ff6444&fire=ff6444&currStreakLabel=c9d1d9" width="48%" />
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=farkhanmaul&theme=radical&hide_border=true&line=ff6444&point=ff6444&background=0d1117&color=c9d1d9" width="100%" />
-</p>
+<table>
+  <tr>
+    <td>
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=farkhanmaul&layout=compact&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/>
+    </td>
+    <td>
+      <img src="https://github-readme-stats.vercel.app/api?username=farkhanmaul&show_icons=true&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/>
+    </td>
+  </tr>
+</table>
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=farkhanmaul&theme=react&hide_border=true&background=1F222E&stroke=0000&ring=F85D7F&fire=F85D7F&currStreakLabel=F85D7F" alt="farkhanmaul" />
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=farkhanmaul&theme=react-dark&bg_color=1F222E&hide_border=true&line=F85D7F&point=F8D866" alt="farkhanmaul"/>
+
+</div>
 
 ---
 
