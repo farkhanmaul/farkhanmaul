@@ -22,21 +22,6 @@
 - 🤝 Collaborating with business users and QA through SIT/UAT cycles
 - 💻 Tech Stack: Spring Boot, Angular, SQL Server, PostgreSQL
 
-## Experience
-
-### PT. Bank Negara Indonesia (BNI)
-**Junior Software Developer** *(Nov 2024 – Aug 2025)*
-- 🏦 Retail Productive Banking system under RDL Division
-- 🌐 Microservices architecture with RESTful APIs (Spring Boot)
-- 🗄️ Database integration: Oracle & PostgreSQL
-- 📋 Agile/Scrum workflow with Jira, Swagger, Docker
-
-### PT. Elang Mahkota Teknologi (EMTEK)
-**Software Developer** *(Aug 2023 – Dec 2023)*
-- 👥 Built internal HRIS at PT Abhimata Citra Abadi (EMTEK Group)
-- 🚀 Developed 40+ REST endpoints (Node.js, Express.js, MySQL)
-- 📊 Modules: Attendance, Room Booking, Claims, Leave Management
-
 ## Education
 
 ### Universitas Ahmad Dahlan
@@ -81,10 +66,6 @@
 **Database:** PostgreSQL, Oracle, SQL Server, MySQL
 **Tools & DevOps:** Git, Docker, Jira, Swagger, Agile/Scrum
 **Cloud:** Google Cloud Platform (Bangkit Academy)
-
-## GitHub Activity
-
-![GitHub Contribution Graph](https://ghchart.rshah.org/farkhanmaul)
 
 ## What I'm Doing
 
