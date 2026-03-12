@@ -20,16 +20,17 @@
 
 ### Live Applications
 
-- 💪 [Fitness Guide](https://farkhanmaul.github.io/fitness/) - Comprehensive fitness exercise guide covering CrossFit, Hyrox, and military training movements with workout programs and progress tracking ([Repo](https://github.com/farkhanmaul/fitness))
-- 🎯 [Spinner App](https://farkhanmaul.github.io/spinner/) - Advanced random name picker with smooth wheel animations, sound effects, and confetti celebrations ([Repo](https://github.com/farkhanmaul/spinner))
-- 📊 [Sort Algorithm Visualize](https://github.com/farkhanmaul/sort-algo-visualize) - Sorting algorithm visualization tool built with Rust and WebAssembly featuring Bubble Sort, Quick Sort, and Merge Sort
-- 🌍 [Countries](https://github.com/farkhanmaul/countries) - Countries data application with comprehensive information
-- 🌡️ [Temp Converter](https://github.com/farkhanmaul/temp-converter) - Temperature conversion utility
-- 📖 [Quran Project](https://github.com/farkhanmaul/quran-project) - Quran application project
-- 🎨 [Hidden Crucials](https://github.com/farkhanmaul/hidden-crucials) - Advanced programming concepts exploration
-- 💻 [Proglang Concept](https://github.com/farkhanmaul/proglang-concept) - Programming language concepts and implementations
+- 💪 [Fitness Guide](https://farkhanmaul.github.io/fitness/) - Comprehensive fitness exercise guide covering CrossFit, Hyrox, and military training movements with workout programs and progress tracking
+- 🎯 [Spinner App](https://farkhanmaul.github.io/spinner/) - Advanced random name picker with smooth wheel animations, sound effects, and confetti celebrations
+- 🎬 [MovieHanz Portal](https://farkhanmaul.github.io/movie-hanz/) - Modern React web app for exploring movies and TV shows with TMDb integration
+- 📊 [Sort Algorithm Visualize](https://farkhanmaul.github.io/sort-algo-visualize/) - Sorting algorithm visualization tool built with Rust and WebAssembly featuring Bubble Sort, Quick Sort, and Merge Sort
+- 🌍 [Countries](https://farkhanmaul.github.io/countries/) - Countries data application with comprehensive information
+- 🌡️ [Temp Converter](https://farkhanmaul.github.io/temp-converter/) - Temperature conversion utility
+- 📖 [Quran Project](https://farkhanmaul.github.io/quran-project/) - Quran application project
+- 🎨 [Hidden Crucials](https://farkhanmaul.github.io/hidden-crucials/) - Advanced programming concepts exploration
+- 💻 [Proglang Concept](https://farkhanmaul.github.io/proglang-concept/) - Programming language concepts and implementations
 
-### Course Submissions
+### Course Projects
 
 - 📝 [Notes App Backend](https://github.com/farkhanmaul/notes-app-back-end-advanced) - Advanced backend with authentication, CRUD operations, and data storage (Dicoding)
 - 📚 [Bookshelf Apps](https://github.com/farkhanmaul/bookshelf-apps) - Book management application with CRUD functionality (Dicoding submission)
@@ -37,9 +38,6 @@
 - 🔧 [REST API Simple](https://github.com/farkhanmaul/restAPI-simple) - Simple RESTful API implementation guide in JavaScript
 - ✂️ [Simple CRUD](https://github.com/farkhanmaul/simple-crud) - Basic CRUD operations project
 - 👟 [VANS x HANZ](https://github.com/farkhanmaul/vans-x-hanz) - E-commerce website (Dicoding submission)
-
-### Experimental & Academic
-
 - 📱 [Mobile Programming](https://github.com/farkhanmaul/211850231-pemrograman-mobile) - Mobile app development course collection
 - ✂️ [Hanz Barbershop](https://github.com/farkhanmaul/hanz-barbershop) - Barbershop booking app (Mobile final project)
 - 🚗 [Hanz Car](https://github.com/farkhanmaul/hanz-car) - Dynamic web programming final project
@@ -73,7 +71,7 @@
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Jira](https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white)
+![Jira](https://img.sh.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white)
 ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=white)
 ![Google Cloud](https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
 
