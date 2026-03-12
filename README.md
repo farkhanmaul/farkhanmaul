@@ -2,18 +2,6 @@
 
 📍 **Jakarta, Indonesia** | 🚀 **Full Stack Developer** | 💼 **2+ Years Experience**
 
-![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)
-![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
-![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
-
 > Building enterprise applications that power real businesses – from banking systems to e-procurement platforms. Passionate about translating complex requirements into clean, maintainable code.
 
 ---
@@ -88,9 +76,14 @@
 
 ## 📊 GitHub Analytics
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=farkhanmaul&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true)
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=farkhanmaul&theme=radical&hide_border=true)
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=farkhanmaul&theme=radical&hide_border=true&line=ff6444&point=ff6444)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=farkhanmaul&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=ff6444&icon_color=ff6444&text_color=c9d1d9" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=farkhanmaul&theme=radical&hide_border=true&background=0d1117&stroke=ff6444&ring=ff6444&fire=ff6444&currStreakLabel=c9d1d9" width="48%" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=farkhanmaul&theme=radical&hide_border=true&line=ff6444&point=ff6444&background=0d1117&color=c9d1d9" width="100%" />
+</p>
 
 ---
 
@@ -101,16 +94,6 @@
 - 👨‍🏫 **Laboratory Assistant** - Informatics Logic & Basic Computer Systems
 - 🏅 **Google Cloud Mentor** - Computing Foundations mentorship program
 - 📊 **39+ GitHub Repositories** - Showcasing continuous learning and development journey
-
----
-
-## 💼 What I'm Doing
-
-- 🚀 **Building Enterprise Applications** - Developing scalable solutions for real businesses at PT. Mitra Mandiri Informatika
-- 📚 **Continuously Learning** - Exploring modern backend & frontend technologies
-- 🤝 **Open to Collaboration** - Interested in open-source contributions
-- ✍️ **Writing Clean Code** - Focused on maintainable, scalable solutions
-- 🛠️ **Building Tools** - Creating utilities that solve real problems
 
 ---
 
@@ -125,8 +108,6 @@
 
 ---
 
-**💼 Interested in enterprise application development, microservices architecture, and cloud-native solutions**
-
-**Senang bisa berkontribusi!** Hubungi saja kalau ada yang bisa saya bantu.
+Happy to contribute! Feel free to reach out if you need anything.
 
 🙏 **Thanks for stopping by!** Feel free to explore my repositories or reach out for collaboration.
