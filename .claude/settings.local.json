@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(git remote:*)",
+      "mcp__github__get_file_contents",
+      "Bash(git add:*)"
+    ]
+  }
+}
