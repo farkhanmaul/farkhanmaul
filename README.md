@@ -11,6 +11,7 @@
 ![Oracle](https://img.shields.io/badge/-Oracle-F80000?style=flat-square&logo=oracle&logoColor=white)
 ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Google%20Dev](https://img.shields.io/badge/-Google%20Dev-4285F4?style=flat-square&logo=google&logoColor=white)
 
 > Building enterprise applications that power real businesses. Passionate about translating complex requirements into clean, maintainable code.
 
@@ -99,6 +100,9 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/farkhanmaul)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/farkhanmaul)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/farkhanmaul)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/farkhanmaul)
+[![Google%20Dev](https://img.shields.io/badge/Google%20Dev-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://developers.google.com/profile/u/102081039922458329998)
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your-email@example.com)
 
 ---
