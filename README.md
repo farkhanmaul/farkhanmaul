@@ -19,34 +19,39 @@
 ## 🚀 Current Projects
 
 ### Live Applications
-- 💪 [Fitness Guide](https://farkhanmaul.github.io/fitness/) - Comprehensive fitness exercise guide covering CrossFit, Hyrox, and military training movements with workout programs and progress tracking
-- 🎯 [Spinner App](https://farkhanmaul.github.io/spinner/) - Advanced random name picker with smooth wheel animations, sound effects, and confetti celebrations
 
-### Experimental & Tools
+- 💪 [Fitness Guide](https://farkhanmaul.github.io/fitness/) - Comprehensive fitness exercise guide covering CrossFit, Hyrox, and military training movements with workout programs and progress tracking ([Repo](https://github.com/farkhanmaul/fitness))
+- 🎯 [Spinner App](https://farkhanmaul.github.io/spinner/) - Advanced random name picker with smooth wheel animations, sound effects, and confetti celebrations ([Repo](https://github.com/farkhanmaul/spinner))
 - 📊 [Sort Algorithm Visualize](https://github.com/farkhanmaul/sort-algo-visualize) - Sorting algorithm visualization tool built with Rust and WebAssembly featuring Bubble Sort, Quick Sort, and Merge Sort
 - 🌍 [Countries](https://github.com/farkhanmaul/countries) - Countries data application with comprehensive information
 - 🌡️ [Temp Converter](https://github.com/farkhanmaul/temp-converter) - Temperature conversion utility
 - 📖 [Quran Project](https://github.com/farkhanmaul/quran-project) - Quran application project
 - 🎨 [Hidden Crucials](https://github.com/farkhanmaul/hidden-crucials) - Advanced programming concepts exploration
 - 💻 [Proglang Concept](https://github.com/farkhanmaul/proglang-concept) - Programming language concepts and implementations
-- 👟 [VANS x HANZ](https://github.com/farkhanmaul/vans-x-hanz) - E-commerce website (Dicoding submission)
-- ✂️ [Hanz Barbershop](https://github.com/farkhanmaul/hanz-barbershop) - Mobile programming final project - barbershop booking app
 
-### Backend & APIs
-- 👥 [HRIS Node.js API](https://github.com/farkhanmaul/hris-nodejs-api) - Backend server for HRIS mobile app built with Node.js, Express, and authentication
-- 📝 [Notes App Backend](https://github.com/farkhanmaul/notes-app-back-end-advanced) - Advanced backend with authentication, CRUD operations, and data storage
+### Course Submissions
+
+- 📝 [Notes App Backend](https://github.com/farkhanmaul/notes-app-back-end-advanced) - Advanced backend with authentication, CRUD operations, and data storage (Dicoding)
 - 📚 [Bookshelf Apps](https://github.com/farkhanmaul/bookshelf-apps) - Book management application with CRUD functionality (Dicoding submission)
-- 🔌 [Bookshelf API](https://github.com/farkhanmaul/bookshelf-api) - RESTful API for bookshelf application
+- 🔌 [Bookshelf API](https://github.com/farkhanmaul/bookshelf-api) - RESTful API for bookshelf application (Dicoding)
 - 🔧 [REST API Simple](https://github.com/farkhanmaul/restAPI-simple) - Simple RESTful API implementation guide in JavaScript
 - ✂️ [Simple CRUD](https://github.com/farkhanmaul/simple-crud) - Basic CRUD operations project
+- 👟 [VANS x HANZ](https://github.com/farkhanmaul/vans-x-hanz) - E-commerce website (Dicoding submission)
 
-### Course Projects
-- 🧮 [Calculator PWEB](https://github.com/farkhanmaul/calculator-pweb) - Basic web calculator for programming course
+### Experimental & Academic
+
+- 📱 [Mobile Programming](https://github.com/farkhanmaul/211850231-pemrograman-mobile) - Mobile app development course collection
+- ✂️ [Hanz Barbershop](https://github.com/farkhanmaul/hanz-barbershop) - Barbershop booking app (Mobile final project)
 - 🚗 [Hanz Car](https://github.com/farkhanmaul/hanz-car) - Dynamic web programming final project
 - 🌐 [Web Programming Final](https://github.com/farkhanmaul/web-programming-final-project) - Final project for basic web programming course
 - 💻 [Dynamic Web Programming](https://github.com/farkhanmaul/211850731-pemrograman-web-dinamis) - Collection of dynamic web projects
+- 🧮 [Calculator PWEB](https://github.com/farkhanmaul/calculator-pweb) - Basic web calculator for programming course
 - 🎓 [Programming Algorithms](https://github.com/farkhanmaul/211820230-algoritma-pemrograman) - Algorithm implementations and solutions
-- 📱 [Mobile Programming](https://github.com/farkhanmaul/211850231-pemrograman-mobile) - Mobile app development course works
+- 📐 [Discrete Mathematics](https://github.com/farkhanmaul/211820631-matematika-diskrit) - Mathematical algorithms & concepts
+- 💻 [Programming Basics](https://github.com/farkhanmaul/211810230-dasar-pemrograman) - Fundamental programming exercises
+- 🧠 [Artificial Intelligence](https://github.com/farkhanmaul/211840531-kecerdasan-buatan) - AI course implementations
+- 🖥️ [Operating Systems](https://github.com/farkhanmaul/211830531-sistem-operasi) - OS programming assignments
+- 🎨 [Computer Graphics](https://github.com/farkhanmaul/211840231-grafika-komputer) - Graphics programming projects
 
 ---
 
